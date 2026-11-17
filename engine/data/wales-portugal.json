@@ -1,0 +1,74 @@
+{
+ "slug": "wales-portugal",
+ "template": "tpl_story.html",
+ "home": "Wales",
+ "away": "Portugal",
+ "league": "UEFA Nations League",
+ "when": "17 Nov 2026 · 19:45 UTC",
+ "hook": [
+  "Can",
+  "Wales",
+  "stop",
+  "Portugal?"
+ ],
+ "hookSize": 140,
+ "codes": {
+  "home": "WAL",
+  "away": "POR"
+ },
+ "colors": {
+  "home": "#00843d",
+  "away": "#c8102e"
+ },
+ "posHome": 4,
+ "posAway": 1,
+ "ptsHome": 3,
+ "ptsAway": 12,
+ "winsHome": 1,
+ "winsAway": 4,
+ "formHome": [
+  "L",
+  "L",
+  "W",
+  "L",
+  "L"
+ ],
+ "formAway": [
+  "L",
+  "W",
+  "W",
+  "W",
+  "W"
+ ],
+ "banner": "Portugal top of Group D",
+ "probs": [
+  8,
+  20,
+  72
+ ],
+ "pick": "Portugal",
+ "score": "0-1",
+ "scorePct": "17.6",
+ "others": [
+  [
+   "0-2",
+   "16.9"
+  ],
+  [
+   "0-3",
+   "10.8"
+  ],
+  [
+   "0-0",
+   "9.1"
+  ]
+ ],
+ "h2h": {
+  "date": "24 Sep 2026",
+  "a": "Portugal",
+  "score": "1–0",
+  "b": "Wales"
+ },
+ "ctaTitle": "Upset or<br>no chance?",
+ "ctaAsk": "Drop your score in the comments"
+}

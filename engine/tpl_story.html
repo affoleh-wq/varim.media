@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+/*ENGINE_CSS*/
+.code{display:inline-grid;place-items:center;background:var(--c);color:#fff;font-weight:900;font-style:italic;letter-spacing:1px;border-radius:14px;transform:skewX(-8deg);box-shadow:0 16px 40px rgba(0,0,0,.45)}
+/* s1 — хук */
+#s1 .in{justify-content:center;gap:6px}
+.kw{font-weight:900;letter-spacing:-6px;line-height:.98;text-transform:uppercase;align-self:flex-start;position:relative}
+.kw.hl{color:#fff;padding:0 26px;margin-left:-10px}
+.kw.hl::before{content:'';position:absolute;inset:6% 0 2%;background:var(--c);transform:skewX(-10deg) scaleX(0);transform-origin:left;animation:hlin .45s var(--ease) both;animation-delay:var(--hd);z-index:-1}
+@keyframes hlin{to{transform:skewX(-10deg) scaleX(1)}}
+#s1 .meta{margin-top:56px;font-size:34px;font-weight:700;color:var(--muted);letter-spacing:.5px}
+#s1 .vsrow{display:flex;align-items:center;gap:22px;margin-top:40px}
+#s1 .vsrow .code{font-size:56px;width:180px;height:96px}
+#s1 .vsrow span{font-size:40px;font-weight:900;font-style:italic;color:var(--muted)}
+/* s2 — tale of the tape */
+.tape-h{display:flex;justify-content:space-between;align-items:center}
+.tape-h .code{font-size:46px;width:150px;height:80px}
+.tape-h .t{font-size:34px;font-weight:900;font-style:italic;letter-spacing:2px;text-transform:uppercase}
+.tr3{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:26px 36px;margin-top:20px;border-radius:30px}
+.tr3 .v{font-size:84px;font-weight:800;letter-spacing:-3px;line-height:1}
+.tr3 .v.r{text-align:right}
+.tr3 .v.dim{color:var(--muted);opacity:.7}
+.tr3 .k{font-size:26px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:var(--muted);text-align:center}
+.tr3 .pills{gap:8px}
+.tr3 .pills b{width:62px;height:62px;border-radius:16px;font-size:30px}
+.tr3.form{grid-template-columns:auto 1fr auto;padding:26px 30px}
+.banner{margin-top:26px;align-self:center;background:var(--accent);color:#fff;font-size:40px;font-weight:800;letter-spacing:-.5px;padding:20px 40px;border-radius:999px;animation:pop .6s cubic-bezier(.2,1.4,.3,1) both,pulse 1.2s ease-out 2;animation-delay:var(--d),calc(var(--d) + .3s)}
+/* s3 — вердикт */
+#s3 .in{align-items:center;text-align:center;justify-content:center;padding-bottom:30px}
+#s3 .who{margin-top:34px;font-size:58px;font-weight:900;font-style:italic;letter-spacing:1px;text-transform:uppercase}
+#s3 .big{position:relative;font-size:390px;font-weight:900;letter-spacing:-18px;line-height:.9;margin-top:6px;text-shadow:0 0 90px rgba(230,0,35,.65)}
+#s3 .big small{font-size:190px;letter-spacing:0}
+#s3 .burst{width:380px;height:380px;left:calc(50% - 190px);top:330px}
+.stack{display:flex;width:100%;height:56px;border-radius:18px;overflow:hidden;margin-top:56px;gap:6px}
+.stack i{display:block;height:100%;transform-origin:left;animation:fill .7s var(--ease) both;animation-delay:var(--d)}
+.legend{display:flex;justify-content:space-between;width:100%;margin-top:24px}
+.legend div{font-size:32px;font-weight:700;color:var(--muted);display:flex;align-items:center;gap:12px}
+.legend div b{color:var(--text);font-weight:800}
+.legend div::before{content:'';width:20px;height:20px;border-radius:5px;background:var(--c)}
+/* s4 — счёт */
+#s4 .in{align-items:center}
+.sc2{display:flex;align-items:flex-end;justify-content:center;gap:50px;margin-top:20px;position:relative}
+.sc2 .side{display:flex;flex-direction:column;align-items:center;gap:20px}
+.sc2 .d{font-size:360px;font-weight:900;letter-spacing:-14px;line-height:.85}
+.sc2 .code{font-size:40px;width:130px;height:70px}
+.sc2 .dash{width:110px;height:26px;background:var(--accent);margin-bottom:220px;box-shadow:0 0 50px rgba(230,0,35,.9);transform-origin:center;animation:fill .4s var(--ease) both;animation-delay:.8s}
+#s4 .prob{font-size:36px;font-weight:600;color:var(--muted);margin-top:28px}
+#s4 .prob b{color:var(--text);font-weight:800}
+.alt{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;width:100%;margin-top:44px}
+.alt div{background:rgba(19,19,19,.92);border:2px solid var(--border);border-radius:28px;padding:22px 0;text-align:center}
+.alt b{display:block;font-size:52px;font-weight:800;letter-spacing:-1px}
+.alt s{display:block;text-decoration:none;font-size:28px;font-weight:600;color:var(--muted);margin-top:4px}
+.lastm{width:100%;margin-top:18px;padding:28px 36px;border-radius:30px}
+.lastm .r{margin-top:12px;font-size:44px;font-weight:700;display:flex;align-items:center;gap:18px}
+.lastm .r b{background:var(--accent);color:#fff;padding:2px 18px;border-radius:12px;font-weight:800}
+/* s5 */
+.cta .ask{margin-top:30px;font-size:40px;font-weight:600;color:var(--muted)}
+</style>
+</head>
+<body>
+<script>
+const D=__DATA__;
+/*ENGINE_JS*/
+const H=D.home,A=D.away,CH=D.colors.home,CA=D.colors.away;
+const code=(c,col,cls='',st='')=>`<div class="code ${cls}" style="--c:${col};${st}">${c}</div>`;
+const sc=D.score.split('-');
+const better=(a,b,lowWins)=>lowWins?(a<b?['','dim']:['dim','']):(a>b?['','dim']:['dim','']);
+const pos=better(D.posHome,D.posAway,true), pts=better(D.ptsHome,D.ptsAway), wn=better(D.winsHome,D.winsAway);
+const ord=n=>n+(['th','st','nd','rd'][(n%100>10&&n%100<14)?0:Math.min(n%10,4)%4]||'th');
+document.body.insertAdjacentHTML('afterbegin',`
+<section class="scene" id="s1" style="--dur:3.5s;--t0:0s;--shake:.62s"><div class="body"><div class="in">
+  <div class="kw a" style="--d:.05s;font-size:120px;color:var(--muted)">${D.hook[0]}</div>
+  <div class="kw hl a" style="--d:.22s;--hd:.3s;--c:${CH};font-size:220px">${D.hook[1]}</div>
+  <div class="kw slam" style="--d:.5s;font-size:220px">${D.hook[2]}</div>
+  <div class="kw hl a" style="--d:.95s;--hd:1.05s;--c:${CA};font-size:${D.hookSize||140}px">${D.hook[3]}</div>
+  <div class="meta a" style="--d:1.4s">${D.league} · ${D.when}</div>
+  <div class="vsrow a" style="--d:1.65s">${code(D.codes.home,CH)}<span>VS</span>${code(D.codes.away,CA)}</div>
+</div></div></section>
+
+<section class="scene" id="s2" style="--dur:5s;--t0:3.5s"><div class="body"><div class="in">
+  <div class="tape-h a" style="--d:.25s">${code(D.codes.home,CH)}<div class="t">Tale of the tape</div>${code(D.codes.away,CA)}</div>
+  <div class="card tr3 fl" style="--d:.45s"><div class="v ${pos[0]}">${ord(D.posHome)}</div><div class="k">Group position</div><div class="v r ${pos[1]}">${ord(D.posAway)}</div></div>
+  <div class="card tr3 fr2" style="--d:.6s"><div class="v ${pts[0]}"><span class="count" style="--to:${D.ptsHome};--d:.75s"></span></div><div class="k">Points</div><div class="v r ${pts[1]}"><span class="count" style="--to:${D.ptsAway};--d:.75s"></span></div></div>
+  <div class="card tr3 fl" style="--d:.75s"><div class="v ${wn[0]}"><span class="count" style="--to:${D.winsHome};--d:.9s"></span></div><div class="k">Wins · last 5</div><div class="v r ${wn[1]}"><span class="count" style="--to:${D.winsAway};--d:.9s"></span></div></div>
+  <div class="card tr3 form fr2" style="--d:.9s"><div class="pills">${pills(D.formHome,1.05)}</div><div class="k">Form</div><div class="pills">${pills(D.formAway,1.45)}</div></div>
+  <div class="banner" style="--d:2.4s">${D.banner}</div>
+</div></div></section>
+
+<section class="scene" id="s3" style="--dur:4.5s;--t0:8.5s;--shake:.78s"><div class="body"><div class="in">
+  <div class="label a" style="--d:.2s">The model's verdict</div>
+  <div class="who a" style="--d:.35s">${D.pick} win</div>
+  <div class="big slam" style="--d:.5s"><span class="count" style="--to:${D.probs[2]};--d:.5s"></span><small>%</small></div>
+  <div class="burst" style="--d:.78s"></div>
+  <div class="stack">
+    <i style="width:${D.probs[0]}%;background:${CH};--d:1.3s"></i>
+    <i style="width:${D.probs[1]}%;background:#85858e;--d:1.5s"></i>
+    <i style="width:${D.probs[2]}%;background:${CA};--d:1.7s"></i>
+  </div>
+  <div class="legend a" style="--d:2s">
+    <div style="--c:${CH}">${H} <b>${D.probs[0]}%</b></div>
+    <div style="--c:#85858e">Draw <b>${D.probs[1]}%</b></div>
+    <div style="--c:${CA}">${A} <b>${D.probs[2]}%</b></div>
+  </div>
+</div></div></section>
+
+<section class="scene" id="s4" style="--dur:4.5s;--t0:13s"><div class="body"><div class="in">
+  <div class="label a" style="--d:.2s">Most likely score</div>
+  <div class="sc2">
+    <div class="side"><div class="d slam" style="--d:.4s">${sc[0]}</div>${code(D.codes.home,CH,'a','--d:.6s')}</div>
+    <div class="dash"></div>
+    <div class="side"><div class="d slam" style="--d:.55s">${sc[1]}</div>${code(D.codes.away,CA,'a','--d:.7s')}</div>
+  </div>
+  <div class="prob a" style="--d:.9s">model probability — <b>${D.scorePct}%</b></div>
+  <div class="alt">${D.others.map((o,i)=>`<div class="flip" style="--d:${1.2+i*.1}s"><b>${o[0].replace('-','–')}</b><s>${o[1]}%</s></div>`).join('')}</div>
+  <div class="card lastm a" style="--d:1.95s"><div class="label">Last meeting · ${D.h2h.date}</div><div class="r">${D.h2h.a}<b>${D.h2h.score}</b>${D.h2h.b}</div></div>
+</div></div></section>
+
+<section class="scene" id="s5" style="--dur:3.5s;--t0:17.5s;--shake:.55s"><div class="body" style="bottom:430px"><div class="in cta">
+  <div class="burst" style="--d:.5s"></div>
+  <div class="lg"><img data-logo><i></i></div>
+  <h2 class="a" style="--d:.8s">${D.ctaTitle}</h2>
+  <div class="ask a" style="--d:.95s">${D.ctaAsk}</div>
+  <div class="url">varim.net</div>
+  <div class="note a" style="--d:1.5s">An estimate is not a guarantee of the result.</div>
+</div></div></section>`);
+ENGINE({chip:'Match preview',ticker:['Model prediction',D.league,`${H} vs ${A}`,D.when,'varim.net']});
+</script>
+</body>
+</html>

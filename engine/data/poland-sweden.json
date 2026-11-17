@@ -1,0 +1,54 @@
+{
+ "slug": "poland-sweden",
+ "template": "tpl_top3.html",
+ "home": "Poland",
+ "away": "Sweden",
+ "league": "UEFA Nations League",
+ "when": "17 Nov 2026 · 19:45 UTC",
+ "stat3": "Two teams,<br>two directions",
+ "formHome": [
+  "L",
+  "L",
+  "W",
+  "L",
+  "D"
+ ],
+ "formAway": [
+  "W",
+  "W",
+  "D",
+  "W",
+  "W"
+ ],
+ "tagHome": "1 win in 5",
+ "tagAway": "Unbeaten in 5",
+ "stat2": "Sweden won<br>the last meeting",
+ "h2h": {
+  "date": "28 Sep 2026",
+  "a": "Sweden",
+  "ga": 3,
+  "gb": 1,
+  "b": "Poland"
+ },
+ "group": "League B · Group D",
+ "table": [
+  [
+   "1",
+   "Sweden",
+   13
+  ],
+  [
+   "3",
+   "Poland",
+   4
+  ]
+ ],
+ "probs": [
+  17,
+  23,
+  60
+ ],
+ "pick": "Sweden",
+ "score": "0-1",
+ "scorePct": "13.4"
+}

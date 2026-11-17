@@ -1,0 +1,60 @@
+{
+ "slug": "switzerland-scotland",
+ "home": "Switzerland",
+ "away": "Scotland",
+ "league": "UEFA Nations League",
+ "when": "16 NOV 2026 · 18:45 UTC",
+ "probs": [
+  49,
+  29,
+  22
+ ],
+ "pick": "Switzerland",
+ "pickPct": "48.7",
+ "score": "1-0",
+ "scorePct": "16.9",
+ "others": [
+  [
+   "0-0",
+   "13.4"
+  ],
+  [
+   "1-1",
+   "12.6"
+  ],
+  [
+   "2-0",
+   "10.7"
+  ],
+  [
+   "0-1",
+   "10"
+  ]
+ ],
+ "over25": 33,
+ "btts": 38,
+ "formHome": [
+  "D",
+  "W",
+  "W",
+  "L",
+  "D"
+ ],
+ "formAway": [
+  "L",
+  "L",
+  "D",
+  "L",
+  "L"
+ ],
+ "lastHome": "Slovenia 0–0 Switzerland",
+ "lastAway": "Scotland 1–2 Slovenia",
+ "statHome": "",
+ "statAway": "",
+ "h2h": {
+  "date": "29 Sep 2026",
+  "a": "Scotland",
+  "score": "0–3",
+  "b": "Switzerland"
+ }
+}

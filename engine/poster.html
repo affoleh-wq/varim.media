@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+/*ENGINE_CSS*/
+*{animation:none!important}
+body{width:var(--W);height:var(--H);position:relative}
+.root{position:absolute;inset:0;overflow:hidden;background:var(--bg)}
+.fx .glow{left:-260px;top:-300px}
+.wrap{position:absolute;inset:0;padding:56px 60px 56px;display:flex;flex-direction:column;justify-content:space-between}
+.hd{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
+.hd img{height:44px;display:block}
+.hd .chip{font-size:20px;padding:10px 20px}
+.navbar{height:156px}
+.ft{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.ft .url{background:var(--accent);color:#fff;font-size:36px;font-weight:800;border-radius:999px;padding:18px 40px;flex:none}
+.ft .note{font-size:21px;font-weight:600;color:var(--muted);line-height:1.35}
+.ft .note b{color:var(--text)}
+.code{display:inline-grid;place-items:center;background:var(--c);color:#fff;font-weight:900;font-style:italic;letter-spacing:1px;border-radius:12px;transform:skewX(-8deg)}
+/* ===== STORY ===== */
+.kw{font-weight:900;letter-spacing:-5px;line-height:.98;text-transform:uppercase;align-self:flex-start;position:relative;z-index:0}
+.kw.hl{color:#fff;padding:0 22px;margin-left:-8px}
+.kw.hl::before{content:'';position:absolute;inset:6% 0 2%;background:var(--c);transform:skewX(-10deg);z-index:-1}
+.meta{font-size:28px;font-weight:700;color:var(--muted);margin-top:22px}
+.verdict{display:flex;align-items:center;gap:34px;padding:34px 38px;border-radius:36px}
+.verdict .v{font-size:190px;font-weight:900;letter-spacing:-9px;line-height:.85;text-shadow:0 0 70px rgba(230,0,35,.55)}
+.verdict .v small{font-size:90px;letter-spacing:0}
+.verdict .k{font-size:44px;font-weight:900;font-style:italic;text-transform:uppercase;line-height:1.05}
+.verdict .k span{display:block;font-style:normal;font-size:22px;letter-spacing:2.4px;color:var(--muted);margin-bottom:10px}
+.stack{display:flex;height:34px;border-radius:12px;overflow:hidden;gap:5px;margin-top:18px}
+.legend{display:flex;justify-content:space-between;margin-top:16px}
+.legend div{font-size:24px;font-weight:700;color:var(--muted);display:flex;align-items:center;gap:9px}
+.legend div b{color:var(--text)}
+.legend div::before{content:'';width:15px;height:15px;border-radius:4px;background:var(--c)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mini{padding:28px 32px;border-radius:30px}
+.mini .s{font-size:96px;font-weight:900;letter-spacing:-4px;line-height:1;margin-top:12px}
+.mini .s small{font-size:28px;font-weight:700;color:var(--muted);letter-spacing:0;margin-left:10px}
+.mini .r{font-size:34px;font-weight:700;margin-top:16px;line-height:1.25}
+.mini .r b{background:var(--accent);color:#fff;padding:0 12px;border-radius:9px}
+.mini .label{font-size:20px;letter-spacing:2.2px}
+/* ===== QUIZ ===== */
+.qtag{align-self:center;background:var(--accent);color:#fff;font-size:24px;font-weight:800;letter-spacing:3px;text-transform:uppercase;padding:13px 28px;border-radius:999px}
+.duel{display:flex;align-items:center;justify-content:center;gap:34px}
+.duel .flag{width:200px;height:134px;border-radius:18px}
+.duel .qm{font-size:170px;font-weight:900;color:var(--accent);line-height:1}
+.qt{font-size:76px;font-weight:800;letter-spacing:-3px;text-align:center;line-height:1.02}
+.opt{position:relative;height:118px;border-radius:30px;background:var(--surface);border:3px solid var(--border);display:flex;align-items:center;gap:24px;padding:0 32px;overflow:hidden;box-shadow:0 8px 24px rgba(5,18,48,.08)}
+.opt + .opt{margin-top:16px}
+.opt .fillb{position:absolute;left:0;top:0;bottom:0;width:var(--w);background:var(--surface2)}
+.opt > *:not(.fillb){position:relative}
+.opt .ltr{width:64px;height:64px;border-radius:50%;background:#051230;color:#fff;display:grid;place-items:center;font-size:30px;font-weight:800;flex:none}
+.opt .flag{width:66px;height:44px;border-radius:8px}
+.opt .nm{font-size:42px;font-weight:800;letter-spacing:-1px;flex:1}
+.opt .pc{font-size:54px;font-weight:800;letter-spacing:-2px}
+.opt.win{border-color:var(--accent)}.opt.win .fillb{background:#fff1e4}.opt.win .ltr{background:var(--accent)}
+.opt.lose{opacity:.6}
+.mtag{background:var(--accent);color:#fff;font-size:17px;font-weight:800;letter-spacing:2px;padding:6px 12px;border-radius:999px;white-space:nowrap}
+.gg{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.gauge{display:flex;align-items:center;gap:22px;padding:24px 28px;border-radius:30px}
+.ringg{width:120px;height:120px;position:relative;display:grid;place-items:center;flex:none}
+.ringg svg{position:absolute;inset:0;transform:rotate(-90deg)}
+.ringg circle{fill:none;stroke-width:13;stroke-linecap:round}
+.ringg .bg{stroke:var(--surface2)}.ringg .fg{stroke:var(--accent);stroke-dasharray:314}
+.ringg b{font-size:36px;font-weight:800;letter-spacing:-1px}
+.gauge s{text-decoration:none;font-size:28px;font-weight:700;line-height:1.15}
+.gauge s span{display:block;font-size:20px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.quiz .ft .note{color:var(--muted)}
+/* ===== TOP3 ===== */
+.ghost{position:absolute;font-weight:900;line-height:.8;color:transparent;-webkit-text-stroke:3px rgba(255,255,255,.07);font-size:1100px;right:-150px;top:-60px;letter-spacing:-20px}
+.t3h{display:flex;align-items:flex-end;gap:24px}
+.t3h .three{font-size:260px;font-weight:900;line-height:.78;color:var(--accent);letter-spacing:-12px;text-shadow:0 0 70px rgba(230,0,35,.55)}
+.t3h .tt{font-size:76px;font-weight:900;letter-spacing:-3px;line-height:.95;text-transform:uppercase}
+.t3h .tt span{display:block;font-size:30px;font-weight:700;color:var(--muted);letter-spacing:-.5px;text-transform:none;margin-top:12px}
+.teams{display:flex;align-items:center;gap:18px;margin-top:26px}
+.teams .flag{width:84px;height:56px;border-radius:9px}
+.teams b{font-size:46px;font-weight:800;letter-spacing:-1.5px}
+.teams i{font-style:italic;font-size:30px;font-weight:900;color:var(--accent-text)}
+.item{display:flex;gap:26px;align-items:center;padding:26px 30px;border-radius:30px}
+.item + .item{margin-top:16px}
+.item .n{font-size:110px;font-weight:900;line-height:.8;letter-spacing:-6px;color:transparent;-webkit-text-stroke:4px var(--accent);width:150px;flex:none}
+.item .c{flex:1;min-width:0}
+.item .ttl{font-size:36px;font-weight:800;letter-spacing:-1px;line-height:1.1}
+.item .sub{font-size:24px;font-weight:600;color:var(--muted);margin-top:8px}
+.item .pills{gap:7px;margin-top:12px}
+.item .pills b{width:46px;height:46px;border-radius:12px;font-size:22px}
+.fm{display:flex;align-items:center;gap:12px;font-size:24px;font-weight:700;margin-top:10px}
+.fm .flag{width:36px;height:24px;border-radius:4px}
+.fm .pills{margin:0}
+.item .big{font-size:84px;font-weight:900;letter-spacing:-4px;line-height:1}
+.item .big span{color:var(--accent)}
+</style>
+</head>
+<body>
+<script>
+const D=__DATA__, P=D.platform;
+/*ENGINE_JS*/
+document.body.style.setProperty('--W',P.w+'px');document.body.style.setProperty('--H',P.h+'px');
+const H=D.home,A=D.away,mx=Math.max(...D.probs);
+const fx=`<div class="fx" style="--t0:0s"><div class="glow"></div><div class="grid"></div><div class="ring b" style="left:${P.w/2-620}px;top:${P.h/2-560}px"></div><div class="ring" style="left:${P.w/2-400}px;top:${P.h/2-340}px"></div><div class="vig"></div></div>`;
+const head=(chip)=>`<div class="hd"><img data-logo><div class="chip">${chip}</div></div>`;
+const foot=`<div class="ft"><div class="note">${D.footNote}</div><div class="url">varim.net</div></div>`;
+let html='';
+if(D.template==='tpl_story.html'){
+  const CH=D.colors.home,CA=D.colors.away,sc=D.score.split('-'),k=P.h<1400?.86:1;
+  html=`<div class="root">${fx}<div class="wrap">${head('Match preview')}
+  <div style="display:flex;flex-direction:column">
+    <div class="kw" style="font-size:${78*k}px;color:var(--muted)">${D.hook[0]}</div>
+    <div class="kw hl" style="--c:${CH};font-size:${168*k}px">${D.hook[1]}</div>
+    <div class="kw" style="font-size:${168*k}px">${D.hook[2]}</div>
+    <div class="kw hl" style="--c:${CA};font-size:${108*k}px">${D.hook[3]}</div>
+    <div class="meta">${D.league} · ${D.when}</div>
+  </div>
+  <div class="card verdict" style="flex-direction:column;align-items:stretch;gap:0">
+    <div style="display:flex;align-items:center;gap:30px"><div class="v">${D.probs[2]}<small>%</small></div><div class="k"><span>The model's verdict</span>${D.pick} win</div></div>
+    <div class="stack"><i style="width:${D.probs[0]}%;background:${CH}"></i><i style="width:${D.probs[1]}%;background:#85858e"></i><i style="width:${D.probs[2]}%;background:${CA}"></i></div>
+    <div class="legend"><div style="--c:${CH}">${H} <b>${D.probs[0]}%</b></div><div style="--c:#85858e">Draw <b>${D.probs[1]}%</b></div><div style="--c:${CA}">${A} <b>${D.probs[2]}%</b></div></div>
+  </div>
+  <div class="two">
+    <div class="card mini"><div class="label">Most likely score</div><div class="s">${sc[0]}–${sc[1]}<small>${D.scorePct}%</small></div></div>
+    <div class="card mini"><div class="label">Last meeting</div><div class="r">${D.h2h.a} <b>${D.h2h.score}</b> ${D.h2h.b}</div><div class="r" style="font-size:22px;color:var(--muted);font-weight:600;margin-top:8px">${D.h2h.date}</div></div>
+  </div>
+  ${foot}</div></div>`;
+}
+if(D.template==='tpl_quiz.html'){
+  document.body.classList.add('light');
+  const names=[H,'Draw',A];
+  const opt=i=>{const p=D.probs[i],w=p==mx;return `<div class="opt ${w?'win':'lose'}" style="--w:${p}%"><div class="fillb"></div><div class="ltr">${'ABC'[i]}</div>${i==1?'':flag(names[i])}<div class="nm">${names[i]}</div>${w?'<div class="mtag">MODEL PICK</div>':''}<div class="pc">${p}%</div></div>`};
+  const g=(p,lab,sub)=>`<div class="card gauge"><div class="ringg"><svg viewBox="0 0 120 120"><circle class="bg" cx="60" cy="60" r="50"/><circle class="fg" cx="60" cy="60" r="50" style="stroke-dashoffset:${314*(1-p/100)}"/></svg><b>${p}%</b></div><s><span>${sub}</span>${lab}</s></div>`;
+  const small=P.h<1400;
+  html=`<div class="root quiz">${fx}<div class="navbar"></div><div class="wrap">${head('Score quiz')}
+  <div style="display:flex;flex-direction:column;gap:${small?18:28}px;margin-top:${small?30:40}px">
+    <div class="qtag">Predict the score</div>
+    ${small?'':`<div class="duel">${flag(H)}<div class="qm">?</div>${flag(A)}</div>`}
+    <div class="qt" style="${small?'font-size:68px':''}">${small?`${H} or ${A}?`:`${H} or<br>${A}?`}</div>
+  </div>
+  <div>${opt(0)}${opt(1)}${opt(2)}</div>
+  <div class="gg">${g(D.over25,'Over 2.5 goals','Clue')}${g(D.btts,'Both teams score','Clue')}</div>
+  ${foot}</div></div>`;
+}
+if(D.template==='tpl_top3.html'){
+  const sc=D.score.split('-'),small=P.h<1400;
+  const fm=(t,f)=>`<div class="fm">${flag(t)}<span style="width:120px">${t}</span><div class="pills">${pills(f,0)}</div></div>`;
+  html=`<div class="root">${fx}<div class="ghost">3</div><div class="wrap">${head('3 stats')}
+  <div>
+    <div class="t3h"><div class="three" style="${small?'font-size:210px':''}">3</div><div class="tt" style="${small?'font-size:64px':''}">Stats to know<span>before kick-off · ${D.when}</span></div></div>
+    <div class="teams">${flag(H)}<b>${H}</b><i>VS</i><b>${A}</b>${flag(A)}</div>
+  </div>
+  <div>
+    <div class="card item"><div class="n">#3</div><div class="c"><div class="ttl">${small?`${A} unbeaten in 5 · ${H} 1 win in 5`:`${A} unbeaten in 5`}</div>${small?'':fm(A,D.formAway)+fm(H,D.formHome)}</div></div>
+    <div class="card item"><div class="n">#2</div><div class="c"><div class="ttl">Last meeting</div><div class="big" style="font-size:${small?60:64}px;white-space:nowrap">${D.h2h.a} ${D.h2h.ga}<span>–</span>${D.h2h.gb} ${D.h2h.b}</div><div class="sub">${D.h2h.date} · ${D.table[0][1]} 1st, ${D.table[1][1]} 3rd in group</div></div></div>
+    <div class="card item"><div class="n">#1</div><div class="c"><div class="ttl">The model backs ${D.pick}</div><div class="big" style="font-size:${small?60:76}px">${mx}<span>%</span> <span style="color:var(--muted);font-size:.42em;letter-spacing:0;font-weight:700">· most likely ${sc[0]}–${sc[1]}</span></div></div></div>
+  </div>
+  ${foot}</div></div>`;
+}
+document.body.insertAdjacentHTML('afterbegin',html);
+document.documentElement.style.setProperty('--logo',`url(${LOGO})`);
+document.querySelectorAll('[data-logo]').forEach(i=>i.src=LOGO);
+</script>
+</body>
+</html>

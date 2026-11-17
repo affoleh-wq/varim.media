@@ -1,0 +1,60 @@
+{
+ "slug": "germany-netherlands",
+ "home": "Germany",
+ "away": "Netherlands",
+ "league": "UEFA Nations League",
+ "when": "16 NOV 2026 · 19:45 UTC",
+ "probs": [
+  59,
+  23,
+  19
+ ],
+ "pick": "Germany",
+ "pickPct": "58.6",
+ "score": "1-0",
+ "scorePct": "11.7",
+ "others": [
+  [
+   "1-1",
+   "10.8"
+  ],
+  [
+   "2-0",
+   "10.7"
+  ],
+  [
+   "2-1",
+   "9.8"
+  ],
+  [
+   "3-0",
+   "6.5"
+  ]
+ ],
+ "over25": 52,
+ "btts": 51,
+ "formHome": [
+  "W",
+  "D",
+  "W",
+  "L",
+  "D"
+ ],
+ "formAway": [
+  "W",
+  "W",
+  "D",
+  "W",
+  "D"
+ ],
+ "lastHome": "Serbia 1–3 Germany",
+ "lastAway": "Netherlands 7–0 Greece",
+ "statHome": "19 scored · 7 conceded",
+ "statAway": "16 scored · 10 conceded",
+ "h2h": {
+  "date": "24 Sep 2026",
+  "a": "Netherlands",
+  "score": "1–1",
+  "b": "Germany"
+ }
+}

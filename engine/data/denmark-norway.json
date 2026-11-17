@@ -1,0 +1,38 @@
+{
+ "slug": "denmark-norway",
+ "template": "tpl_quiz.html",
+ "home": "Denmark",
+ "away": "Norway",
+ "league": "UEFA Nations League",
+ "when": "17 Nov 2026 · 19:45 UTC",
+ "probs": [
+  48,
+  23,
+  29
+ ],
+ "over25": 62,
+ "btts": 63,
+ "clue": "Expect goals",
+ "h2h": {
+  "date": "24 Sep 2026",
+  "a": "Norway",
+  "score": "3–2",
+  "b": "Denmark"
+ },
+ "score": "1-1",
+ "scorePct": "10.2",
+ "others": [
+  [
+   "2-1",
+   "9.3"
+  ],
+  [
+   "1-0",
+   "7.3"
+  ],
+  [
+   "1-2",
+   "7.1"
+  ]
+ ]
+}
