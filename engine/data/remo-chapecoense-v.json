@@ -1,0 +1,46 @@
+{
+ "slug": "remo-chapecoense-v",
+ "template": "tpl_verdict.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Remo",
+ "away": "Chapecoense",
+ "short": {
+  "home": "Remo",
+  "away": "Chape"
+ },
+ "league": "Brasileirão",
+ "when": "Tonight",
+ "colors": {
+  "home": "#0b2a6b",
+  "away": "#0a7d3b"
+ },
+ "probs": [
+  67,
+  21,
+  11
+ ],
+ "pick": "Remo",
+ "score": "1-0",
+ "scorePct": "16.0",
+ "fact": {
+  "label": "Key stat",
+  "big": "21",
+  "line": "Goals Chapecoense<br>conceded in 9 games",
+  "sub": "And just 5 scored in that run"
+ },
+ "ask": "Your<br><span>score?</span>",
+ "url": "https://varim.net/predictions/remo-vs-chapecoense-2026-11-18-1270080840/"
+}

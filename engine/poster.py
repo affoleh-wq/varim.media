@@ -14,7 +14,7 @@ async def main():
     data = json.load(open(sys.argv[1]))
     out = f"{HERE}/out/{data['slug']}"
     os.makedirs(out, exist_ok=True)
-    tpl = open(HERE + "/poster.html").read().replace("/*ENGINE_CSS*/", open(HERE + "/engine.css").read()).replace("/*ENGINE_JS*/", open(HERE + "/engine.js").read())
+    tpl = open(HERE + "/" + ("poster_verdict.html" if data.get("template") == "tpl_verdict.html" else "poster.html")).read().replace("/*ENGINE_CSS*/", open(HERE + "/engine.css").read()).replace("/*ENGINE_JS*/", open(HERE + "/engine.js").read())
     logo = "data:image/png;base64," + base64.b64encode(open(HERE + "/logo.png", "rb").read()).decode()
     async with async_playwright() as p:
         b = await p.chromium.launch(executable_path="/usr/bin/google-chrome")

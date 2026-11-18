@@ -1,0 +1,46 @@
+{
+ "slug": "flamengo-athletico-v",
+ "template": "tpl_verdict.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Flamengo",
+ "away": "Athletico-PR",
+ "short": {
+  "home": "Flamengo",
+  "away": "Athletico"
+ },
+ "league": "Brasileirão",
+ "when": "Tonight",
+ "colors": {
+  "home": "#c8102e",
+  "away": "#1b1b1f"
+ },
+ "probs": [
+  74,
+  16,
+  10
+ ],
+ "pick": "Flamengo",
+ "score": "2-0",
+ "scorePct": "12.3",
+ "fact": {
+  "label": "Key stat",
+  "big": "5/5",
+  "line": "Flamengo have won<br>their last five",
+  "sub": "Only 7 conceded in their last 10 games"
+ },
+ "ask": "Your<br><span>score?</span>",
+ "url": "https://varim.net/predictions/flamengo-vs-athletico-paranaense-2026-11-18-1270078287/"
+}

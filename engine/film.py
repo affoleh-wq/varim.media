@@ -10,8 +10,9 @@ open(HERE + "/build_" + DATA["slug"] + ".html", "w").write(_h)
 OUT = HERE + "/out/" + DATA["slug"]
 URL = "file://" + HERE + "/build_" + DATA["slug"] + ".html"
 FPS = 30
-SCENES = {"s1": 3.5, "s2": 5.0, "s3": 4.5, "s4": 4.5, "s5": 3.5}
+SCENES = DATA.get("scenes") or {"s1": 3.5, "s2": 5.0, "s3": 4.5, "s4": 4.5, "s5": 3.5}
 CHECK = {"s1a": 0.0, "s1": 2.8, "s2": 3.3, "s3": 3.2, "s4": 3.2, "s5": 2.6, "s1b": 0.62, "s2b": 0.2, "s3b": 0.7, "s4b": 4.3}
+CHECK = DATA.get("checks") or CHECK
 
 
 async def open_scene(browser, sid):

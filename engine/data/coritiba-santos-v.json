@@ -1,0 +1,46 @@
+{
+ "slug": "coritiba-santos-v",
+ "template": "tpl_verdict.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Coritiba",
+ "away": "Santos",
+ "short": {
+  "home": "Coritiba",
+  "away": "Santos"
+ },
+ "league": "Brasileirão",
+ "when": "Tonight",
+ "colors": {
+  "home": "#00804a",
+  "away": "#5d5d66"
+ },
+ "probs": [
+  11,
+  20,
+  69
+ ],
+ "pick": "Santos",
+ "score": "0-1",
+ "scorePct": "15.1",
+ "fact": {
+  "label": "Last meeting",
+  "big": "1-0",
+  "line": "Coritiba won at Santos<br>in May",
+  "sub": "Santos 0–1 Coritiba · 17 May 2026"
+ },
+ "ask": "Upset<br><span>again?</span>",
+ "url": "https://varim.net/predictions/coritiba-vs-santos-2026-11-18-1270076585/"
+}
