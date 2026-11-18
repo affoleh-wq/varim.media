@@ -6,7 +6,7 @@
 /*ENGINE_CSS*/
 .ghost{position:absolute;font-weight:900;line-height:.8;color:transparent;-webkit-text-stroke:3px rgba(255,255,255,.09);pointer-events:none;letter-spacing:-20px}
 /* s1 */
-#s1 .in{justify-content:center}
+#s1 .in{justify-content:flex-start}
 #s1 .ghost{font-size:1300px;right:-120px;top:-170px}
 #s1 .three{font-size:420px;font-weight:900;line-height:.82;color:var(--accent);letter-spacing:-20px;text-shadow:0 0 90px rgba(230,0,35,.6);align-self:flex-start}
 #s1 .burst{width:300px;height:300px;left:40px;top:120px}
@@ -80,11 +80,11 @@ const L=D.table;
 document.body.insertAdjacentHTML('afterbegin',`
 <section class="scene" id="s1" style="--dur:3.5s;--t0:0s;--shake:.62s"><div class="body"><div class="in">
   <div class="ghost">3</div>
-  <div class="three slam" style="--d:.42s">3</div><div class="burst" style="--d:.62s"></div>
-  <div class="t1" data-split style="--d:.7s">stats to know</div>
-  <div class="t2 a" style="--d:1.05s">before kick-off tonight</div>
-  <div class="teams a" style="--d:1.3s">${flag(H,'sh')}<b>${H}</b><i>VS</i><b>${A}</b>${flag(A,'sh')}</div>
-  <div class="meta a" style="--d:1.55s">${D.league} · ${D.when}</div>
+  <div class="three now">3</div><div class="burst" style="--d:.2s"></div>
+  <div class="t1 now">stats to know</div>
+  <div class="t2 a" style="--d:.05s">before kick-off tonight</div>
+  <div class="teams a" style="--d:.05s">${flag(H,'sh')}<b>${H}</b><i>VS</i><b>${A}</b>${flag(A,'sh')}</div>
+  <div class="meta a" style="--d:.05s">${D.league} · ${D.when}</div>
 </div></div></section>
 
 <section class="scene" id="s2" style="--dur:5s;--t0:3.5s"><div class="body"><div class="in">

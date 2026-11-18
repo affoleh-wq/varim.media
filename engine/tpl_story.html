@@ -6,12 +6,18 @@
 /*ENGINE_CSS*/
 .code{display:inline-grid;place-items:center;background:var(--c);color:#fff;font-weight:900;font-style:italic;letter-spacing:1px;border-radius:14px;transform:skewX(-8deg);box-shadow:0 16px 40px rgba(0,0,0,.45)}
 /* s1 — хук */
-#s1 .in{justify-content:center;gap:6px}
+#s1 .in{justify-content:flex-start;gap:6px}
+#s1 .fav{font-weight:900;letter-spacing:-4px;line-height:1;text-transform:uppercase;align-self:flex-start;position:relative;color:#fff;padding:6px 26px;margin-left:-10px;white-space:nowrap}
+#s1 .fav::before{content:'';position:absolute;inset:4% 0 0;background:var(--c);transform:skewX(-10deg);z-index:-1}
+#s1 .pct{font-size:330px;font-weight:900;letter-spacing:-16px;line-height:.86;margin-top:14px;text-shadow:0 0 90px rgba(230,0,35,.55)}
+#s1 .pct small{font-size:170px;letter-spacing:0}
+#s1 .q{font-weight:800;letter-spacing:-2px;line-height:1.05;margin-top:30px;white-space:nowrap}
+#s1 .q b{color:var(--accent-text);font-weight:900}
 .kw{font-weight:900;letter-spacing:-6px;line-height:.98;text-transform:uppercase;align-self:flex-start;position:relative}
 .kw.hl{color:#fff;padding:0 26px;margin-left:-10px}
 .kw.hl::before{content:'';position:absolute;inset:6% 0 2%;background:var(--c);transform:skewX(-10deg) scaleX(0);transform-origin:left;animation:hlin .45s var(--ease) both;animation-delay:var(--hd);z-index:-1}
 @keyframes hlin{to{transform:skewX(-10deg) scaleX(1)}}
-#s1 .meta{margin-top:56px;font-size:34px;font-weight:700;color:var(--muted);letter-spacing:.5px}
+#s1 .meta{margin-top:44px;font-size:34px;font-weight:700;color:var(--muted);letter-spacing:.5px}
 #s1 .vsrow{display:flex;align-items:center;gap:22px;margin-top:40px}
 #s1 .vsrow .code{font-size:56px;width:180px;height:96px}
 #s1 .vsrow span{font-size:40px;font-weight:900;font-style:italic;color:var(--muted)}
@@ -67,17 +73,18 @@ const D=__DATA__;
 const H=D.home,A=D.away,CH=D.colors.home,CA=D.colors.away;
 const code=(c,col,cls='',st='')=>`<div class="code ${cls}" style="--c:${col};${st}">${c}</div>`;
 const sc=D.score.split('-');
+const favH=D.probs[0]>=D.probs[2], FAV=favH?H:A, DOG=favH?A:H, FC=favH?CH:CA, FP=favH?D.probs[0]:D.probs[2];
+const qTxt=`Can ${DOG} stop them?`, favSize=Math.min(190,Math.floor(1250/FAV.length)), qSize=Math.min(84,Math.floor(1650/qTxt.length));
 const better=(a,b,lowWins)=>lowWins?(a<b?['','dim']:['dim','']):(a>b?['','dim']:['dim','']);
 const pos=better(D.posHome,D.posAway,true), pts=better(D.ptsHome,D.ptsAway), wn=better(D.winsHome,D.winsAway);
 const ord=n=>n+(['th','st','nd','rd'][(n%100>10&&n%100<14)?0:Math.min(n%10,4)%4]||'th');
 document.body.insertAdjacentHTML('afterbegin',`
 <section class="scene" id="s1" style="--dur:3.5s;--t0:0s;--shake:.62s"><div class="body"><div class="in">
-  <div class="kw a" style="--d:.05s;font-size:120px;color:var(--muted)">${D.hook[0]}</div>
-  <div class="kw hl a" style="--d:.22s;--hd:.3s;--c:${CH};font-size:220px">${D.hook[1]}</div>
-  <div class="kw slam" style="--d:.5s;font-size:220px">${D.hook[2]}</div>
-  <div class="kw hl a" style="--d:.95s;--hd:1.05s;--c:${CA};font-size:${D.hookSize||140}px">${D.hook[3]}</div>
-  <div class="meta a" style="--d:1.4s">${D.league} · ${D.when}</div>
-  <div class="vsrow a" style="--d:1.65s">${code(D.codes.home,CH)}<span>VS</span>${code(D.codes.away,CA)}</div>
+  <div class="fav now" style="--c:${FC};font-size:${favSize}px">${FAV}</div>
+  <div class="pct now">${FP}<small>%</small></div>
+  <div class="q now" style="font-size:${qSize}px">Can <b>${DOG}</b> stop them?</div>
+  <div class="meta a" style="--d:.05s">${D.league} · ${D.when}</div>
+  <div class="vsrow a" style="--d:.05s">${code(D.codes.home,CH)}<span>VS</span>${code(D.codes.away,CA)}</div>
 </div></div></section>
 
 <section class="scene" id="s2" style="--dur:5s;--t0:3.5s"><div class="body"><div class="in">
@@ -92,7 +99,7 @@ document.body.insertAdjacentHTML('afterbegin',`
 <section class="scene" id="s3" style="--dur:4.5s;--t0:8.5s;--shake:.78s"><div class="body"><div class="in">
   <div class="label a" style="--d:.2s">The model's verdict</div>
   <div class="who a" style="--d:.35s">${D.pick} win</div>
-  <div class="big slam" style="--d:.5s"><span class="count" style="--to:${D.probs[2]};--d:.5s"></span><small>%</small></div>
+  <div class="big slam" style="--d:.5s"><span class="count" style="--to:${D.pick==H?D.probs[0]:D.pick==A?D.probs[2]:D.probs[1]};--d:.5s"></span><small>%</small></div>
   <div class="burst" style="--d:.78s"></div>
   <div class="stack">
     <i style="width:${D.probs[0]}%;background:${CH};--d:1.3s"></i>
