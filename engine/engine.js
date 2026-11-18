@@ -32,3 +32,5 @@ function ENGINE(o){
   document.getElementById(location.hash.slice(1)||'s1').classList.add('on');
   window.seek=t=>{document.getAnimations().forEach(a=>{a.pause();a.currentTime=t})};
 }
+// подгоняет размер шрифта, чтобы текст влез в одну строку
+const fit=(sel,min=36)=>document.querySelectorAll(sel).forEach(e=>{let s=parseFloat(getComputedStyle(e).fontSize);while(e.scrollWidth>e.clientWidth&&s>min){s-=2;e.style.fontSize=s+'px'}});

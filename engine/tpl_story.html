@@ -5,19 +5,17 @@
 <style>
 /*ENGINE_CSS*/
 .code{display:inline-grid;place-items:center;background:var(--c);color:#fff;font-weight:900;font-style:italic;letter-spacing:1px;border-radius:14px;transform:skewX(-8deg);box-shadow:0 16px 40px rgba(0,0,0,.45)}
-/* s1 — хук */
-#s1 .in{justify-content:flex-start;gap:6px}
-#s1 .fav{font-weight:900;letter-spacing:-4px;line-height:1;text-transform:uppercase;align-self:flex-start;position:relative;color:#fff;padding:6px 26px;margin-left:-10px;white-space:nowrap}
-#s1 .fav::before{content:'';position:absolute;inset:4% 0 0;background:var(--c);transform:skewX(-10deg);z-index:-1}
-#s1 .pct{font-size:330px;font-weight:900;letter-spacing:-16px;line-height:.86;margin-top:14px;text-shadow:0 0 90px rgba(230,0,35,.55)}
-#s1 .pct small{font-size:170px;letter-spacing:0}
-#s1 .q{font-weight:800;letter-spacing:-2px;line-height:1.05;margin-top:30px;white-space:nowrap}
-#s1 .q b{color:var(--accent-text);font-weight:900}
+/* s1 — хук: фаворит и его % видны с первого кадра */
+#s1 .in{justify-content:flex-start;padding-top:10px}
 .kw{font-weight:900;letter-spacing:-6px;line-height:.98;text-transform:uppercase;align-self:flex-start;position:relative}
 .kw.hl{color:#fff;padding:0 26px;margin-left:-10px}
-.kw.hl::before{content:'';position:absolute;inset:6% 0 2%;background:var(--c);transform:skewX(-10deg) scaleX(0);transform-origin:left;animation:hlin .45s var(--ease) both;animation-delay:var(--hd);z-index:-1}
-@keyframes hlin{to{transform:skewX(-10deg) scaleX(1)}}
-#s1 .meta{margin-top:44px;font-size:34px;font-weight:700;color:var(--muted);letter-spacing:.5px}
+.kw.hl::before{content:'';position:absolute;inset:6% 0 2%;background:var(--c);transform:skewX(-10deg);z-index:-1}
+#s1 .fav{font-size:130px;white-space:nowrap;max-width:100%}
+#s1 .pct{font-size:250px;font-weight:900;letter-spacing:-12px;line-height:.9;margin-top:14px;text-shadow:0 0 90px rgba(230,0,35,.6)}
+#s1 .pct small{font-size:130px;letter-spacing:0}
+#s1 .ask{font-size:68px;font-weight:800;letter-spacing:-2.5px;line-height:1.1;margin-top:34px;white-space:nowrap;width:100%;overflow:hidden}
+#s1 .ask b{color:var(--accent-text)}
+#s1 .meta{margin-top:56px;font-size:34px;font-weight:700;color:var(--muted);letter-spacing:.5px}
 #s1 .vsrow{display:flex;align-items:center;gap:22px;margin-top:40px}
 #s1 .vsrow .code{font-size:56px;width:180px;height:96px}
 #s1 .vsrow span{font-size:40px;font-weight:900;font-style:italic;color:var(--muted)}
@@ -73,25 +71,24 @@ const D=__DATA__;
 const H=D.home,A=D.away,CH=D.colors.home,CA=D.colors.away;
 const code=(c,col,cls='',st='')=>`<div class="code ${cls}" style="--c:${col};${st}">${c}</div>`;
 const sc=D.score.split('-');
-const favH=D.probs[0]>=D.probs[2], FAV=favH?H:A, DOG=favH?A:H, FC=favH?CH:CA, FP=favH?D.probs[0]:D.probs[2];
-const qTxt=`Can ${DOG} stop them?`, favSize=Math.min(190,Math.floor(1250/FAV.length)), qSize=Math.min(84,Math.floor(1650/qTxt.length));
-const better=(a,b,lowWins)=>lowWins?(a<b?['','dim']:['dim','']):(a>b?['','dim']:['dim','']);
-const pos=better(D.posHome,D.posAway,true), pts=better(D.ptsHome,D.ptsAway), wn=better(D.winsHome,D.winsAway);
+const better=(a,b,lowWins)=>a==b?['','']:lowWins?(a<b?['','dim']:['dim','']):(a>b?['','dim']:['dim','']);
+const fi=D.probs[0]>D.probs[2]?0:2, FAV=fi?A:H, DOG=fi?H:A, CF=fi?CA:CH;
+const ask=D.ask||`Can <b>${DOG}</b> stop them?`;
+const tape=D.tape||[['Group position',D.posHome,D.posAway,1,'ord'],['Points',D.ptsHome,D.ptsAway],['Wins · last 5',D.winsHome,D.winsAway]];
+const cell=(v,d,f)=>f=='ord'?ord(v):Number.isInteger(v)?`<span class="count" style="--to:${v};--d:${d}s"></span>`:v;
 const ord=n=>n+(['th','st','nd','rd'][(n%100>10&&n%100<14)?0:Math.min(n%10,4)%4]||'th');
 document.body.insertAdjacentHTML('afterbegin',`
-<section class="scene" id="s1" style="--dur:3.5s;--t0:0s;--shake:.62s"><div class="body"><div class="in">
-  <div class="fav now" style="--c:${FC};font-size:${favSize}px">${FAV}</div>
-  <div class="pct now">${FP}<small>%</small></div>
-  <div class="q now" style="font-size:${qSize}px">Can <b>${DOG}</b> stop them?</div>
-  <div class="meta a" style="--d:.05s">${D.league} · ${D.when}</div>
-  <div class="vsrow a" style="--d:.05s">${code(D.codes.home,CH)}<span>VS</span>${code(D.codes.away,CA)}</div>
+<section class="scene" id="s1" style="--dur:3.5s;--t0:0s;--shake:99s"><div class="body"><div class="in">
+  <div class="kw hl fav now" style="--c:${CF}">${FAV}</div>
+  <div class="pct now">${D.probs[fi]}<small>%</small></div>
+  <div class="ask aq" style="--d:.05s">${ask}</div>
+  <div class="meta aq" style="--d:.05s">${D.league} · ${D.when}</div>
+  <div class="vsrow aq" style="--d:.05s">${code(D.codes.home,CH)}<span>VS</span>${code(D.codes.away,CA)}</div>
 </div></div></section>
 
 <section class="scene" id="s2" style="--dur:5s;--t0:3.5s"><div class="body"><div class="in">
   <div class="tape-h a" style="--d:.25s">${code(D.codes.home,CH)}<div class="t">Tale of the tape</div>${code(D.codes.away,CA)}</div>
-  <div class="card tr3 fl" style="--d:.45s"><div class="v ${pos[0]}">${ord(D.posHome)}</div><div class="k">Group position</div><div class="v r ${pos[1]}">${ord(D.posAway)}</div></div>
-  <div class="card tr3 fr2" style="--d:.6s"><div class="v ${pts[0]}"><span class="count" style="--to:${D.ptsHome};--d:.75s"></span></div><div class="k">Points</div><div class="v r ${pts[1]}"><span class="count" style="--to:${D.ptsAway};--d:.75s"></span></div></div>
-  <div class="card tr3 fl" style="--d:.75s"><div class="v ${wn[0]}"><span class="count" style="--to:${D.winsHome};--d:.9s"></span></div><div class="k">Wins · last 5</div><div class="v r ${wn[1]}"><span class="count" style="--to:${D.winsAway};--d:.9s"></span></div></div>
+  ${tape.map((r,i)=>{const d=.45+i*.15,c=better(r[1],r[2],r[3]);return `<div class="card tr3 ${i%2?'fr2':'fl'}" style="--d:${d}s"><div class="v ${c[0]}">${cell(r[1],d+.15,r[4])}</div><div class="k">${r[0]}</div><div class="v r ${c[1]}">${cell(r[2],d+.15,r[4])}</div></div>`}).join('')}
   <div class="card tr3 form fr2" style="--d:.9s"><div class="pills">${pills(D.formHome,1.05)}</div><div class="k">Form</div><div class="pills">${pills(D.formAway,1.45)}</div></div>
   <div class="banner" style="--d:2.4s">${D.banner}</div>
 </div></div></section>
@@ -99,7 +96,7 @@ document.body.insertAdjacentHTML('afterbegin',`
 <section class="scene" id="s3" style="--dur:4.5s;--t0:8.5s;--shake:.78s"><div class="body"><div class="in">
   <div class="label a" style="--d:.2s">The model's verdict</div>
   <div class="who a" style="--d:.35s">${D.pick} win</div>
-  <div class="big slam" style="--d:.5s"><span class="count" style="--to:${D.pick==H?D.probs[0]:D.pick==A?D.probs[2]:D.probs[1]};--d:.5s"></span><small>%</small></div>
+  <div class="big slam" style="--d:.5s"><span class="count" style="--to:${D.probs[fi]};--d:.5s"></span><small>%</small></div>
   <div class="burst" style="--d:.78s"></div>
   <div class="stack">
     <i style="width:${D.probs[0]}%;background:${CH};--d:1.3s"></i>
@@ -133,6 +130,7 @@ document.body.insertAdjacentHTML('afterbegin',`
   <div class="url">varim.net</div>
   <div class="note a" style="--d:1.5s">An estimate is not a guarantee of the result.</div>
 </div></div></section>`);
+document.fonts.ready.then(()=>{fit('#s1 .ask',40);fit('#s1 .fav',70)});
 ENGINE({chip:'Match preview',ticker:['Model prediction',D.league,`${H} vs ${A}`,D.when,'varim.net']});
 </script>
 </body>

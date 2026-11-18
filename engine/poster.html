@@ -104,22 +104,21 @@ const foot=`<div class="ft"><div class="note">${D.footNote}</div><div class="url
 let html='';
 if(D.template==='tpl_story.html'){
   const CH=D.colors.home,CA=D.colors.away,sc=D.score.split('-'),k=P.h<1400?.86:1;
+  const fi=D.probs[0]>D.probs[2]?0:2, FAV=fi?A:H, DOG=fi?H:A, CF=fi?CA:CH;
   html=`<div class="root">${fx}<div class="wrap">${head('Match preview')}
   <div style="display:flex;flex-direction:column">
-    <div class="kw" style="font-size:${78*k}px;color:var(--muted)">${D.hook[0]}</div>
-    <div class="kw hl" style="--c:${CH};font-size:${168*k}px">${D.hook[1]}</div>
-    <div class="kw" style="font-size:${168*k}px">${D.hook[2]}</div>
-    <div class="kw hl" style="--c:${CA};font-size:${108*k}px">${D.hook[3]}</div>
+    <div class="kw hl" style="--c:${CF};font-size:${120*k}px;white-space:nowrap">${FAV}</div>
+    <div class="ask" style="font-size:${76*k}px;font-weight:800;letter-spacing:-2.5px;margin-top:24px;white-space:nowrap">${D.ask||`Can <span style="color:var(--accent-text)">${DOG}</span> stop them?`}</div>
     <div class="meta">${D.league} · ${D.when}</div>
   </div>
   <div class="card verdict" style="flex-direction:column;align-items:stretch;gap:0">
-    <div style="display:flex;align-items:center;gap:30px"><div class="v">${D.probs[2]}<small>%</small></div><div class="k"><span>The model's verdict</span>${D.pick} win</div></div>
+    <div style="display:flex;align-items:center;gap:30px"><div class="v">${D.probs[fi]}<small>%</small></div><div class="k"><span>The model's verdict</span>${D.pick} win</div></div>
     <div class="stack"><i style="width:${D.probs[0]}%;background:${CH}"></i><i style="width:${D.probs[1]}%;background:#85858e"></i><i style="width:${D.probs[2]}%;background:${CA}"></i></div>
     <div class="legend"><div style="--c:${CH}">${H} <b>${D.probs[0]}%</b></div><div style="--c:#85858e">Draw <b>${D.probs[1]}%</b></div><div style="--c:${CA}">${A} <b>${D.probs[2]}%</b></div></div>
   </div>
   <div class="two">
     <div class="card mini"><div class="label">Most likely score</div><div class="s">${sc[0]}–${sc[1]}<small>${D.scorePct}%</small></div></div>
-    <div class="card mini"><div class="label">Last meeting</div><div class="r">${D.h2h.a} <b>${D.h2h.score}</b> ${D.h2h.b}</div><div class="r" style="font-size:22px;color:var(--muted);font-weight:600;margin-top:8px">${D.h2h.date}</div></div>
+    ${D.h2h?`<div class="card mini"><div class="label">Last meeting</div><div class="r">${D.h2h.a} <b>${D.h2h.score}</b> ${D.h2h.b}</div><div class="r" style="font-size:22px;color:var(--muted);font-weight:600;margin-top:8px">${D.h2h.date}</div></div>`:`<div class="card mini"><div class="label">Form · last 5</div><div class="r">${H} ${D.formHome.join(' ')}<br>${A} ${D.formAway.join(' ')}</div></div>`}
   </div>
   ${foot}</div></div>`;
 }
@@ -141,15 +140,15 @@ if(D.template==='tpl_quiz.html'){
 }
 if(D.template==='tpl_top3.html'){
   const sc=D.score.split('-'),small=P.h<1400;
-  const fm=(t,f)=>`<div class="fm">${flag(t)}<span style="width:120px">${t}</span><div class="pills">${pills(f,0)}</div></div>`;
+  const fm=(t,f)=>`<div class="fm">${flag(t)}<span style="min-width:120px;white-space:nowrap">${t}</span><div class="pills">${pills(f,0)}</div></div>`;
   html=`<div class="root">${fx}<div class="ghost">3</div><div class="wrap">${head('3 stats')}
   <div>
     <div class="t3h"><div class="three" style="${small?'font-size:210px':''}">3</div><div class="tt" style="${small?'font-size:64px':''}">Stats to know<span>before kick-off · ${D.when}</span></div></div>
     <div class="teams">${flag(H)}<b>${H}</b><i>VS</i><b>${A}</b>${flag(A)}</div>
   </div>
   <div>
-    <div class="card item"><div class="n">#3</div><div class="c"><div class="ttl">${small?`${A} unbeaten in 5 · ${H} 1 win in 5`:`${A} unbeaten in 5`}</div>${small?'':fm(A,D.formAway)+fm(H,D.formHome)}</div></div>
-    <div class="card item"><div class="n">#2</div><div class="c"><div class="ttl">Last meeting</div><div class="big" style="font-size:${small?60:64}px;white-space:nowrap">${D.h2h.a} ${D.h2h.ga}<span>–</span>${D.h2h.gb} ${D.h2h.b}</div><div class="sub">${D.h2h.date} · ${D.table[0][1]} 1st, ${D.table[1][1]} 3rd in group</div></div></div>
+    <div class="card item"><div class="n">#3</div><div class="c"><div class="ttl">${D.stat3.replace(/<br>/g,' ')}</div>${small?'':((D.hot||'away')=='away'?fm(A,D.formAway)+fm(H,D.formHome):fm(H,D.formHome)+fm(A,D.formAway))}</div></div>
+    <div class="card item"><div class="n">#2</div><div class="c">${D.h2h?`<div class="ttl">Last meeting</div><div class="big" style="font-size:${small?60:64}px;white-space:nowrap">${D.h2h.a} ${D.h2h.ga}<span>–</span>${D.h2h.gb} ${D.h2h.b}</div><div class="sub">${D.h2h.date}${D.table?` · ${D.table[0][1]} ${D.table[0][0]==1?'1st':D.table[0][0]}, ${D.table[1][1]} ${D.table[1][0]==3?'3rd':D.table[1][0]} in group`:''}</div>`:`<div class="ttl">${D.stat2.replace(/<br>/g,' ')}</div><div class="sub" style="font-size:28px;color:var(--text);font-weight:700">${D.cmp.map(r=>`${r[0]}: ${H} ${r[1]} · ${A} ${r[2]}`).join('<br>')}</div><div class="sub">${D.cmpNote}</div>`}</div></div>
     <div class="card item"><div class="n">#1</div><div class="c"><div class="ttl">The model backs ${D.pick}</div><div class="big" style="font-size:${small?60:76}px">${mx}<span>%</span> <span style="color:var(--muted);font-size:.42em;letter-spacing:0;font-weight:700">· most likely ${sc[0]}–${sc[1]}</span></div></div></div>
   </div>
   ${foot}</div></div>`;

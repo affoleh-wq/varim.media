@@ -7,12 +7,12 @@
 .qtag{align-self:center;background:var(--accent);color:#fff;font-size:30px;font-weight:800;letter-spacing:3px;text-transform:uppercase;padding:16px 34px;border-radius:999px}
 #s2 .in,#s3 .in,#s4 .in{justify-content:center;padding-bottom:40px}
 /* s1 */
-#s1 .in{align-items:center;text-align:center;justify-content:flex-start}
-.duel{display:flex;align-items:center;gap:44px;margin-top:70px;position:relative}
+#s1 .in{align-items:center;text-align:center;justify-content:flex-start;padding-top:10px}
+.duel{display:flex;align-items:center;gap:44px;margin-top:60px;position:relative}
 .duel .flag{width:280px;height:190px;border-radius:24px}
 .duel .qm{font-size:230px;font-weight:900;color:var(--accent);line-height:1;width:120px}
 #s1 .burst{width:260px;height:260px;left:calc(50% - 130px);top:-40px}
-#s1 h1{font-size:104px;font-weight:800;letter-spacing:-4px;line-height:1.02;margin-top:40px}
+#s1 h1{font-size:112px;font-weight:800;letter-spacing:-4px;line-height:1.02;margin-top:40px}
 #s1 .sub{font-size:38px;font-weight:600;color:var(--muted);margin-top:30px;line-height:1.3}
 /* s2 — варианты ответа */
 .qh{display:flex;justify-content:space-between;align-items:center}
@@ -91,11 +91,11 @@ const names=[H,'Draw',A], mx=Math.max(...D.probs);
 const opt=(i,d)=>{const p=D.probs[i],win=p==mx;return `<div class="opt ${win?'win':'lose'} fl" style="--d:${d}s;--w:${p}%;--fd:${.6+i*.15}s"><div class="fillb"></div><div class="ltr">${'ABC'[i]}</div>${i==1?'':flag(names[i])}<div class="nm">${names[i]}</div>${win?'<div class="mtag">MODEL PICK</div>':''}<div class="pc">${p}%</div></div>`};
 const gauge=(p,lab,d)=>`<div class="card gauge pop" style="--d:${d}s"><div class="ringg"><svg viewBox="0 0 280 280"><circle class="bg" cx="140" cy="140" r="120"/><circle class="fg" cx="140" cy="140" r="120" style="--p:${p/100};--d:${d+.15}s"/></svg><b><span class="count" style="--to:${p};--d:${d+.15}s"></span><small>%</small></b></div><s>${lab}</s></div>`;
 document.body.insertAdjacentHTML('afterbegin',`
-<section class="scene" id="s1" style="--dur:3.5s;--t0:0s;--shake:.62s"><div class="body"><div class="in">
-  <div class="qtag" style="--d:0s">Predict the score</div>
-  <h1 class="now">${H} or ${A}?</h1>
-  <div class="duel">${flag(H,'sh fl','--d:.05s')}<div class="qm slam" style="--d:.05s">?</div>${flag(A,'sh fr2','--d:.05s')}<div class="burst" style="--d:.3s"></div></div>
-  <div class="sub a" style="--d:.05s">Make your call —<br>then see what the model says</div>
+<section class="scene" id="s1" style="--dur:3.5s;--t0:0s;--shake:99s"><div class="body"><div class="in">
+  <div class="qtag now">Predict the score</div>
+  <h1 class="now">${H} or<br>${A}?</h1>
+  <div class="duel aq" style="--d:.05s">${flag(H,'sh')}<div class="qm">?</div>${flag(A,'sh')}</div>
+  <div class="sub aq" style="--d:.05s">Make your call —<br>then see what the model says</div>
 </div></div></section>
 
 <section class="scene" id="s2" style="--dur:5s;--t0:3.5s"><div class="body"><div class="in">
@@ -108,7 +108,7 @@ document.body.insertAdjacentHTML('afterbegin',`
   <div class="label a" style="--d:.2s">Clue</div>
   <div class="clue a" style="--d:.3s">${D.clue}</div>
   <div class="gauges"><div class="burst" style="--d:.78s"></div>${gauge(D.over25,'Over 2.5 goals',.6)}${gauge(D.btts,'Both teams score',.75)}</div>
-  <div class="card h2hq a" style="--d:1.9s"><div class="label">Last meeting · ${D.h2h.date}</div><div class="r">${D.h2h.a}<b>${D.h2h.score}</b>${D.h2h.b}</div></div>
+  ${D.h2h?`<div class="card h2hq a" style="--d:1.9s"><div class="label">Last meeting · ${D.h2h.date}</div><div class="r">${D.h2h.a}<b>${D.h2h.score}</b>${D.h2h.b}</div></div>`:D.fact?`<div class="card h2hq a" style="--d:1.9s"><div class="label">${D.fact.label}</div><div class="r">${D.fact.text}</div></div>`:''}
 </div></div></section>
 
 <section class="scene" id="s4" style="--dur:4.5s;--t0:13s"><div class="body"><div class="in">

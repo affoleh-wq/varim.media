@@ -6,16 +6,16 @@
 /*ENGINE_CSS*/
 .ghost{position:absolute;font-weight:900;line-height:.8;color:transparent;-webkit-text-stroke:3px rgba(255,255,255,.09);pointer-events:none;letter-spacing:-20px}
 /* s1 */
-#s1 .in{justify-content:flex-start}
+#s1 .in{justify-content:flex-start;padding-top:10px}
 #s1 .ghost{font-size:1300px;right:-120px;top:-170px}
 #s1 .three{font-size:420px;font-weight:900;line-height:.82;color:var(--accent);letter-spacing:-20px;text-shadow:0 0 90px rgba(230,0,35,.6);align-self:flex-start}
 #s1 .burst{width:300px;height:300px;left:40px;top:120px}
 #s1 .t1{font-size:120px;font-weight:900;letter-spacing:-5px;line-height:.95;text-transform:uppercase;margin-top:10px}
 #s1 .t2{font-size:52px;font-weight:700;color:var(--muted);margin-top:24px;letter-spacing:-1px}
-#s1 .teams{display:flex;align-items:center;gap:22px;margin-top:56px}
+#s1 .teams{display:flex;align-items:center;gap:22px;margin-top:56px;font-size:60px;width:100%;overflow:hidden}
 #s1 .teams .flag{width:120px;height:80px;border-radius:12px}
-#s1 .teams b{font-size:60px;font-weight:800;letter-spacing:-2px}
-#s1 .teams i{font-style:italic;font-size:36px;font-weight:900;color:var(--accent-text)}
+#s1 .teams b{font-size:1em;font-weight:800;letter-spacing:-2px;white-space:nowrap}
+#s1 .teams i{font-style:italic;font-size:.6em;font-weight:900;color:var(--accent-text)}
 #s1 .meta{margin-top:40px;font-size:32px;font-weight:600;color:var(--muted)}
 /* заголовок пункта */
 .numh{display:flex;align-items:flex-end;gap:28px;position:relative}
@@ -64,6 +64,15 @@
 .ms{margin-top:44px;display:flex;justify-content:space-between;align-items:center;padding:30px 40px;border-radius:32px}
 .ms .s{font-size:72px;font-weight:900;letter-spacing:-3px}
 .ms .s small{font-size:32px;font-weight:700;color:var(--muted);letter-spacing:0;margin-left:16px}
+.cmp{margin-top:30px;padding:16px 40px;border-radius:32px}
+.cmp .r{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 0}
+.cmp .r + .r{border-top:2px solid var(--border)}
+.cmp .hd2{font-size:34px;font-weight:800}
+.cmp .hd2 .rt,.cmp .v.rt{text-align:right}
+.cmp .v{font-size:110px;font-weight:900;letter-spacing:-5px;line-height:1}
+.cmp .v.dim{color:var(--muted);opacity:.6}
+.cmp .k{font-size:26px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:var(--muted);text-align:center}
+.tbl .r.v2{grid-template-columns:1fr auto}
 /* финал */
 .cta .ask{margin-top:30px;font-size:40px;font-weight:600;color:var(--muted)}
 .cta .ask b{color:var(--text)}
@@ -76,28 +85,29 @@ const D=__DATA__;
 const H=D.home,A=D.away,sc=D.score.split('-');
 const names=[H,'Draw',A], mx=Math.max(...D.probs);
 const frow=(t,f,tag,good,cls,d,hot)=>`<div class="card frow ${hot?'hot':cls}" style="--d:${d}s"><div class="h">${flag(t)}${t}<em class="${good?'good':'bad'}">${tag}</em></div><div class="pills">${pills(f,d+.25)}</div></div>`;
-const L=D.table;
+const L=D.table||[];
+const hotA=(D.hot||'away')=='away';
+const better=(a,b,low)=>a==b?['','']:(low?a<b:a>b)?['','dim']:['dim',''];
 document.body.insertAdjacentHTML('afterbegin',`
-<section class="scene" id="s1" style="--dur:3.5s;--t0:0s;--shake:.62s"><div class="body"><div class="in">
+<section class="scene" id="s1" style="--dur:3.5s;--t0:0s;--shake:99s"><div class="body"><div class="in">
   <div class="ghost">3</div>
-  <div class="three now">3</div><div class="burst" style="--d:.2s"></div>
+  <div class="three now">3</div>
   <div class="t1 now">stats to know</div>
-  <div class="t2 a" style="--d:.05s">before kick-off tonight</div>
-  <div class="teams a" style="--d:.05s">${flag(H,'sh')}<b>${H}</b><i>VS</i><b>${A}</b>${flag(A,'sh')}</div>
-  <div class="meta a" style="--d:.05s">${D.league} · ${D.when}</div>
+  <div class="t2 aq" style="--d:.05s">before kick-off tonight</div>
+  <div class="teams aq" style="--d:.05s">${flag(H,'sh')}<b>${H}</b><i>VS</i><b>${A}</b>${flag(A,'sh')}</div>
+  <div class="meta aq" style="--d:.05s">${D.league} · ${D.when}</div>
 </div></div></section>
 
 <section class="scene" id="s2" style="--dur:5s;--t0:3.5s"><div class="body"><div class="in">
   <div class="numh a" style="--d:.15s"><div class="num">#3</div><div class="nt">${D.stat3}</div></div>
   <div class="rule"></div>
-  ${frow(A,D.formAway,D.tagAway,true,'fl',.5,true)}
-  ${frow(H,D.formHome,D.tagHome,false,'fr2',1.0,false)}
+  ${hotA?frow(A,D.formAway,D.tagAway,true,'fl',.5,true)+frow(H,D.formHome,D.tagHome,false,'fr2',1.0,false):frow(H,D.formHome,D.tagHome,true,'fl',.5,true)+frow(A,D.formAway,D.tagAway,false,'fr2',1.0,false)}
 </div></div></section>
 
 <section class="scene" id="s3" style="--dur:4.5s;--t0:8.5s;--shake:.78s"><div class="body"><div class="in">
   <div class="numh a" style="--d:.15s"><div class="num">#2</div><div class="nt">${D.stat2}</div></div>
   <div class="rule"></div>
-  <div class="hscore"><div class="burst" style="--d:.78s"></div>
+  ${D.h2h?`  <div class="hscore"><div class="burst" style="--d:.78s"></div>
     <div class="tm fl" style="--d:.3s">${flag(D.h2h.a)}<b>${D.h2h.a}</b></div>
     <div class="d slam" style="--d:.55s">${D.h2h.ga}<span>–</span>${D.h2h.gb}</div>
     <div class="tm fr2" style="--d:.35s">${flag(D.h2h.b)}<b>${D.h2h.b}</b></div>
@@ -107,6 +117,11 @@ document.body.insertAdjacentHTML('afterbegin',`
     <div class="label" style="margin-top:22px">${D.group}</div>
     ${L.map((r,i)=>`<div class="r ${i==0?'lead':''}"><div class="p">${r[0]}</div>${flag(r[1])}<div>${r[1]}</div><div class="pts">${r[2]}<small>pts</small></div></div>`).join('')}
   </div>
+`:`<div class="card cmp fl" style="--d:.3s"><div class="r hd2"><div>${H}</div><div></div><div class="rt">${A}</div></div>
+    ${D.cmp.map((r,i)=>{const c=better(r[1],r[2],r[3]);return `<div class="r"><div class="v ${c[0]}"><span class="count" style="--to:${r[1]};--d:${.5+i*.2}s"></span></div><div class="k">${r[0]}</div><div class="v rt ${c[1]}"><span class="count" style="--to:${r[2]};--d:${.5+i*.2}s"></span></div></div>`}).join('')}</div>
+  <div class="when2 a" style="--d:1s">${D.cmpNote}</div>
+  <div class="card tbl a" style="--d:1.4s"><div class="label" style="margin-top:22px">${D.venueLabel}</div>
+    ${D.venue.map(r=>`<div class="r v2"><div>${r[0]}</div><div class="pts">${r[1]}</div></div>`).join('')}</div>`}
 </div></div></section>
 
 <section class="scene" id="s4" style="--dur:4.5s;--t0:13s"><div class="body"><div class="in">
@@ -125,6 +140,7 @@ document.body.insertAdjacentHTML('afterbegin',`
   <div class="url">varim.net</div>
   <div class="note a" style="--d:1.5s">An estimate is not a guarantee of the result.</div>
 </div></div></section>`);
+document.fonts.ready.then(()=>fit('#s1 .teams',36));
 ENGINE({chip:'3 stats',ticker:['Model prediction',D.league,`${H} vs ${A}`,D.when,'varim.net']});
 </script>
 </body>

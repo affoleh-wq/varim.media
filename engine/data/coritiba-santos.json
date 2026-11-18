@@ -1,0 +1,23 @@
+{
+ "slug": "coritiba-santos",
+ "template": "tpl_story.html",
+ "home": "Coritiba",
+ "away": "Santos",
+ "league": "Brasileirão",
+ "when": "18 Nov 2026 · 22:30 UTC",
+ "url": "https://varim.net/predictions/coritiba-vs-santos-2026-11-18-1270076585/",
+ "codes": {"home": "CFC", "away": "SAN"},
+ "colors": {"home": "#00804a", "away": "#6b6b75"},
+ "tape": [["Wins · last 5", 1, 1], ["Goals · last 5", 3, 5], ["Model xG", "0.61", "1.95"]],
+ "formHome": ["L","W","L","L","D"],
+ "formAway": ["L","D","D","W","L"],
+ "banner": "Coritiba won the last meeting 1–0",
+ "probs": [11, 20, 69],
+ "pick": "Santos",
+ "score": "0-1",
+ "scorePct": "15.1",
+ "others": [["0-2","14.7"],["0-3","9.5"],["1-1","9.2"]],
+ "h2h": {"date": "17 May 2026", "a": "Santos", "score": "0–1", "b": "Coritiba"},
+ "ctaTitle": "Upset or<br>no chance?",
+ "ctaAsk": "Drop your score in the comments"
+}
