@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100vw;height:100vh;overflow:hidden;font-family:Inter,sans-serif;color:#fff;background:#06070b}
+svg.bgsvg{position:absolute;inset:0;width:100%;height:100%}
+.shade{position:absolute;inset:0;background:
+ radial-gradient(ellipse 55% 30% at 50% var(--cy),rgba(0,0,0,.0),rgba(0,0,0,.35) 60%,transparent 100%),
+ linear-gradient(180deg,rgba(6,7,11,.92) 0%,rgba(6,7,11,.25) 22%,rgba(6,7,11,.1) 45%,rgba(6,7,11,.55) 68%,rgba(6,7,11,.97) 86%)}
+.flare{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.28),rgba(255,255,255,.06) 30%,transparent 62%);mix-blend-mode:screen}
+.flare.l{left:-420px;top:-420px}.flare.r{right:-420px;top:-420px}
+.rays{position:absolute;inset:0;background:conic-gradient(from 160deg at 0% 0%,transparent 0deg,rgba(255,255,255,.06) 6deg,transparent 12deg,rgba(255,255,255,.04) 20deg,transparent 26deg),conic-gradient(from 110deg at 100% 0%,transparent 0deg,rgba(255,255,255,.05) 8deg,transparent 14deg,rgba(255,255,255,.04) 24deg,transparent 30deg);mix-blend-mode:screen}
+.grain{position:absolute;inset:0;opacity:.22;mix-blend-mode:overlay;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E")}
+.c{position:absolute;inset:0;padding:var(--pt) 72px var(--pb);display:flex;flex-direction:column}
+.top{display:flex;align-items:center;gap:26px}
+.top img{height:44px}
+.top .sep{width:2px;height:40px;background:rgba(255,255,255,.35)}
+.top .t1{font-weight:800;font-size:22px;letter-spacing:5px;text-transform:uppercase;line-height:1.25}
+.top .t1 small{display:block;font-weight:600;font-size:18px;letter-spacing:4px;color:rgba(255,255,255,.6)}
+.top .pg{margin-left:auto;font-weight:700;font-size:20px;letter-spacing:4px;color:rgba(255,255,255,.7);border:1.5px solid rgba(255,255,255,.4);padding:9px 14px;border-radius:40px}
+.hero{margin-top:var(--g1);text-align:center;position:relative}
+.kick{display:flex;align-items:center;justify-content:center;gap:22px;font-weight:700;font-size:24px;letter-spacing:9px;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.kick i{width:70px;height:2px;background:rgba(255,255,255,.5)}
+.ft{white-space:nowrap;font-family:'Inter Display',Inter;font-weight:900;font-size:var(--fts);letter-spacing:-4px;line-height:.8;text-transform:uppercase;transform:scaleX(.74);margin:14px -200px 0;
+ background:linear-gradient(180deg,#fff 30%,#c9ccd4);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 18px 40px rgba(0,0,0,.55))}
+.board{margin-top:var(--g2);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:26px}
+.team{display:flex;flex-direction:column;align-items:center;gap:20px}
+.crest{width:var(--cr);height:var(--cr);border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;
+ background:radial-gradient(circle at 35% 28%,rgba(255,255,255,.45),transparent 45%),var(--c);box-shadow:0 0 0 5px rgba(255,255,255,.9),0 0 0 11px rgba(255,255,255,.12),0 24px 50px rgba(0,0,0,.55)}
+.crest b{font-family:'Inter Display',Inter;font-weight:900;font-size:calc(var(--cr)*.3);letter-spacing:1px}
+.team .nm{font-weight:900;font-size:44px;letter-spacing:2px;text-transform:uppercase}
+.team.lose{opacity:.62}
+.score{display:flex;align-items:center;gap:6px;padding:26px 34px;border-radius:30px;background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,.05));border:1.5px solid rgba(255,255,255,.28);backdrop-filter:blur(18px);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 30px 60px rgba(0,0,0,.45)}
+.score span{font-family:'Inter Display',Inter;font-weight:900;font-size:var(--scs);line-height:.85;letter-spacing:-6px;transform:scaleX(.82);display:inline-block;width:calc(var(--scs)*.62);text-align:center}
+.score span.l{color:rgba(255,255,255,.55)}
+.score em{width:6px;height:calc(var(--scs)*.5);background:rgba(255,255,255,.5);border-radius:3px;margin:0 14px;transform:skewX(-14deg)}
+.line{margin-top:var(--g3);text-align:center;font-weight:800;font-size:40px;letter-spacing:-.5px}
+.line span{color:rgba(255,255,255,.65);font-weight:600}
+.facts{margin-top:var(--g4);display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid rgba(255,255,255,.25);border-bottom:1.5px solid rgba(255,255,255,.25)}
+.facts div{padding:22px 0;text-align:center}
+.facts div+div{border-left:1.5px solid rgba(255,255,255,.25)}
+.facts small{display:block;font-weight:700;font-size:17px;letter-spacing:4px;color:rgba(255,255,255,.55);text-transform:uppercase;margin-bottom:8px}
+.facts b{font-weight:800;font-size:27px}
+.model{margin-top:var(--g5);display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px;padding:26px 30px;border-radius:24px;background:rgba(10,12,18,.72);border:1.5px solid rgba(255,255,255,.16);backdrop-filter:blur(16px)}
+.model .h{display:flex;align-items:center;gap:14px;font-weight:800;font-size:19px;letter-spacing:5px;color:rgba(255,255,255,.6);text-transform:uppercase}
+.model .h img{height:22px}
+.model .p{font-weight:900;font-size:40px;letter-spacing:-1px;margin-top:10px}
+.model .p s{font-weight:700;font-size:28px;color:rgba(255,255,255,.45);margin-left:14px;text-decoration-thickness:3px}
+.bar{display:flex;height:12px;border-radius:6px;overflow:hidden;margin-top:16px;gap:3px}
+.bar i{display:block}
+.legend{display:flex;justify-content:space-between;margin-top:9px;font-weight:700;font-size:17px;letter-spacing:2px;color:rgba(255,255,255,.55)}
+.verdict{width:210px;height:150px;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:linear-gradient(180deg,#22c063,#138a43);box-shadow:0 14px 30px rgba(19,138,67,.45),inset 0 1px 0 rgba(255,255,255,.4)}
+.verdict.no{background:linear-gradient(180deg,#5d6270,#3b3f49);box-shadow:none}
+.verdict svg{width:52px;height:52px}
+.verdict b{font-weight:900;font-size:26px;letter-spacing:3px}
+.foot{margin-top:auto;display:flex;justify-content:space-between;font-weight:700;font-size:20px;letter-spacing:4px;color:rgba(255,255,255,.5);text-transform:uppercase}
+</style></head><body>
+<svg class="bgsvg" id="bg" preserveAspectRatio="none"></svg>
+<div class="flare l"></div><div class="flare r"></div><div class="rays"></div>
+<div class="shade"></div><div class="grain"></div>
+<div class="c" id="c"></div>
+<script>
+const D=__DATA__,LOGO='__LOGO__';
+const W=innerWidth,H=innerHeight,tall=H>1600,R=document.documentElement.style;
+Object.entries(tall?{'--pt':'150px','--pb':'420px','--g1':'130px','--g2':'90px','--g3':'56px','--g4':'64px','--g5':'50px','--fts':'250px','--scs':'210px','--cr':'150px','--cy':'45%'}
+ :{'--pt':'56px','--pb':'50px','--g1':'80px','--g2':'64px','--g3':'44px','--g4':'48px','--g5':'40px','--fts':'230px','--scs':'190px','--cr':'130px','--cy':'45%'}).forEach(([k,v])=>R.setProperty(k,v));
+// ткань в цветах команд со складками
+const cut=W*.5, sk=H*.12;
+bg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+bg.innerHTML=`<defs><filter id="cl" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.0022 0.0075" numOctaves="3" seed="${D.seed||7}" result="n"/>
+<feDiffuseLighting in="n" lighting-color="#fff" surfaceScale="26" result="l"><feDistantLight azimuth="225" elevation="42"/></feDiffuseLighting>
+<feComposite in="l" in2="SourceGraphic" operator="arithmetic" k1="1.25" k2="0" k3="0" k4="0"/></filter>
+<linearGradient id="seam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".45" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<filter id="gl"><feGaussianBlur stdDeviation="10"/></filter></defs>
+<g filter="url(#cl)"><polygon points="0,0 ${cut+sk},0 ${cut-sk},${H} 0,${H}" fill="${D.colors.home}"/><polygon points="${cut+sk},0 ${W},0 ${W},${H} ${cut-sk},${H}" fill="${D.colors.away}"/></g>
+<line x1="${cut+sk}" y1="0" x2="${cut-sk}" y2="${H}" stroke="url(#seam)" stroke-width="16" filter="url(#gl)"/>
+<line x1="${cut+sk}" y1="0" x2="${cut-sk}" y2="${H}" stroke="url(#seam)" stroke-width="3"/>`;
+const [hg,ag]=D.final.split('-').map(Number);
+const cls=(a,b)=>a<b?'lose':'';
+const ck=`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>`;
+const xk=`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>`;
+const pv=Math.max(...D.probs), segs=[[D.probs[0],D.colors.home],[D.probs[1],'#8b8f9a'],[D.probs[2],D.colors.away]];
+c.innerHTML=`<div class="top"><img src="${LOGO}"><div class="sep"></div><div class="t1">${D.league}<small>${D.round||'Matchday'}</small></div><div class="pg">FULL TIME</div></div>
+<div class="hero"><div class="kick"><i></i>Final score<i></i></div><div class="ft">Full time</div></div>
+<div class="board">
+ <div class="team ${cls(hg,ag)}"><div class="crest" style="--c:${D.colors.home}"><b>${D.code.home}</b></div><div class="nm">${D.home}</div></div>
+ <div class="score"><span class="${hg<ag?'l':''}">${hg}</span><em></em><span class="${ag<hg?'l':''}">${ag}</span></div>
+ <div class="team ${cls(ag,hg)}"><div class="crest" style="--c:${D.colors.away}"><b>${D.code.away}</b></div><div class="nm">${D.away}</div></div></div>
+<div class="line">${D.story.short}</div>
+<div class="facts"><div><small>Venue</small><b>${D.venue}</b></div><div><small>Date</small><b>${D.date}</b></div><div><small>Competition</small><b>${D.league}</b></div></div>
+<div class="model"><div><div class="h"><img src="${LOGO}">Model check</div>
+ <div class="p">${D.pick} to win · ${pv}%<s>${D.score.replace('-','–')}</s></div>
+ <div class="bar">${segs.map(([v,col])=>`<i style="width:${v}%;background:${col}"></i>`).join('')}</div>
+ <div class="legend"><span>${D.code.home} ${D.probs[0]}%</span><span>DRAW ${D.probs[1]}%</span><span>${D.code.away} ${D.probs[2]}%</span></div></div>
+ <div class="verdict ${D.pickOk?'':'no'}">${D.pickOk?ck:xk}<b>${D.pickOk?'CALLED IT':'MISSED'}</b></div></div>
+<div class="foot"><span>varim.net</span><span>18+ · Bet responsibly</span></div>`;
+</script></body></html>

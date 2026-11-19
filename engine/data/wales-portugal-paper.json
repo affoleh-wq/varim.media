@@ -1,0 +1,22 @@
+{
+ "slug": "wales-portugal-paper",
+ "template": "tpl_paper.html",
+ "music": "sound_paper.wav",
+ "scenes": {"s1": 3.2, "s2": 3.2, "s3": 3.2, "s4": 2.6},
+ "checks": {"s1a": 0.0, "s1": 2.6, "s2a": 1.2, "s2": 2.6, "s3": 2.7, "s3b": 3.0, "s4": 2.2},
+ "home": "Wales",
+ "away": "Portugal",
+ "league": "Nations League",
+ "probs": [8, 20, 72],
+ "pick": "Portugal",
+ "pickOk": true,
+ "score": "0-1",
+ "final": "2-3",
+ "story": {"sub": "Five-goal thriller in Cardiff"},
+ "paper": {
+  "date": "Matchday · 18 Nov 2026",
+  "headline": ["Ten-man", "Portugal <i>edge</i>", "five-goal thriller"],
+  "hook": "Did the model <span>call it?</span>",
+  "story": ["Portugal won it", "with 10 men."]
+ }
+}

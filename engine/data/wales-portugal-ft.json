@@ -1,0 +1,44 @@
+{
+ "slug": "wales-portugal-ft",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Wales",
+ "away": "Portugal",
+ "short": {
+  "home": "Wales",
+  "away": "Portugal"
+ },
+ "league": "Nations League",
+ "colors": {
+  "home": "#00843d",
+  "away": "#c8102e"
+ },
+ "probs": [
+  8,
+  20,
+  72
+ ],
+ "pick": "Portugal",
+ "pickOk": true,
+ "score": "0-1",
+ "final": "2-3",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "line": "Portugal won it<br>with 10 men",
+  "sub": "Five-goal thriller in Cardiff"
+ },
+ "ask": "Watch<br><span>the goals</span>"
+}

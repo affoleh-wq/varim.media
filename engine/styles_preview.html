@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1920px;overflow:hidden;font-family:Inter,sans-serif}
+.v{position:absolute;inset:0;display:none}
+.v.on{display:block}
+/* ===== A: MATCHDAY PAPER ===== */
+#A{background:#efe7d6;color:#151515;font-family:Lora,serif}
+#A::before{content:'';position:absolute;inset:0;background:radial-gradient(circle,rgba(0,0,0,.09) 1.2px,transparent 1.6px) 0 0/9px 9px;mix-blend-mode:multiply}
+#A .wrap{position:absolute;inset:150px 70px 420px;display:flex;flex-direction:column}
+#A .mast{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:6px double #151515;padding-bottom:16px}
+#A .mast img{height:46px;filter:brightness(0)}
+#A .mast span{font-family:Inter;font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase}
+#A .kick{font-family:Inter;font-weight:800;font-size:26px;letter-spacing:4px;text-transform:uppercase;color:#b3001b;margin-top:40px}
+#A h1{font-size:118px;line-height:.95;font-weight:700;letter-spacing:-3px;margin-top:16px}
+#A h1 i{font-style:italic;color:#b3001b}
+#A .score{display:flex;align-items:center;justify-content:space-between;margin-top:50px;border-top:3px solid #151515;border-bottom:3px solid #151515;padding:26px 0}
+#A .score .t{font-family:Inter;font-weight:900;font-size:56px;letter-spacing:-1px;text-transform:uppercase}
+#A .score .n{font-size:200px;font-weight:700;line-height:.9}
+#A .cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;font-size:34px;line-height:1.35}
+#A .cols b{font-family:Inter;font-weight:900;display:block;font-size:22px;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;color:#b3001b}
+#A .stamp{position:absolute;right:90px;top:1150px;transform:rotate(-12deg);border:10px solid #b3001b;color:#b3001b;font-family:Inter;font-weight:900;font-size:76px;letter-spacing:2px;padding:10px 30px;text-transform:uppercase;opacity:.92;mix-blend-mode:multiply;border-radius:14px}
+#A .foot{margin-top:auto;font-family:Inter;font-weight:800;font-size:34px;display:flex;justify-content:space-between;border-top:2px solid #151515;padding-top:18px}
+/* ===== B: BROADCAST ===== */
+#B{background:radial-gradient(ellipse 80% 50% at 50% 0%,#2a4fa8,transparent 70%),linear-gradient(180deg,#0a1a3c,#04091a);color:#fff}
+#B::before{content:'';position:absolute;inset:0;background:repeating-conic-gradient(from 180deg at 50% -10%,rgba(255,255,255,.07) 0 4deg,transparent 4deg 14deg)}
+#B .bug{position:absolute;left:70px;top:170px;display:flex;align-items:stretch;font-weight:800;font-size:44px;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+#B .bug div{padding:14px 24px;display:flex;align-items:center}
+#B .bug .tm{background:#fff;color:#0a1a3c;letter-spacing:1px}
+#B .bug .sc{background:#e60023;font-variant-numeric:tabular-nums;letter-spacing:2px}
+#B .bug .ft{background:#0a1a3c;border:3px solid #fff;font-size:32px;letter-spacing:2px}
+#B .mid{position:absolute;left:70px;right:70px;top:560px}
+#B .mid small{font-size:30px;font-weight:700;letter-spacing:8px;color:#9fb6ff}
+#B .mid h1{font-size:190px;font-weight:900;letter-spacing:-6px;line-height:.9;margin-top:18px}
+#B .mid h2{font-size:60px;font-weight:600;letter-spacing:-1px;margin-top:26px;color:#dbe4ff}
+#B .lt{position:absolute;left:0;right:0;top:1130px}
+#B .lt .a{margin-left:70px;display:inline-block;background:#e60023;font-weight:900;font-size:30px;letter-spacing:4px;padding:12px 24px}
+#B .lt .b{margin:0 70px;background:#fff;color:#0a1a3c;display:flex;justify-content:space-between;align-items:center;padding:28px 34px}
+#B .lt .b b{font-size:60px;font-weight:900;letter-spacing:-1px}
+#B .lt .b span{font-size:40px;font-weight:900;color:#0a7d3b;display:flex;align-items:center;gap:12px}
+#B .logo{position:absolute;right:70px;top:182px;height:42px}
+#B .tick{position:absolute;left:0;right:0;top:1440px;height:70px;background:#04091a;border-top:3px solid #e60023;display:flex;align-items:center;font-size:28px;font-weight:700;letter-spacing:3px;color:#9fb6ff;white-space:nowrap;padding-left:70px}
+/* ===== C: MODEL TERMINAL ===== */
+#C{background:#030806;color:#36f58a;font-family:'DejaVu Sans Mono',monospace}
+#C::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(54,245,138,.06) 1px,transparent 1px) 0 0/100% 60px,linear-gradient(90deg,rgba(54,245,138,.06) 1px,transparent 1px) 0 0/60px 100%}
+#C::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.35) 0 2px,transparent 2px 5px);pointer-events:none}
+#C .wrap{position:absolute;inset:170px 70px 420px;display:flex;flex-direction:column;gap:22px;text-shadow:0 0 18px rgba(54,245,138,.55)}
+#C .top{display:flex;justify-content:space-between;align-items:center;font-size:26px;color:#7dffb4}
+#C .top img{height:40px}
+#C .ln{font-size:34px;line-height:1.35;color:#9dffc6}
+#C .ln b{color:#fff;text-shadow:0 0 18px rgba(255,255,255,.6)}
+#C .big{font-size:250px;font-weight:700;letter-spacing:-8px;color:#fff;line-height:.95;margin:10px 0}
+#C .bar{font-size:38px;white-space:pre;color:#36f58a}
+#C .bar span{color:#1c6b3e}
+#C .ok{align-self:flex-start;border:4px solid #36f58a;padding:16px 28px;font-size:64px;font-weight:700;color:#030806;background:#36f58a;text-shadow:none;box-shadow:0 0 40px rgba(54,245,138,.6)}
+#C .cur::after{content:'█';animation:none;margin-left:6px}
+</style>
+</head>
+<body>
+<section class="v" id="A"><div class="wrap">
+  <div class="mast"><img data-logo><span>Matchday · 18 Nov 2026</span></div>
+  <div class="kick">Nations League · Full time</div>
+  <h1>Ten-man Portugal <i>edge</i> five-goal thriller</h1>
+  <div class="score"><span class="t">Wales</span><span class="n">2–3</span><span class="t">Portugal</span></div>
+  <div class="cols"><div><b>The model said</b>Portugal win, 72% before kick-off.</div><div><b>Exact score</b>Model 0–1. Final 2–3. Not even close.</div></div>
+  <div class="foot"><span>Full highlights → varim.net</span><span>18+</span></div>
+</div><div class="stamp">Called it</div></section>
+
+<section class="v" id="B">
+  <div class="bug"><div class="tm">WAL</div><div class="sc">2 – 3</div><div class="tm">POR</div><div class="ft">FT</div></div>
+  <img class="logo" data-logo>
+  <div class="mid"><small>NATIONS LEAGUE · CARDIFF</small><h1>FULL TIME</h1><h2>Portugal win it with ten men</h2></div>
+  <div class="lt"><div class="a">VARiM MODEL CHECK</div><div class="b"><b>Portugal 72%</b><span>✓ CORRECT</span></div></div>
+  <div class="tick">WAL 2–3 POR · DEN – NOR · POL – SWE · NEXT: BAYERN vs KÖLN FRI 19:30 UTC · VARIM.NET</div>
+</section>
+
+<section class="v" id="C"><div class="wrap">
+  <div class="top"><span>varim@model:~$</span><img data-logo></div>
+  <div class="ln">&gt; run check --match <b>WAL-POR</b></div>
+  <div class="ln">&gt; pre-match  POR <b>72.3%</b>  X 20%  WAL 8%</div>
+  <div class="bar">POR ██████████████<span>░░░░░</span> 72%
+X   ████<span>░░░░░░░░░░░░░░░</span> 20%
+WAL █<span>░░░░░░░░░░░░░░░░░░</span>  8%</div>
+  <div class="ln">&gt; final score</div>
+  <div class="big">2–3</div>
+  <div class="ok">✓ MODEL CORRECT</div>
+  <div class="ln">&gt; exact score 0–1 … <b>miss</b></div>
+  <div class="ln cur">&gt; highlights: varim.net</div>
+</div></section>
+<script>
+const L='__LOGO__';document.querySelectorAll('[data-logo]').forEach(i=>i.src=L);
+document.getElementById(location.hash.slice(1)||'A').classList.add('on');
+</script>
+</body>
+</html>
