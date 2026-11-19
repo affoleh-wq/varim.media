@@ -1,0 +1,47 @@
+{
+ "template": "tpl_verdict.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "slug": "athletic-espanyol-v",
+ "home": "Athletic",
+ "away": "Espanyol",
+ "short": {
+  "home": "Athletic",
+  "away": "Espanyol"
+ },
+ "league": "La Liga",
+ "when": "Fri · 20:00 UTC",
+ "hook": "Guess <span>the score</span>",
+ "colors": {
+  "home": "#e02020",
+  "away": "#0b5fb3"
+ },
+ "probs": [
+  63,
+  23,
+  13
+ ],
+ "pick": "Athletic",
+ "score": "1-0",
+ "scorePct": "16.8",
+ "fact": {
+  "label": "Last meeting",
+  "big": "2-0",
+  "line": "Espanyol won<br>in May",
+  "sub": "Espanyol 2–0 Athletic · 13 May 2026"
+ },
+ "ask": "Revenge<br><span>or repeat?</span>",
+ "url": "https://varim.net/predictions/athletic-club-vs-espanyol-2026-11-20-1336457138/"
+}

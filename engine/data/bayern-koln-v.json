@@ -1,0 +1,47 @@
+{
+ "template": "tpl_verdict.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "slug": "bayern-koln-v",
+ "home": "Bayern",
+ "away": "Köln",
+ "short": {
+  "home": "Bayern",
+  "away": "Köln"
+ },
+ "league": "Bundesliga",
+ "when": "Fri · 19:30 UTC",
+ "hook": "Can anyone <span>stop Bayern?</span>",
+ "colors": {
+  "home": "#dc052d",
+  "away": "#7d7d86"
+ },
+ "probs": [
+  88,
+  8,
+  3
+ ],
+ "pick": "Bayern",
+ "score": "3-0",
+ "scorePct": "12.8",
+ "fact": {
+  "label": "Key stat",
+  "big": "37",
+  "line": "Bayern goals<br>in their last 10",
+  "sub": "Köln scored 12 in the same run"
+ },
+ "ask": "Your<br><span>score?</span>",
+ "url": "https://varim.net/predictions/bayern-munich-vs-fc-koln-2026-11-20-1340513855/"
+}

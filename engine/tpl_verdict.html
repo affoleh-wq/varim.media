@@ -24,6 +24,8 @@ body{background:#050505}
 @keyframes settle{from{transform:scale(1.08)}to{transform:none}}
 /* s1 */
 #s1 .in{justify-content:center;gap:0}
+.hook{font-size:84px;letter-spacing:-3px;margin-top:22px;white-space:normal;line-height:.95}
+.hook span{color:var(--accent)}
 .tn{font-size:200px;max-width:100%;overflow:hidden;text-shadow:0 10px 60px rgba(0,0,0,.6)}
 .tn.home{margin-top:40px}
 .vsr{display:flex;align-items:center;gap:22px;margin:22px 0}
@@ -55,7 +57,7 @@ body{background:#050505}
 #s3 .burst{width:360px;height:360px;left:120px;top:300px}
 /* s4 */
 #s4 .in{justify-content:center;align-items:center;text-align:center}
-.ask{font-size:200px;letter-spacing:-8px;line-height:.86}
+.ask{font-size:200px;letter-spacing:-8px;line-height:.86;width:100%;overflow:hidden}
 .ask span{color:var(--accent)}
 .cm{display:flex;align-items:center;gap:18px;font-size:44px;font-weight:800;margin-top:44px}
 .cm svg{width:56px;height:56px;animation:bob .6s ease-in-out infinite alternate}
@@ -78,6 +80,7 @@ const nm=s=>s.toUpperCase();
 const factBig=String(D.fact.big).replace(/([–\-\/%])/g,'<span>$1</span>');
 document.body.insertAdjacentHTML('afterbegin',
  sec(0,`<div class="kick">${D.league} · ${D.when}</div>
+   ${D.hook?`<div class="hook V">${D.hook}</div>`:''}
    <div class="tn home V settle">${nm(H)}</div>
    <div class="vsr settle"><i></i><b>VS</b><i></i></div>
    <div class="tn away V settle">${nm(A)}</div>
@@ -103,7 +106,7 @@ document.body.insertAdjacentHTML('afterbegin',
    <div class="url">varim.net</div>
    <div class="note a" style="--d:1.3s">Model estimate, not a guarantee. 18+</div>`,.43));
 ENGINE({chip:'Model verdict',ticker:[]});
-fit('.tn',90);fit('.verd .V',60);fit('.fl1',44);
+fit('.tn',90);fit('.verd .V',60);fit('.fl1',44);fit('.ask',90);fit('.hook',50);
 </script>
 </body>
 </html>

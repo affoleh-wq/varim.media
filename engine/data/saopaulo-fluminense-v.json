@@ -1,0 +1,47 @@
+{
+ "template": "tpl_verdict.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "slug": "saopaulo-fluminense-v",
+ "home": "São Paulo",
+ "away": "Fluminense",
+ "short": {
+  "home": "São Paulo",
+  "away": "Flu"
+ },
+ "league": "Brasileirão",
+ "when": "Tonight",
+ "hook": "Too close <span>to call?</span>",
+ "colors": {
+  "home": "#c8102e",
+  "away": "#00613c"
+ },
+ "probs": [
+  30,
+  29,
+  41
+ ],
+ "pick": "Fluminense",
+ "score": "0-1",
+ "scorePct": "13.4",
+ "fact": {
+  "label": "Form",
+  "big": "4/5",
+  "line": "Fluminense lost<br>4 of their last 5",
+  "sub": "…yet the model still backs them"
+ },
+ "ask": "Your<br><span>score?</span>",
+ "url": "https://varim.net/predictions/sao-paulo-vs-fluminense-2026-11-20-1270081691/"
+}
