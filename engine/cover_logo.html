@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:BS;src:url(__FONT__) format('truetype');font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#07080c}
+svg.bg{position:absolute;inset:0}
+.shade{position:absolute;inset:0;background:radial-gradient(circle 560px at 50% 50%,rgba(7,8,12,.35),rgba(7,8,12,.15) 55%,rgba(5,6,10,.7) 100%)}
+.grain{position:absolute;inset:0;opacity:.2;mix-blend-mode:overlay;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E")}
+.box{position:absolute;left:0;right:0;top:960px;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:46px}
+.box img{width:640px;filter:drop-shadow(0 18px 30px rgba(0,0,0,.6))}
+.bar{width:120px;height:10px;border-radius:5px;background:#e11d2e;box-shadow:0 0 30px rgba(225,29,46,.7)}
+.lab{font-family:BS;font-size:190px;line-height:.8;letter-spacing:10px;color:#fff;text-transform:uppercase;filter:drop-shadow(0 14px 24px rgba(0,0,0,.6))}
+</style></head><body>
+<svg class="bg" viewBox="0 0 1080 1920"><defs><filter id="cl" x="-50%" y="-50%" width="200%" height="200%"><feTurbulence type="fractalNoise" baseFrequency="0.0016 0.006" numOctaves="3" seed="9" result="n"/><feDiffuseLighting in="n" lighting-color="#fff" surfaceScale="30" result="l"><feDistantLight azimuth="235" elevation="45"/></feDiffuseLighting><feComposite in="l" in2="SourceGraphic" operator="arithmetic" k1="1.2" k2="0" k3="0" k4="0"/></filter>
+<clipPath id="a"><polygon points="0,0 860,0 220,1920 0,1920"/></clipPath><clipPath id="b"><polygon points="860,0 1080,0 1080,1920 220,1920"/></clipPath>
+<linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><filter id="g"><feGaussianBlur stdDeviation="14"/></filter></defs>
+<g clip-path="url(#a)"><g transform="rotate(-28 540 960)" filter="url(#cl)"><rect x="-1080" y="-1920" width="3240" height="5760" fill="#22252f"/></g></g>
+<g clip-path="url(#b)"><g transform="rotate(-28 540 960)" filter="url(#cl)"><rect x="-1080" y="-1920" width="3240" height="5760" fill="#c4101f"/></g></g>
+<line x1="860" y1="0" x2="220" y2="1920" stroke="url(#s)" stroke-width="26" filter="url(#g)" opacity=".7"/><line x1="860" y1="0" x2="220" y2="1920" stroke="url(#s)" stroke-width="2.5"/></svg>
+<div class="shade"></div><div class="grain"></div>
+<div class="box"><img src="__LOGO__"><div class="bar"></div><div class="lab" id="lab"></div></div>
+<script>lab.textContent=decodeURIComponent(location.hash.slice(1));</script>
+</body></html>
