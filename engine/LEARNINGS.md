@@ -46,3 +46,11 @@
   - в TikTok чередовать: 1 ролик-прогноз максимум в день, остальное — итоги матчей (баннер/анимация в стиле poster_result), квиз «угадай счёт», «3 facts before…»;
   - заблокированный ролик никогда не перезаливать.
 - Если TikTok снова отклонит — фиксировать в отчёте: какой матч, формат, текст на экране.
+
+## 2026-11-20 — подписи и хештеги (решение пользователя)
+- Хештеги команд НЕ ставим. Только лига + общие:
+  - Instagram: #<Лига> #football #soccer + 2 по формату (#footballpredictions / #scoreprediction / #footballstats);
+  - TikTok: #<Лига> #football #soccer + 1 по формату (#footballquiz / #footballstats);
+  - Threads: только #<Лига>; Pinterest: #<Лига> #football #FootballPredictions + 1 по формату.
+- Подпись Instagram: 1) крючок-факт с цифрой, 2) вопрос/интрига, пустая строка, 3) призыв «Comment your score below 👇 / We'll check after full time», 4) «Full preview: link in bio · Model estimate, not a guarantee. 18+», 5) хештеги. Без полного расклада процентов в подписи — ответ модели в ролике.
+- Ночная задача баннеров итогов 20.11 — тоже по этим правилам.
