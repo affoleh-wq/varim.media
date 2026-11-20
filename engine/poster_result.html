@@ -84,12 +84,13 @@ bg.innerHTML=`<defs><filter id="cl" x="-50%" y="-50%" width="200%" height="200%"
 <line x1="${cut+sk}" y1="0" x2="${cut-sk}" y2="${H}" stroke="url(#seam)" stroke-width="2.5"/>`;
 const [hg,ag]=D.final.split('-').map(Number);
 gh.textContent=`${hg}-${ag}`;
+const ink=c=>{const n=parseInt(c.slice(1),16),r=n>>16,g=n>>8&255,b=n&255;return (.299*r+.587*g+.114*b)/255>.62?'#1a1a1a':'#fff'};
 const shield=(col,code,id)=>`<svg class="shield" viewBox="0 0 200 236"><defs><linearGradient id="g${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".3"/></linearGradient></defs>
 <path d="M100 4 L192 30 V112 C192 170 152 210 100 232 C48 210 8 170 8 112 V30 Z" fill="#fff"/>
 <path d="M100 16 L180 38 V112 C180 163 145 199 100 219 C55 199 20 163 20 112 V38 Z" fill="${col}"/>
 <path d="M100 16 L180 38 V112 C180 163 145 199 100 219 C55 199 20 163 20 112 V38 Z" fill="url(#g${id})"/>
 <path d="M100 30 L168 48 V60 H32 V48 Z" fill="rgba(255,255,255,.22)"/>
-<text x="100" y="152" text-anchor="middle" font-family="BS" font-size="74" fill="#fff" letter-spacing="2">${code}</text></svg>`;
+<text x="100" y="152" text-anchor="middle" font-family="BS" font-size="74" fill="${ink(col)}" letter-spacing="2">${code}</text></svg>`;
 const ck=`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>`;
 const xk=`<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>`;
 const pv=Math.max(...D.probs), segs=[[D.probs[0],D.colors.home],[D.probs[1],'#8b8f9a'],[D.probs[2],D.colors.away]];
