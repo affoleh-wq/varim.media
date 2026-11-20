@@ -1,0 +1,146 @@
+{
+ "slug": "carousel-sat21",
+ "title": "Saturday's big 5",
+ "date": "Sat 21 Nov 2026",
+ "slides": [
+  {
+   "type": "cover",
+   "kick": "Saturday · 21 Nov",
+   "h1": "Big <span>5</span>",
+   "sub": "Five matches. One model. Your calls."
+  },
+  {
+   "type": "match",
+   "league": "Premier League",
+   "ko": "12:30 UTC",
+   "home": "Man City",
+   "away": "Fulham",
+   "code": [
+    "MCI",
+    "FUL"
+   ],
+   "colors": {
+    "home": "#4f97cf",
+    "away": "#16171c"
+   },
+   "hook": "1 win in 5.<br><span>Still favourites?</span>",
+   "hl": "#8fd0ff",
+   "note": "City lost 3 of their last 5, but they scored 24 in 10 games. Fulham managed 11.",
+   "probs": [
+    62,
+    22,
+    17
+   ],
+   "score": "1–0"
+  },
+  {
+   "type": "match",
+   "league": "Serie A",
+   "ko": "14:00 UTC",
+   "home": "Lazio",
+   "away": "Lecce",
+   "code": [
+    "LAZ",
+    "LEC"
+   ],
+   "colors": {
+    "home": "#3fa9dd",
+    "away": "#d8b400"
+   },
+   "ink": {
+    "1": "#1a1a1a"
+   },
+   "hook": "Top vs 14th.<br><span>Any doubt?</span>",
+   "hl": "#ffd84a",
+   "note": "Lazio lead Serie A with 29 points and are unbeaten in 5. Lecce have lost 3 of their last 5.",
+   "probs": [
+    85,
+    10,
+    5
+   ],
+   "score": "3–0"
+  },
+  {
+   "type": "match",
+   "league": "Bundesliga",
+   "ko": "14:30 UTC",
+   "home": "Gladbach",
+   "away": "Dortmund",
+   "code": [
+    "BMG",
+    "BVB"
+   ],
+   "colors": {
+    "home": "#14874a",
+    "away": "#e8c800"
+   },
+   "ink": {
+    "1": "#1a1a1a"
+   },
+   "hook": "Last vs 2nd.<br><span>Upset again?</span>",
+   "hl": "#ffe14a",
+   "note": "Gladbach are bottom with 4 points, but they won the last meeting 1–0 in May.",
+   "probs": [
+    14,
+    17,
+    69
+   ],
+   "score": "1–2"
+  },
+  {
+   "type": "match",
+   "league": "Bundesliga",
+   "ko": "14:30 UTC",
+   "home": "Union Berlin",
+   "away": "Leipzig",
+   "code": [
+    "FCU",
+    "RBL"
+   ],
+   "colors": {
+    "home": "#c8102e",
+    "away": "#0f2a5c"
+   },
+   "hook": "3 goals a game.<br><span>Stop them?</span>",
+   "hl": "#ff5a6a",
+   "note": "Leipzig average 3 goals per game. Union average 0.78. The model expects goals: over 2.5 at 76%.",
+   "probs": [
+    13,
+    15,
+    72
+   ],
+   "score": "1–2"
+  },
+  {
+   "type": "match",
+   "league": "Premier League",
+   "ko": "15:00 UTC",
+   "home": "Chelsea",
+   "away": "Leeds",
+   "code": [
+    "CHE",
+    "LEE"
+   ],
+   "colors": {
+    "home": "#0a4aa0",
+    "away": "#d9ae00"
+   },
+   "hook": "6–3 last time.<br><span>Again?</span>",
+   "hl": "#ffd84a",
+   "note": "Chelsea beat Leeds 6–3 in the EFL Cup in September. Over 2.5 goals at 66%.",
+   "probs": [
+    58,
+    21,
+    22
+   ],
+   "score": "2–1"
+  },
+  {
+   "type": "cta",
+   "h1": "Your<br><span>5 scores?</span>",
+   "p": "Drop your five predictions in the comments.<br>We'll post every result after full time.",
+   "ex": "1–0 · 3–0 · 1–2 · 1–2 · 2–1",
+   "save": "this post for Saturday"
+  }
+ ]
+}
