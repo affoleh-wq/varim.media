@@ -24,7 +24,7 @@ body{background:#050505}
 @keyframes settle{from{transform:scale(1.08)}to{transform:none}}
 /* s1 */
 #s1 .in{justify-content:center;gap:0}
-.hook{font-size:84px;letter-spacing:-3px;margin-top:22px;white-space:normal;line-height:.95}
+.hook{font-size:118px;letter-spacing:-4px;margin-top:26px;white-space:normal;line-height:.92}
 .hook span{color:var(--accent)}
 .tn{font-size:200px;max-width:100%;overflow:hidden;text-shadow:0 10px 60px rgba(0,0,0,.6)}
 .tn.home{margin-top:40px}
@@ -36,13 +36,16 @@ body{background:#050505}
 .verd .V{font-size:110px;letter-spacing:-4px}
 .verd .V em{font-style:italic;color:var(--accent)}
 #s1 .burst{width:320px;height:320px;left:260px;top:640px}
+/* 20.11: вердикт перенесён из s1 в начало s2 — в первом кадре только вопрос */
+#s2 .verd{align-self:center;margin-top:0;margin-bottom:34px}
+#s2 .verd .V{font-size:96px}
 /* s2 */
 #s2 .in{justify-content:center;align-items:center;text-align:center}
-.sc{font-size:470px;letter-spacing:-20px;line-height:.85;margin-top:30px;display:flex;align-items:center;gap:36px;text-shadow:0 20px 90px rgba(0,0,0,.7)}
+.sc{font-size:330px;letter-spacing:-14px;line-height:.85;margin-top:16px;display:flex;align-items:center;gap:36px;text-shadow:0 20px 90px rgba(0,0,0,.7)}
 .sc i{display:block;width:110px;height:30px;background:var(--accent);transform:skewX(-14deg);box-shadow:0 0 60px rgba(230,0,35,.8)}
 .pc{font-size:38px;font-weight:700;color:rgba(255,255,255,.85);margin-top:26px}
 .pc b{color:#fff;font-weight:900}
-.bars{width:100%;margin-top:70px}
+.bars{width:100%;margin-top:44px}
 .bars .row{display:flex;height:64px;gap:6px}
 .bars .row div{height:100%;transform-origin:left;animation:fill .6s var(--ease) both;animation-delay:var(--d)}
 .bars .lg2{display:flex;justify-content:space-between;margin-top:18px;font-size:30px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
@@ -84,16 +87,16 @@ document.body.insertAdjacentHTML('afterbegin',
    <div class="tn home V settle">${nm(H)}</div>
    <div class="vsr settle"><i></i><b>VS</b><i></i></div>
    <div class="tn away V settle">${nm(A)}</div>
-   <div class="verd slam" style="--d:.2s"><small>MODEL VERDICT</small><div class="V">${nm(D.pick)} <em>${mx}%</em></div></div>
    <div class="burst" style="--d:.43s"></div>`,.43)
-+sec(1,`<div class="kick a" style="--d:.0s">Most likely score</div>
-   <div class="sc V slam" style="--d:.25s">${sc[0]}<i></i>${sc[1]}</div>
-   <div class="pc a" style="--d:.55s">model probability <b>${D.scorePct}%</b></div>
++sec(1,`<div class="verd slam" style="--d:.05s"><small>MODEL VERDICT</small><div class="V">${nm(D.pick)} <em>${mx}%</em></div></div>
+   <div class="kick a" style="--d:.45s">Most likely score</div>
+   <div class="sc V slam" style="--d:.6s">${sc[0]}<i></i>${sc[1]}</div>
+   <div class="pc a" style="--d:.85s">model probability <b>${D.scorePct}%</b></div>
    <div class="bars"><div class="row">
-     <div style="flex:${D.probs[0]};background:${CH};--d:.9s;box-shadow:inset 0 0 0 3px rgba(255,255,255,.25)"></div>
-     <div style="flex:${D.probs[1]};background:#8a8a93;--d:1.05s"></div>
-     <div style="flex:${D.probs[2]};background:${CA};--d:1.2s;box-shadow:inset 0 0 0 3px rgba(255,255,255,.25)"></div></div>
-     <div class="lg2 a" style="--d:1.3s"><span>${D.short.home}<b>${D.probs[0]}%</b></span><span>Draw<b>${D.probs[1]}%</b></span><span>${D.short.away}<b>${D.probs[2]}%</b></span></div></div>`,.43)
+     <div style="flex:${D.probs[0]};background:${CH};--d:1.05s;box-shadow:inset 0 0 0 3px rgba(255,255,255,.25)"></div>
+     <div style="flex:${D.probs[1]};background:#8a8a93;--d:1.15s"></div>
+     <div style="flex:${D.probs[2]};background:${CA};--d:1.25s;box-shadow:inset 0 0 0 3px rgba(255,255,255,.25)"></div></div>
+     <div class="lg2 a" style="--d:1.4s"><span>${D.short.home}<b>${D.probs[0]}%</b></span><span>Draw<b>${D.probs[1]}%</b></span><span>${D.short.away}<b>${D.probs[2]}%</b></span></div></div>`,.43)
 +sec(2,`<div class="kick a" style="--d:.0s">${D.fact.label}</div>
    <div class="big V slam" style="--d:.25s">${factBig}</div>
    <div class="burst" style="--d:.43s"></div>
