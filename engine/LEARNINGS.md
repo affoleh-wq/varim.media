@@ -54,3 +54,9 @@
   - Threads: только #<Лига>; Pinterest: #<Лига> #football #FootballPredictions + 1 по формату.
 - Подпись Instagram: 1) крючок-факт с цифрой, 2) вопрос/интрига, пустая строка, 3) призыв «Comment your score below 👇 / We'll check after full time», 4) «Full preview: link in bio · Model estimate, not a guarantee. 18+», 5) хештеги. Без полного расклада процентов в подписи — ответ модели в ролике.
 - Ночная задача баннеров итогов 20.11 — тоже по этим правилам.
+
+## 2026-11-20 — карусели в Instagram (решение пользователя: разбавлять ленту)
+- Шаблон `engine/carousel.html` + `python3 engine/shot_carousel.py data/<slug>.json` → out/<slug>/slide_N.jpg (1080×1350). Типы слайдов: cover / match / cta (пример: data/carousel-sat21.json).
+- Баланс ленты в день: 2 Reels + 1 карусель или пост-картинка + баннеры итогов вечером.
+- Карусели 3–4 в неделю: «Weekend preview / Big 5» (пт или сб), «Model scorecard» (раз в неделю, честно ✓/✗), «Form check».
+- Публикация: Instagram POST с несколькими media + тот же набор в Threads через 15 мин.
