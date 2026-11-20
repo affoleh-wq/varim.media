@@ -1,0 +1,47 @@
+{
+ "template": "tpl_verdict.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "slug": "chelsea-leeds-v",
+ "home": "Chelsea",
+ "away": "Leeds",
+ "short": {
+  "home": "Chelsea",
+  "away": "Leeds"
+ },
+ "league": "Premier League",
+ "when": "Sat · 15:00 UTC",
+ "hook": "6–3 last time.<br><span>Again?</span>",
+ "colors": {
+  "home": "#034694",
+  "away": "#f2c200"
+ },
+ "probs": [
+  58,
+  21,
+  22
+ ],
+ "pick": "Chelsea",
+ "score": "2-1",
+ "scorePct": "9.7",
+ "fact": {
+  "label": "Last meeting",
+  "big": "6-3",
+  "line": "Chelsea won<br>a 9-goal thriller",
+  "sub": "Chelsea 6–3 Leeds · EFL Cup · 9 Sep 2026"
+ },
+ "ask": "Goals<br><span>again?</span>",
+ "url": "https://varim.net/predictions/chelsea-vs-leeds-2026-11-21-1325407754/"
+}

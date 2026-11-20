@@ -1,0 +1,62 @@
+{
+ "slug": "mancity-fulham",
+ "template": "tpl_top3.html",
+ "home": "Man City",
+ "away": "Fulham",
+ "league": "Premier League",
+ "when": "Sat 21 Nov · 12:30 UTC",
+ "url": "https://varim.net/predictions/manchester-city-vs-fulham-2026-11-21-1325411158/",
+ "hot": "away",
+ "stat3": "City: 1 win<br>in their last 5",
+ "formHome": [
+  "L",
+  "W",
+  "L",
+  "D",
+  "L"
+ ],
+ "formAway": [
+  "D",
+  "D",
+  "L",
+  "W",
+  "W"
+ ],
+ "tagHome": "1 win in 5",
+ "tagAway": "2 wins in 5",
+ "stat2": "City still score<br>twice as many",
+ "cmp": [
+  [
+   "Scored",
+   24,
+   11
+  ],
+  [
+   "Conceded",
+   13,
+   11,
+   1
+  ]
+ ],
+ "cmpNote": "Last 10 games · all competitions",
+ "venueLabel": "Venue form",
+ "venue": [
+  [
+   "Man City at home",
+   "W0 D1 L1"
+  ],
+  [
+   "Fulham away",
+   "W1 D1 L0"
+  ]
+ ],
+ "probs": [
+  62,
+  22,
+  17
+ ],
+ "pick": "Man City",
+ "score": "1-0",
+ "scorePct": "11.4",
+ "kickoff": "before Saturday's kick-off"
+}
