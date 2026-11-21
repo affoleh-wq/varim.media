@@ -1,0 +1,50 @@
+{
+ "slug": "union-leipzig-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Union",
+ "away": "Leipzig",
+ "short": {
+  "home": "Wales",
+  "away": "Portugal"
+ },
+ "league": "Bundesliga",
+ "colors": {
+  "home": "#c8102e",
+  "away": "#0f2a5c"
+ },
+ "probs": [
+  13,
+  15,
+  72
+ ],
+ "pick": "Leipzig",
+ "pickOk": true,
+ "score": "1-2",
+ "final": "1-5",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "Leipzig hit five in Berlin"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "FCU",
+  "away": "RBL"
+ },
+ "venue": "An der Alten Försterei",
+ "date": "21 Nov 2026",
+ "round": "Matchday 10"
+}

@@ -1,0 +1,50 @@
+{
+ "slug": "gladbach-dortmund-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Gladbach",
+ "away": "Dortmund",
+ "short": {
+  "home": "Wales",
+  "away": "Portugal"
+ },
+ "league": "Bundesliga",
+ "colors": {
+  "home": "#14874a",
+  "away": "#e8c800"
+ },
+ "probs": [
+  14,
+  17,
+  69
+ ],
+ "pick": "Dortmund",
+ "pickOk": true,
+ "score": "1-2",
+ "final": "0-1",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "Late Nmecha strike sends Dortmund top"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "BMG",
+  "away": "BVB"
+ },
+ "venue": "Borussia-Park",
+ "date": "21 Nov 2026",
+ "round": "Matchday 10"
+}
