@@ -1,0 +1,50 @@
+{
+ "slug": "chelsea-leeds-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Chelsea",
+ "away": "Leeds",
+ "short": {
+  "home": "Wales",
+  "away": "Portugal"
+ },
+ "league": "Premier League",
+ "colors": {
+  "home": "#0a4aa0",
+  "away": "#d9ae00"
+ },
+ "probs": [
+  58,
+  21,
+  22
+ ],
+ "pick": "Chelsea",
+ "pickOk": false,
+ "score": "2-1",
+ "final": "1-4",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "Leeds' first Stamford Bridge win this century"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "CHE",
+  "away": "LEE"
+ },
+ "venue": "Stamford Bridge",
+ "date": "21 Nov 2026",
+ "round": "Matchday 11"
+}

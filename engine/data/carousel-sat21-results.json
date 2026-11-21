@@ -1,0 +1,161 @@
+{
+ "slug": "carousel-sat21-results",
+ "title": "Big 5 · Results",
+ "date": "Sat 21 Nov 2026",
+ "slides": [
+  {
+   "type": "cover",
+   "kick": "Saturday's big 5 · Results",
+   "h1": "Model check",
+   "big": "3<span>/5</span>",
+   "sub": "Winners called. One exact score. Two upsets."
+  },
+  {
+   "type": "result",
+   "league": "Premier League",
+   "home": "Man City",
+   "away": "Fulham",
+   "code": [
+    "MCI",
+    "FUL"
+   ],
+   "colors": {
+    "home": "#4f97cf",
+    "away": "#16171c"
+   },
+   "final": "1–1",
+   "ko": "Draw",
+   "pick": "Man City",
+   "probs": [
+    62,
+    22,
+    17
+   ],
+   "ok": false,
+   "hook": "Boos at<br><span>the Etihad.</span>",
+   "hl": "#8fd0ff",
+   "note": "City are now winless in four league games."
+  },
+  {
+   "type": "result",
+   "league": "Serie A",
+   "home": "Lazio",
+   "away": "Lecce",
+   "code": [
+    "LAZ",
+    "LEC"
+   ],
+   "colors": {
+    "home": "#3fa9dd",
+    "away": "#d8b400"
+   },
+   "ink": {
+    "1": "#1a1a1a"
+   },
+   "final": "3–0",
+   "ko": "Exact",
+   "pick": "Lazio",
+   "probs": [
+    85,
+    10,
+    5
+   ],
+   "ok": true,
+   "exact": true,
+   "hook": "3–0. Exactly<br><span>as predicted.</span>",
+   "hl": "#ffd84a",
+   "note": "The model's most likely score was 3–0. Lazio stay top of Serie A."
+  },
+  {
+   "type": "result",
+   "league": "Bundesliga",
+   "home": "Gladbach",
+   "away": "Dortmund",
+   "code": [
+    "BMG",
+    "BVB"
+   ],
+   "colors": {
+    "home": "#14874a",
+    "away": "#e8c800"
+   },
+   "ink": {
+    "1": "#1a1a1a"
+   },
+   "final": "0–1",
+   "ko": "Called",
+   "pick": "Dortmund",
+   "probs": [
+    14,
+    17,
+    69
+   ],
+   "ok": true,
+   "hook": "No upset<br><span>this time.</span>",
+   "hl": "#ffe14a",
+   "note": "A late Nmecha goal sends Dortmund top of the Bundesliga."
+  },
+  {
+   "type": "result",
+   "league": "Bundesliga",
+   "home": "Union",
+   "away": "Leipzig",
+   "code": [
+    "FCU",
+    "RBL"
+   ],
+   "colors": {
+    "home": "#c8102e",
+    "away": "#0f2a5c"
+   },
+   "final": "1–5",
+   "ko": "Called",
+   "pick": "Leipzig",
+   "probs": [
+    13,
+    15,
+    72
+   ],
+   "ok": true,
+   "hook": "Five goals<br><span>in Berlin.</span>",
+   "hl": "#ff5a6a",
+   "note": "We asked if anyone could stop Leipzig. Union couldn't."
+  },
+  {
+   "type": "result",
+   "league": "Premier League",
+   "home": "Chelsea",
+   "away": "Leeds",
+   "code": [
+    "CHE",
+    "LEE"
+   ],
+   "colors": {
+    "home": "#0a4aa0",
+    "away": "#d9ae00"
+   },
+   "ink": {
+    "1": "#1a1a1a"
+   },
+   "final": "1–4",
+   "ko": "Upset",
+   "pick": "Chelsea",
+   "probs": [
+    58,
+    21,
+    22
+   ],
+   "ok": false,
+   "hook": "Leeds stun<br><span>the Bridge.</span>",
+   "hl": "#ffd84a",
+   "note": "Leeds' first win at Stamford Bridge this century."
+  },
+  {
+   "type": "cta",
+   "h1": "Did you beat<br><span>the model?</span>",
+   "p": "Comment how many you got right.<br>Follow for Sunday: Liverpool vs United.",
+   "ex": "Model 3/5 · You ?/5",
+   "save": "and come back tomorrow"
+  }
+ ]
+}
