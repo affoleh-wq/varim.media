@@ -71,3 +71,9 @@
 4. Тест трендовой музыки Instagram (audioConfiguration, audioVolume ~30, videoVolume 100) на 1 Reel в день против нашей музыки.
 5. Вечерний отчёт: главные метрики — сохранения, репосты, подписки с поста, комментарии; лайки вторично.
 Нужно от пользователя (вручную): опрос-стикер в сторис 1/X/2, ответы на комментарии в первый час, закрепить карусель Big 5 и будущий scorecard.
+
+## 2026-11-21 — TikTok: фото-карусели (решение пользователя)
+- Карусели публиковать и в TikTok (photo mode): тот же набор slide_N.jpg, provider tiktok, tiktokData {title, autoAddMusic:true, photoCoverIndex:0}. Подпись — по правилам TikTok (аналитика, без pick/verdict/tip/bet/odds).
+- В TikTok в первую очередь карусели-ИТОГИ (results, scorecard, form check) — они безопасны для модерации. Карусель с процентами на будущие матчи считается прогнозом (лимит 1 прогноз в день).
+- TikTok Stories через Metricool/API не публикуются — только вручную из приложения.
+- Первая: карусель «Big 5: how did the model do?» 21.11 в 20:30 — IG + Threads + TikTok (20:35).
