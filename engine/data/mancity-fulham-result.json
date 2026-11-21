@@ -1,0 +1,50 @@
+{
+ "slug": "mancity-fulham-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Man City",
+ "away": "Fulham",
+ "short": {
+  "home": "Wales",
+  "away": "Portugal"
+ },
+ "league": "Premier League",
+ "colors": {
+  "home": "#4f97cf",
+  "away": "#16171c"
+ },
+ "probs": [
+  62,
+  22,
+  17
+ ],
+ "pick": "Man City",
+ "pickOk": false,
+ "score": "1-0",
+ "final": "1-1",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "City now winless in four as Fulham hold on"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "MCI",
+  "away": "FUL"
+ },
+ "venue": "Etihad Stadium",
+ "date": "21 Nov 2026",
+ "round": "Matchday 11"
+}
