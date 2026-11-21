@@ -16,6 +16,9 @@
 #s1 .teams .flag{width:120px;height:80px;border-radius:12px}
 #s1 .teams b{font-size:1em;font-weight:800;letter-spacing:-2px;white-space:nowrap}
 #s1 .teams i{font-style:italic;font-size:.6em;font-weight:900;color:var(--accent-text)}
+#s1 .hook{font-size:118px;font-weight:900;letter-spacing:-5px;line-height:.95;text-transform:uppercase;margin-top:40px}
+#s1 .hook span{color:var(--accent-text);display:block}
+#s1 .tag3{align-self:flex-start;margin-top:34px;font-size:30px;font-weight:800;letter-spacing:3px;text-transform:uppercase;padding:12px 24px;border-radius:999px;border:2px solid var(--border);background:var(--surface);color:var(--muted)}
 #s1 .meta{margin-top:40px;font-size:32px;font-weight:600;color:var(--muted)}
 /* заголовок пункта */
 .numh{display:flex;align-items:flex-end;gap:28px;position:relative}
@@ -90,11 +93,14 @@ const hotA=(D.hot||'away')=='away';
 const better=(a,b,low)=>a==b?['','']:(low?a<b:a>b)?['','dim']:['dim',''];
 document.body.insertAdjacentHTML('afterbegin',`
 <section class="scene" id="s1" style="--dur:3.5s;--t0:0s;--shake:99s"><div class="body"><div class="in">
-  <div class="ghost">3</div>
+${D.hook?`  <div class="ghost">3</div>
+  <div class="teams now">${flag(H,'sh')}<b>${H}</b><i>VS</i><b>${A}</b>${flag(A,'sh')}</div>
+  <div class="hook now">${D.hook}</div>
+  <div class="tag3 aq" style="--d:.05s">3 stats ${D.kickoff||"before kick-off"}</div>`:`  <div class="ghost">3</div>
   <div class="three now">3</div>
   <div class="t1 now">stats to know</div>
   <div class="t2 aq" style="--d:.05s">${D.kickoff||"before kick-off tonight"}</div>
-  <div class="teams aq" style="--d:.05s">${flag(H,'sh')}<b>${H}</b><i>VS</i><b>${A}</b>${flag(A,'sh')}</div>
+  <div class="teams aq" style="--d:.05s">${flag(H,'sh')}<b>${H}</b><i>VS</i><b>${A}</b>${flag(A,'sh')}</div>`}
   <div class="meta aq" style="--d:.05s">${D.league} · ${D.when}</div>
 </div></div></section>
 

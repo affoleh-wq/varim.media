@@ -101,3 +101,5 @@ body.light .card{box-shadow:0 8px 24px rgba(5,18,48,.08)}
 @keyframes now{from{transform:scale(1.06)}to{transform:none}}
 .aq{animation:aq .3s var(--ease) both;animation-delay:var(--d,0s)}
 @keyframes aq{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.flag.crest{box-shadow:none;border-radius:0;overflow:visible;filter:drop-shadow(0 18px 30px rgba(0,0,0,.35))}
+.flag.crest::after{display:none}
