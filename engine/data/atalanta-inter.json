@@ -1,0 +1,71 @@
+{
+ "slug": "atalanta-inter",
+ "template": "tpl_top3.html",
+ "home": "Atalanta",
+ "away": "Inter",
+ "code": {
+  "home": "ATA",
+  "away": "INT"
+ },
+ "colors": {
+  "home": "#1e71b8",
+  "away": "#111111"
+ },
+ "league": "Serie A",
+ "when": "Sun 22 Nov · 19:45 UTC",
+ "kickoff": "before Sunday's kick-off",
+ "url": "https://varim.net/predictions/atalanta-vs-inter-2026-11-22-1319219282/",
+ "hook": "Atalanta: 0 wins<br><span>in 3 at home</span>",
+ "hot": "away",
+ "stat3": "Inter: 4 wins<br>in their last 5",
+ "formHome": [
+  "W",
+  "D",
+  "L",
+  "D",
+  "D"
+ ],
+ "formAway": [
+  "W",
+  "W",
+  "L",
+  "W",
+  "W"
+ ],
+ "tagHome": "1 win in 5",
+ "tagAway": "4 wins in 5",
+ "stat2": "Inter score<br>2.5 a game",
+ "cmp": [
+  [
+   "Scored",
+   16,
+   24
+  ],
+  [
+   "Conceded",
+   19,
+   12,
+   1
+  ]
+ ],
+ "cmpNote": "Last 10 games · all competitions",
+ "venueLabel": "Venue form",
+ "venue": [
+  [
+   "Atalanta at home",
+   "W0 D2 L1"
+  ],
+  [
+   "Inter away",
+   "W2 D0 L1"
+  ]
+ ],
+ "probs": [
+  17,
+  19,
+  64
+ ],
+ "pick": "Inter",
+ "score": "1-2",
+ "scorePct": "9.5"
+}

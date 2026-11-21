@@ -1,0 +1,47 @@
+{
+ "slug": "liverpool-manutd",
+ "template": "tpl_quiz.html",
+ "home": "Liverpool",
+ "away": "Man United",
+ "code": {
+  "home": "LIV",
+  "away": "MUN"
+ },
+ "colors": {
+  "home": "#c8102e",
+  "away": "#1d1d1d"
+ },
+ "league": "Premier League",
+ "when": "Sun 22 Nov · 16:30 UTC",
+ "url": "https://varim.net/predictions/liverpool-vs-manchester-united-2026-11-22-1325410307/",
+ "probs": [
+  55,
+  23,
+  23
+ ],
+ "over25": 57,
+ "btts": 56,
+ "clue": "Tight one?",
+ "h2h": {
+  "date": "3 May 2026",
+  "a": "Man United",
+  "score": "3–2",
+  "b": "Liverpool"
+ },
+ "score": "1-1",
+ "scorePct": "10.7",
+ "others": [
+  [
+   "2-1",
+   "9.8"
+  ],
+  [
+   "1-0",
+   "9.7"
+  ],
+  [
+   "2-0",
+   "8.9"
+  ]
+ ]
+}
