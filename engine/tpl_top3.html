@@ -20,6 +20,16 @@
 #s1 .hook span{color:var(--accent-text);display:block}
 #s1 .tag3{align-self:flex-start;margin-top:34px;font-size:30px;font-weight:800;letter-spacing:3px;text-transform:uppercase;padding:12px 24px;border-radius:999px;border:2px solid var(--border);background:var(--surface);color:var(--muted)}
 #s1 .meta{margin-top:40px;font-size:32px;font-weight:600;color:var(--muted)}
+#s1 .hook{position:relative}
+#s1 .hook::after{content:'';display:block;height:12px;width:100%;margin-top:22px;background:var(--accent);transform-origin:left;animation:fill .55s var(--ease) both;animation-delay:0s}
+#s1 .bigduel{display:flex;align-items:center;justify-content:center;gap:40px;margin-top:46px;position:relative}
+#s1 .bigduel .flag{width:250px;height:290px}
+#s1 .bigduel .vs{font-size:110px;font-weight:900;font-style:italic;color:var(--accent-text);letter-spacing:-4px}
+#s1 .bigduel .hotx .flag{filter:drop-shadow(0 0 40px rgba(230,0,35,.55))}
+#s1 .bigduel .burst{width:240px;height:240px;left:calc(50% - 120px);top:calc(50% - 120px)}
+#s1 .prog{display:flex;gap:14px;margin-top:40px;width:100%}
+#s1 .prog i{flex:1;height:14px;border-radius:7px;background:var(--surface2);overflow:hidden}
+#s1 .prog i::after{content:'';display:block;height:100%;background:var(--accent);transform-origin:left;animation:fill 1.05s linear both;animation-delay:var(--d)}
 /* заголовок пункта */
 .numh{display:flex;align-items:flex-end;gap:28px;position:relative}
 .num{font-size:250px;font-weight:900;line-height:.78;letter-spacing:-12px;color:transparent;-webkit-text-stroke:5px var(--accent);flex:none}
@@ -95,8 +105,10 @@ document.body.insertAdjacentHTML('afterbegin',`
 <section class="scene" id="s1" style="--dur:3.5s;--t0:0s;--shake:99s"><div class="body"><div class="in">
 ${D.hook?`  <div class="ghost">3</div>
   <div class="teams now">${flag(H,'sh')}<b>${H}</b><i>VS</i><b>${A}</b>${flag(A,'sh')}</div>
-  <div class="hook now">${D.hook}</div>
-  <div class="tag3 aq" style="--d:.05s">3 stats ${D.kickoff||"before kick-off"}</div>`:`  <div class="ghost">3</div>
+  <div class="hook nowp">${D.hook}</div>
+  <div class="tag3 aq" style="--d:.05s">3 stats ${D.kickoff||"before kick-off"}</div>
+  <div class="bigduel"><div class="burst" style="--d:.05s"></div><div class="inl ${hotA?'':'hotx'}">${flag(H)}</div><div class="vs bob">VS</div><div class="inr ${hotA?'hotx':''}">${flag(A)}</div></div>
+  <div class="prog"><i style="--d:0s"></i><i style="--d:1.05s"></i><i style="--d:2.1s"></i></div>`:`  <div class="ghost">3</div>
   <div class="three now">3</div>
   <div class="t1 now">stats to know</div>
   <div class="t2 aq" style="--d:.05s">${D.kickoff||"before kick-off tonight"}</div>
