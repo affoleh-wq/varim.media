@@ -1,0 +1,41 @@
+{
+ "slug": "arsenal-dortmund",
+ "template": "tpl_quiz.html",
+ "home": "Arsenal",
+ "away": "Dortmund",
+ "code": {
+  "home": "ARS",
+  "away": "BVB"
+ },
+ "colors": {
+  "home": "#db0007",
+  "away": "#e8c800"
+ },
+ "league": "Champions League",
+ "when": "Tue 24 Nov · 20:00 UTC",
+ "url": "https://varim.net/predictions/arsenal-vs-borussia-dortmund-2026-11-24-1391905745/",
+ "probs": [
+  42,
+  28,
+  30
+ ],
+ "over25": 42,
+ "btts": 48,
+ "clue": "Tight one?",
+ "score": "1-1",
+ "scorePct": "13",
+ "others": [
+  [
+   "1-0",
+   "12.2"
+  ],
+  [
+   "0-1",
+   "10"
+  ],
+  [
+   "0-0",
+   "9.4"
+  ]
+ ]
+}

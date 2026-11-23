@@ -1,0 +1,206 @@
+{
+ "slug": "carousel-weekend-scorecard",
+ "title": "Weekend model check",
+ "date": "20–22 Nov 2026",
+ "slides": [
+  {
+   "type": "cover",
+   "kick": "Weekend scorecard · 20–22 Nov",
+   "h1": "Model check",
+   "big": "4<span>/9</span>",
+   "sub": "4 winners called, 1 exact score, 5 misses. Every call, shown.",
+   "rows": [
+    {
+     "type": "result",
+     "home": "Bayern",
+     "final": "1–1",
+     "away": "Köln",
+     "ok": false,
+     "ko": "Missed"
+    },
+    {
+     "type": "result",
+     "home": "Athletic",
+     "final": "0–1",
+     "away": "Espanyol",
+     "ok": false,
+     "ko": "Missed"
+    },
+    {
+     "type": "result",
+     "home": "Man City",
+     "final": "1–1",
+     "away": "Fulham",
+     "ok": false,
+     "ko": "Missed"
+    },
+    {
+     "type": "result",
+     "home": "Lazio",
+     "final": "3–0",
+     "away": "Lecce",
+     "ok": true,
+     "ko": "Exact"
+    },
+    {
+     "type": "result",
+     "home": "Gladbach",
+     "final": "0–1",
+     "away": "Dortmund",
+     "ok": true,
+     "ko": "Called"
+    },
+    {
+     "type": "result",
+     "home": "Union",
+     "final": "1–5",
+     "away": "Leipzig",
+     "ok": true,
+     "ko": "Called"
+    },
+    {
+     "type": "result",
+     "home": "Chelsea",
+     "final": "1–4",
+     "away": "Leeds",
+     "ok": false,
+     "ko": "Missed"
+    },
+    {
+     "type": "result",
+     "home": "Liverpool",
+     "final": "4–0",
+     "away": "Man United",
+     "ok": true,
+     "ko": "Called"
+    },
+    {
+     "type": "result",
+     "home": "Atalanta",
+     "final": "4–4",
+     "away": "Inter",
+     "ok": false,
+     "ko": "Missed"
+    }
+   ]
+  },
+  {
+   "type": "result",
+   "league": "Serie A",
+   "home": "Lazio",
+   "away": "Lecce",
+   "code": [
+    "LAZ",
+    "LEC"
+   ],
+   "colors": {
+    "home": "#3fa9dd",
+    "away": "#d8b400"
+   },
+   "ink": {
+    "1": "#1a1a1a"
+   },
+   "final": "3–0",
+   "ko": "Exact",
+   "pick": "Lazio",
+   "probs": [
+    85,
+    10,
+    5
+   ],
+   "ok": true,
+   "exact": true,
+   "hook": "3–0. Exactly<br><span>as predicted.</span>",
+   "hl": "#ffd84a",
+   "note": "Best call of the weekend: winner and exact score."
+  },
+  {
+   "type": "result",
+   "league": "Premier League",
+   "home": "Liverpool",
+   "away": "Man United",
+   "code": [
+    "LIV",
+    "MUN"
+   ],
+   "colors": {
+    "home": "#c8102e",
+    "away": "#1d1d1d"
+   },
+   "final": "4–0",
+   "ko": "Called",
+   "pick": "Liverpool",
+   "probs": [
+    55,
+    23,
+    23
+   ],
+   "ok": true,
+   "hook": "Called it.<br><span>Didn't see 4–0.</span>",
+   "hl": "#ff6b6b",
+   "note": "10-man United were beaten 4–0 at Anfield. The model had Liverpool at 55%."
+  },
+  {
+   "type": "result",
+   "league": "Serie A",
+   "home": "Atalanta",
+   "away": "Inter",
+   "code": [
+    "ATA",
+    "INT"
+   ],
+   "colors": {
+    "home": "#1e71b8",
+    "away": "#111111"
+   },
+   "final": "4–4",
+   "ko": "Missed",
+   "pick": "Inter",
+   "probs": [
+    17,
+    19,
+    64
+   ],
+   "ok": false,
+   "hook": "Eight goals.<br><span>Nobody saw that.</span>",
+   "hl": "#7fc4ff",
+   "note": "Inter led by two three times. Atalanta levelled with a stoppage-time penalty."
+  },
+  {
+   "type": "result",
+   "league": "Premier League",
+   "home": "Chelsea",
+   "away": "Leeds",
+   "code": [
+    "CHE",
+    "LEE"
+   ],
+   "colors": {
+    "home": "#0a4aa0",
+    "away": "#d9ae00"
+   },
+   "ink": {
+    "1": "#1a1a1a"
+   },
+   "final": "1–4",
+   "ko": "Missed",
+   "pick": "Chelsea",
+   "probs": [
+    58,
+    21,
+    22
+   ],
+   "ok": false,
+   "hook": "Biggest miss<br><span>of the weekend.</span>",
+   "hl": "#ffd84a",
+   "note": "Leeds' first win at Stamford Bridge this century."
+  },
+  {
+   "type": "cta",
+   "h1": "How did<br><span>you do?</span>",
+   "p": "Comment your weekend score.<br>Champions League is next: Arsenal vs Dortmund, City vs Napoli.",
+   "ex": "Model 4/9 · You ?/9",
+   "save": "and follow for Tuesday"
+  }
+ ]
+}

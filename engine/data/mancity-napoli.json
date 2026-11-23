@@ -1,0 +1,71 @@
+{
+ "slug": "mancity-napoli",
+ "template": "tpl_top3.html",
+ "home": "Man City",
+ "away": "Napoli",
+ "code": {
+  "home": "MCI",
+  "away": "NAP"
+ },
+ "colors": {
+  "home": "#4f97cf",
+  "away": "#0b3c8c"
+ },
+ "league": "Champions League",
+ "when": "Tue 24 Nov · 20:00 UTC",
+ "kickoff": "before Tuesday's kick-off",
+ "url": "https://varim.net/predictions/manchester-city-vs-napoli-2026-11-24-1391974676/",
+ "hook": "Man City: 0 wins<br><span>in 3 at home</span>",
+ "hot": "away",
+ "stat3": "City: 1 win<br>in their last 5",
+ "formHome": [
+  "D",
+  "L",
+  "W",
+  "L",
+  "D"
+ ],
+ "formAway": [
+  "W",
+  "D",
+  "L",
+  "L",
+  "W"
+ ],
+ "tagHome": "1 win in 5",
+ "tagAway": "2 wins in 5",
+ "stat2": "City still score<br>almost twice as many",
+ "cmp": [
+  [
+   "Scored",
+   24,
+   14
+  ],
+  [
+   "Conceded",
+   13,
+   14,
+   1
+  ]
+ ],
+ "cmpNote": "Last 10 games · all competitions",
+ "venueLabel": "Venue form",
+ "venue": [
+  [
+   "Man City at home",
+   "W0 D2 L1"
+  ],
+  [
+   "Napoli away",
+   "W1 D0 L2"
+  ]
+ ],
+ "probs": [
+  64,
+  19,
+  16
+ ],
+ "pick": "Man City",
+ "score": "2-1",
+ "scorePct": "9.8"
+}
