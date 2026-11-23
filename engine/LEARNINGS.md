@@ -98,3 +98,7 @@
 ## Итоги на 2026-11-24
 - Arsenal – Dortmund · Champions League · KO 2026-11-24 20:00 UTC · code ARS/BVB · colors #db0007/#e8c800 · модель 42/28/30, pick Arsenal 42%, точный 1-1 · pinLink https://varim.net/predictions/arsenal-vs-borussia-dortmund-2026-11-24-1391905745/ · venue Emirates Stadium
 - Man City – Napoli · Champions League · KO 2026-11-24 20:00 UTC · code MCI/NAP · colors #4f97cf/#0b3c8c · модель 64/19/16, pick Man City 64%, точный 2-1 · pinLink https://varim.net/predictions/manchester-city-vs-napoli-2026-11-24-1391974676/ · venue Etihad Stadium
+
+## 2026-11-23 — карусели в TikTok как ВИДЕО-слайдшоу (решение пользователя)
+- Фото-карусель в TikTok не публикуем (27 просм.). Вместо неё: `./engine/slideshow.sh <папка со slide_N.jpg> <out.mp4>` → вертикальный ролик ~10 с с музыкой → TikTok как обычное видео (videoCoverMilliseconds 500), через 1–3 ч после карусели в IG.
+- Тест 23.11 17:00 (weekend scorecard 4/9). Если просмотры на уровне обычных роликов (100+) — делать для каждой карусели.
