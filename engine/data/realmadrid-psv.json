@@ -1,0 +1,41 @@
+{
+ "slug": "realmadrid-psv",
+ "template": "tpl_quiz.html",
+ "home": "Real Madrid",
+ "away": "PSV",
+ "code": {
+  "home": "RMA",
+  "away": "PSV"
+ },
+ "colors": {
+  "home": "#f2f2f2",
+  "away": "#e2001a"
+ },
+ "league": "Champions League",
+ "when": "Tue 24 Nov · 20:00 UTC",
+ "url": "https://varim.net/predictions/real-madrid-vs-psv-eindhoven-2026-11-24-1391994249/",
+ "probs": [
+  43,
+  24,
+  33
+ ],
+ "over25": 60,
+ "btts": 62,
+ "clue": "Expect goals",
+ "score": "1-1",
+ "scorePct": "10.7",
+ "others": [
+  [
+   "2-1",
+   "8.9"
+  ],
+  [
+   "1-2",
+   "7.8"
+  ],
+  [
+   "1-0",
+   "7.4"
+  ]
+ ]
+}

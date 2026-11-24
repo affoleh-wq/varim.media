@@ -1,0 +1,71 @@
+{
+ "slug": "galatasaray-villa",
+ "template": "tpl_top3.html",
+ "home": "Galatasaray",
+ "away": "Aston Villa",
+ "code": {
+  "home": "GAL",
+  "away": "AVL"
+ },
+ "colors": {
+  "home": "#a90432",
+  "away": "#670e36"
+ },
+ "league": "Champions League",
+ "when": "Tue 24 Nov · 17:45 UTC",
+ "kickoff": "before tonight's kick-off",
+ "url": "https://varim.net/predictions/galatasaray-vs-aston-villa-2026-11-24-1391953401/",
+ "hook": "Galatasaray: 5 wins<br><span>in a row</span>",
+ "hot": "home",
+ "stat3": "Villa: 0 wins<br>in their last 5",
+ "formHome": [
+  "W",
+  "W",
+  "W",
+  "W",
+  "W"
+ ],
+ "formAway": [
+  "D",
+  "D",
+  "L",
+  "D",
+  "L"
+ ],
+ "tagHome": "5 wins in 5",
+ "tagAway": "0 wins in 5",
+ "stat2": "Galatasaray: 4 from 4<br>at home in Europe",
+ "cmp": [
+  [
+   "Scored",
+   23,
+   17
+  ],
+  [
+   "Conceded",
+   16,
+   19,
+   1
+  ]
+ ],
+ "cmpNote": "Last 10 games · all competitions",
+ "venueLabel": "Venue form",
+ "venue": [
+  [
+   "Galatasaray at home",
+   "W4 D0 L0"
+  ],
+  [
+   "Villa away",
+   "W0 D1 L2"
+  ]
+ ],
+ "probs": [
+  63,
+  18,
+  19
+ ],
+ "pick": "Galatasaray",
+ "score": "2-1",
+ "scorePct": "9"
+}

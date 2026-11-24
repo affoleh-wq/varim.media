@@ -107,3 +107,7 @@
 - Форматы Score Quiz, 3 Stats, Verdict, «газета» и карусели ОСТАЮТСЯ. Слайдшоу карусели в TikTok — продолжаем тест.
 - На стопе только тест трендовой музыки (audioConfiguration / ручной звук TikTok не используем).
 - Ритм: ролик 1 (Score Quiz) в 13:00, ролик 2 (3 Stats; Verdict 1–2 раза в неделю; газета 1 раз в неделю) в 17:00; карусель по рубрике дня; баннеры итогов вечером.
+
+## Итоги на 2026-11-24 (дополнение)
+- Galatasaray – Aston Villa · Champions League · KO 2026-11-24 17:45 UTC · code GAL/AVL · colors #a90432/#670e36 · venue RAMS Park · модель 63/18/19, pick Galatasaray 63%, точный 2-1 · pinLink https://varim.net/predictions/galatasaray-vs-aston-villa-2026-11-24-1391953401/
+- Real Madrid – PSV · Champions League · KO 2026-11-24 20:00 UTC · code RMA/PSV · colors #f2f2f2/#e2001a · venue Santiago Bernabéu · модель 43/24/33, pick Real Madrid 43%, точный 1-1 · pinLink https://varim.net/predictions/real-madrid-vs-psv-eindhoven-2026-11-24-1391994249/
