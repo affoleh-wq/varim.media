@@ -1,0 +1,46 @@
+{
+ "slug": "realmadrid-psv-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Real Madrid",
+ "away": "PSV",
+ "league": "Champions League",
+ "colors": {
+  "home": "#f2f2f2",
+  "away": "#e2001a"
+ },
+ "probs": [
+  43,
+  24,
+  33
+ ],
+ "pick": "Real Madrid",
+ "pickOk": true,
+ "score": "1-1",
+ "final": "5-1",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "1-0 down, then five: Mbappé scores twice"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "RMA",
+  "away": "PSV"
+ },
+ "venue": "Santiago Bernabéu",
+ "date": "24 Nov 2026",
+ "round": "Matchday 5"
+}

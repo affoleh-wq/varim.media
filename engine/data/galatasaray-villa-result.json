@@ -1,0 +1,46 @@
+{
+ "slug": "galatasaray-villa-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Galatasaray",
+ "away": "Villa",
+ "league": "Champions League",
+ "colors": {
+  "home": "#a90432",
+  "away": "#670e36"
+ },
+ "probs": [
+  63,
+  18,
+  19
+ ],
+ "pick": "Galatasaray",
+ "pickOk": true,
+ "score": "2-1",
+ "final": "1-0",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "One goal settles it in Istanbul"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "GAL",
+  "away": "AVL"
+ },
+ "venue": "RAMS Park",
+ "date": "24 Nov 2026",
+ "round": "Matchday 5"
+}

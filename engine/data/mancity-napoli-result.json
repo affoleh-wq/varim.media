@@ -1,0 +1,46 @@
+{
+ "slug": "mancity-napoli-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Man City",
+ "away": "Napoli",
+ "league": "Champions League",
+ "colors": {
+  "home": "#4f97cf",
+  "away": "#0b3c8c"
+ },
+ "probs": [
+  64,
+  19,
+  16
+ ],
+ "pick": "Man City",
+ "pickOk": false,
+ "score": "2-1",
+ "final": "2-2",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "Cherki's 86' equaliser rescues a point"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "MCI",
+  "away": "NAP"
+ },
+ "venue": "Etihad Stadium",
+ "date": "24 Nov 2026",
+ "round": "Matchday 5"
+}
