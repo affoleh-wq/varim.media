@@ -5,7 +5,7 @@ from playwright.async_api import async_playwright
 HERE = os.path.dirname(os.path.abspath(__file__))
 import base64, json
 DATA = json.load(open(sys.argv[2]))
-_h = open(HERE + "/" + DATA.get("template", "video.html")).read().replace("/*ENGINE_CSS*/", open(HERE + "/engine.css").read()).replace("/*ENGINE_JS*/", open(HERE + "/engine.js").read()).replace("__DATA__", json.dumps(DATA)).replace("__LOGO__", "data:image/png;base64," + base64.b64encode(open(HERE + "/logo.png", "rb").read()).decode())
+_h = open(HERE + "/" + DATA.get("template", "video.html")).read().replace("/*ENGINE_CSS*/", open(HERE + "/engine.css").read()).replace("/*ENGINE_JS*/", open(HERE + "/crest.js").read() + "\n" + open(HERE + "/engine.js").read()).replace("__FONT__", 'data:font/ttf;base64,'+__import__('base64').b64encode(open(HERE+'/fonts/BigShoulders-Bold.ttf','rb').read()).decode()).replace("__DATA__", json.dumps(DATA)).replace("__LOGO__", "data:image/png;base64," + base64.b64encode(open(HERE + "/logo.png", "rb").read()).decode())
 open(HERE + "/build_" + DATA["slug"] + ".html", "w").write(_h)
 OUT = HERE + "/out/" + DATA["slug"]
 URL = "file://" + HERE + "/build_" + DATA["slug"] + ".html"

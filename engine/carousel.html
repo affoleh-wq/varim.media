@@ -69,6 +69,9 @@ svg.bgsvg{position:absolute;inset:0;width:100%;height:100%}
 <svg class="bgsvg" id="bg"></svg><div class="pin"></div><div class="shade"></div><div class="grain"></div>
 <div class="c" id="c"></div>
 <script>
+/*CREST_JS*/
+const crest2=(S,i)=>{const c=S.colors?(i?S.colors.away:S.colors.home):(i?'#c4101f':'#22252f'),k=(S.kit||[])[i];const KD=KITS[S.code[i]]||['plain','#ffffff'];return crest({col:c,c2:(k&&k.c2)||KD[1],pat:(k&&k.pat)||KD[0],code:S.code[i],id:'c'+i})};
+
 const D=__DATA__,LOGO='__LOGO__',N=+location.hash.slice(1)||0,W=1080,H=1350;
 const S=D.slides[N], total=D.slides.length;
 const cols=S.colors?[S.colors.home,S.colors.away]:['#22252f','#c4101f'];
@@ -92,13 +95,13 @@ if(S.type=='cover'){h=`${topBar(D.title,D.date)}<div class="cv${S.big?' res':''}
 <div class="foot"><div class="swipe">Swipe <em>→</em></div><span>Model estimate · 18+</span></div>`}
 else if(S.type=='match'){const p=S.probs,segs=[[p[0],cols[0]],[p[1],'#8b8f9a'],[p[2],cols[1]]];
 h=`${topBar(S.league,S.ko)}<div class="mt" style="--hl:${S.hl||'#ff2a3d'}"><div class="hook bs">${S.hook}</div><div class="note">${S.note}</div>
-<div class="board"><div class="team">${shield(cols[0],S.code[0],0)}<div class="nm">${S.home}</div></div><div class="vs">VS</div><div class="team">${shield(cols[1],S.code[1],1)}<div class="nm">${S.away}</div></div></div>
+<div class="board"><div class="team">${crest2(S,0)}<div class="nm">${S.home}</div></div><div class="vs">VS</div><div class="team">${crest2(S,1)}<div class="nm">${S.away}</div></div></div>
 <div class="model"><div><div class="h"><img src="${LOGO}">Model</div><div class="bar">${segs.map(([v,c])=>`<i style="width:${v}%;background:${c}"></i>`).join('')}</div>
 <div class="legend"><span>${S.code[0]} ${p[0]}%</span><span>DRAW ${p[1]}%</span><span>${S.code[1]} ${p[2]}%</span></div></div>
 <div class="ml"><small>Most likely</small><b>${S.score}</b></div></div></div>${foot}`}
 else if(S.type=='result'){const p=S.probs,segs=[[p[0],cols[0]],[p[1],'#8b8f9a'],[p[2],cols[1]]];
 h=`${topBar(S.league,'Full time')}<div class="mt" style="--hl:${S.hl||'#ff2a3d'}"><div class="hook bs">${S.hook}</div><div class="note">${S.note}</div>
-<div class="board"><div class="team">${shield(cols[0],S.code[0],0)}<div class="nm">${S.home}</div></div><div class="fs bs">${S.final}</div><div class="team">${shield(cols[1],S.code[1],1)}<div class="nm">${S.away}</div></div></div>
+<div class="board"><div class="team">${crest2(S,0)}<div class="nm">${S.home}</div></div><div class="fs bs">${S.final}</div><div class="team">${crest2(S,1)}<div class="nm">${S.away}</div></div></div>
 <div class="model"><div><div class="h"><img src="${LOGO}">Model said</div><div class="mp bs">${S.pick} ${Math.max(...p)}%</div><div class="bar">${segs.map(([v,c])=>`<i style="width:${v}%;background:${c}"></i>`).join('')}</div></div>
 <div class="vd ${S.ok?'':'no'}"><b>${S.ok?'✓':'✗'}</b><span class="bs">${S.ok?(S.exact?'Exact score':'Called it'):'Missed'}</span></div></div></div>${foot}`}
 else{h=`${topBar(D.title,D.date)}<div class="ct"><h1 class="bs">${S.h1}</h1><div class="p">${S.p}</div><div class="ex"><small>Comment like this</small>${S.ex}</div>

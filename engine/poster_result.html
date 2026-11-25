@@ -64,6 +64,8 @@ svg.bgsvg{position:absolute;inset:0;width:100%;height:100%}
 <div class="ghost" id="gh"></div>
 <div class="c" id="c"></div>
 <script>
+/*CREST_JS*/
+
 const D=__DATA__,LOGO='__LOGO__';
 const W=innerWidth,H=innerHeight,tall=H>1600,R=document.documentElement.style;
 Object.entries(tall?{'--pt':'150px','--pb':'420px','--g1':'130px','--g2':'90px','--g3':'56px','--g4':'64px','--g5':'30px','--fts':'300px','--scs':'330px','--cr':'170px','--gy':'560px','--gs':'900px','--ang':'22deg'}
@@ -98,9 +100,9 @@ const tag=(a,b)=>a>b?'<span class="res w">WIN</span>':a<b?'<span class="res">LOS
 c.innerHTML=`<div class="top"><img src="${LOGO}"><div class="sep"></div><div class="t1">${D.league}<small>${D.round||'Matchday'}</small></div><div class="pg"><i></i>FULL TIME</div></div>
 <div class="hero"><div class="kick"><i></i>Final score<i></i></div><div class="ft">Full time</div></div>
 <div class="board">
- <div class="team ${hg<ag?'lose':''}">${shield(D.colors.home,D.code.home,'h')}<div class="nm">${D.home}</div>${tag(hg,ag)}</div>
+ <div class="team ${hg<ag?'lose':''}">${crestFor('home',D.code.home,D.colors.home,'h')}<div class="nm">${D.home}</div>${tag(hg,ag)}</div>
  <div class="score"><span class="${hg<ag?'l':''}">${hg}</span><em></em><span class="${ag<hg?'l':''}">${ag}</span></div>
- <div class="team ${ag<hg?'lose':''}">${shield(D.colors.away,D.code.away,'a')}<div class="nm">${D.away}</div>${tag(ag,hg)}</div></div>
+ <div class="team ${ag<hg?'lose':''}">${crestFor('away',D.code.away,D.colors.away,'a')}<div class="nm">${D.away}</div>${tag(ag,hg)}</div></div>
 <div class="line">${D.story.short}</div>
 <div class="facts"><div><small>Venue</small><b>${D.venue}</b></div><div><small>Date</small><b>${D.date}</b></div><div><small>Stage</small><b>${D.round||D.league}</b></div></div>
 <div class="model"><div><div class="h"><img src="${LOGO}">Model check</div>

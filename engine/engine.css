@@ -1,3 +1,4 @@
+@font-face{font-family:BS;src:url(__FONT__) format('truetype');font-weight:700}
 @property --n{syntax:'<integer>';initial-value:0;inherits:false}
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#080808;--surface:#131313;--surface2:#202020;--border:#39393f;--text:#fafafa;--muted:#bdbdc4;--accent:#e60023;--accent-text:#ff6b7f;--win:#54d58a;--win-bg:#10251b;--loss-bg:#35161c;--loss-bd:#6b2431;--win-bd:#1f5a3a;--ease:cubic-bezier(.16,1,.3,1);

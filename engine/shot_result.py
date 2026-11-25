@@ -2,7 +2,7 @@
 import asyncio,base64,json,sys,os
 from playwright.async_api import async_playwright
 H=os.path.dirname(os.path.abspath(__file__)); d=json.load(open(sys.argv[1])); o=f"{H}/out/{d['slug']}"; os.makedirs(o,exist_ok=True)
-h=open(H+'/poster_result.html').read().replace('__DATA__',json.dumps(d)).replace('__FONT__','data:font/ttf;base64,'+base64.b64encode(open(H+'/fonts/BigShoulders-Bold.ttf','rb').read()).decode()).replace('__LOGO__','data:image/png;base64,'+base64.b64encode(open(H+'/logo.png','rb').read()).decode())
+h=open(H+'/poster_result.html').read().replace('/*CREST_JS*/',open(H+'/crest.js').read()).replace('__DATA__',json.dumps(d)).replace('__FONT__','data:font/ttf;base64,'+base64.b64encode(open(H+'/fonts/BigShoulders-Bold.ttf','rb').read()).decode()).replace('__LOGO__','data:image/png;base64,'+base64.b64encode(open(H+'/logo.png','rb').read()).decode())
 open(f'/tmp/r_{d["slug"]}.html','w').write(h)
 async def m():
     async with async_playwright() as p:

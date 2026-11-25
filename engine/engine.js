@@ -14,7 +14,7 @@ const _side=t=>typeof D=='undefined'?null:t==D.home?'home':t==D.away?'away':null
 const _crest=t=>{const s=_side(t),cd=(typeof D!='undefined'&&(D.codes||D.code))||{},cl=(typeof D!='undefined'&&D.colors)||{};
   const code=(s&&cd[s])||t.replace(/[^A-Za-z]/g,'').slice(0,3).toUpperCase(),c=(s&&cl[s])||'#2a2a33';
   const lum=parseInt(c.slice(1,3),16)*.299+parseInt(c.slice(3,5),16)*.587+parseInt(c.slice(5,7),16)*.114,ink=lum>150?'#111':'#fff';
-  return `<svg viewBox="0 0 100 116" preserveAspectRatio="xMidYMid meet"><path d="M50 3 L95 15 V58 C95 86 74 104 50 113 C26 104 5 86 5 58 V15 Z" fill="${c}" stroke="rgba(255,255,255,.55)" stroke-width="4"/><text x="50" y="66" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="900" font-size="${code.length>3?24:30}" fill="${ink}" letter-spacing="1">${code}</text></svg>`};
+  return crestFor(s||'x',code,c,'e'+(s||code),"BS,'Inter',Arial,sans-serif")};
 const flag=(t,cls='',st='')=>{const f=FLAGS[t];if(!f)return `<div class="flag crest ${cls}" style="${st}">${_crest(t)}</div>`;return `<div class="flag ${cls}" style="${st}"><svg viewBox="${f[0]}" preserveAspectRatio="xMidYMid slice">${f[1]}</svg></div>`};
 const pills=(f,d0)=>f.map((r,i)=>`<b class="${r=='W'?'w':r=='L'?'l':''} flip" style="--d:${(d0+i*.08).toFixed(2)}s">${r}</b>`).join('');
 const split=s=>{let i=0;return s.split(' ').map(w=>`<span style="white-space:nowrap;display:inline-block">${[...w].map(c=>`<span class="ch" style="--i:${i++}">${c}</span>`).join('')}</span>`).join(' ')};
