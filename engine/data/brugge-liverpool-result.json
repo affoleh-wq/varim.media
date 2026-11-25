@@ -1,0 +1,46 @@
+{
+ "slug": "brugge-liverpool-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Brugge",
+ "away": "Liverpool",
+ "league": "Champions League",
+ "colors": {
+  "home": "#1d4f91",
+  "away": "#c8102e"
+ },
+ "probs": [
+  55,
+  23,
+  22
+ ],
+ "pick": "Club Brugge",
+ "pickOk": false,
+ "score": "1-1",
+ "final": "0-3",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "Isak scores twice as Liverpool cruise in Bruges"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "BRU",
+  "away": "LIV"
+ },
+ "venue": "Jan Breydel Stadium",
+ "date": "25 Nov 2026",
+ "round": "Matchday 5"
+}

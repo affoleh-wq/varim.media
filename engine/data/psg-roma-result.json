@@ -1,0 +1,46 @@
+{
+ "slug": "psg-roma-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "PSG",
+ "away": "Roma",
+ "league": "Champions League",
+ "colors": {
+  "home": "#004170",
+  "away": "#8e1f2f"
+ },
+ "probs": [
+  68,
+  18,
+  14
+ ],
+ "pick": "PSG",
+ "pickOk": false,
+ "score": "2-0",
+ "final": "2-2",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "Roma halt PSG's winning run in Paris"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "PSG",
+  "away": "ROM"
+ },
+ "venue": "Parc des Princes",
+ "date": "25 Nov 2026",
+ "round": "Matchday 5"
+}

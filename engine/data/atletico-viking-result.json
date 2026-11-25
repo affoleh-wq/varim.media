@@ -1,0 +1,46 @@
+{
+ "slug": "atletico-viking-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Atlético",
+ "away": "Viking",
+ "league": "Champions League",
+ "colors": {
+  "home": "#cb3524",
+  "away": "#1b3f8b"
+ },
+ "probs": [
+  28,
+  26,
+  45
+ ],
+ "pick": "Viking",
+ "pickOk": false,
+ "score": "1-1",
+ "final": "2-0",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "Sørloth and Álvarez on target in Madrid"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "ATM",
+  "away": "VIK"
+ },
+ "venue": "Metropolitano",
+ "date": "25 Nov 2026",
+ "round": "Matchday 5"
+}
