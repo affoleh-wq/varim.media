@@ -92,6 +92,30 @@
   {
    "type": "match",
    "league": "Champions League",
+   "ko": "17:45 UTC",
+   "home": "Sabah",
+   "away": "Barcelona",
+   "code": [
+    "SAB",
+    "BAR"
+   ],
+   "colors": {
+    "home": "#3a3f4b",
+    "away": "#004d98"
+   },
+   "hook": "Barça lost 0–2.<br><span>Bounce back?</span>",
+   "hl": "#ff4f7a",
+   "note": "Barcelona lost 2–0 to Villarreal on Saturday. Sabah conceded 4 at Viking and 4 at Old Trafford in this campaign.",
+   "probs": [
+    8,
+    15,
+    77
+   ],
+   "score": "0–2"
+  },
+  {
+   "type": "match",
+   "league": "Champions League",
    "ko": "20:00 UTC",
    "home": "Sporting",
    "away": "Man United",

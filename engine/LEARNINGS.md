@@ -130,3 +130,4 @@
 
 ## 2026-11-26 утро — scorecard ЛЧ среды (обещан в карусели 25.11)
 - Карусель «UCL Wednesday: X/9» (как carousel-weekend-scorecard): Slavia–Villarreal (Slavia 79%, 2-0), Sabah–Barcelona (Barça 77%, 0-2), Atlético–Viking (Viking 45%, 1-1), Brugge–Liverpool (Brugge 55%, 1-1), Inter–Stuttgart (Inter 61%, 2-1), Lille–Bayern (Bayern 60%, 0-1), PSG–Roma (PSG 68%, 2-0), Shakhtar–Fenerbahçe (Shakhtar 56%, 1-0), Sporting–Man United (Sporting 78%, 2-0). Счёт — 2 независимых источника. IG + Threads в 12:00.
+- Sabah – Barcelona · Champions League · KO 2026-11-25 17:45 UTC · code SAB/BAR · colors #3a3f4b/#004d98 · модель 8/15/77, pick Barcelona 77%, точный 0-2 · pinLink https://varim.net/predictions/sabah-fa-vs-barcelona-2026-11-25-1391996802/
