@@ -1,0 +1,196 @@
+{
+ "slug": "carousel-ucl-wed25",
+ "title": "Champions League",
+ "date": "Wed 25 Nov 2026",
+ "slides": [
+  {
+   "type": "cover",
+   "kick": "Champions League · Wed 25 Nov",
+   "h1": "9 games. <span>1 model.</span>",
+   "sub": "Every call for tonight, recorded before kick-off.",
+   "rows": [
+    {
+     "type": "match",
+     "home": "Slavia Praha",
+     "away": "Villarreal",
+     "ko": "Slavia 79%"
+    },
+    {
+     "type": "match",
+     "home": "Sabah",
+     "away": "Barcelona",
+     "ko": "Barça 77%"
+    },
+    {
+     "type": "match",
+     "home": "Atlético",
+     "away": "Viking",
+     "ko": "Viking 45%"
+    },
+    {
+     "type": "match",
+     "home": "Club Brugge",
+     "away": "Liverpool",
+     "ko": "Brugge 55%"
+    },
+    {
+     "type": "match",
+     "home": "Inter",
+     "away": "Stuttgart",
+     "ko": "Inter 61%"
+    },
+    {
+     "type": "match",
+     "home": "Lille",
+     "away": "Bayern",
+     "ko": "Bayern 60%"
+    },
+    {
+     "type": "match",
+     "home": "PSG",
+     "away": "Roma",
+     "ko": "PSG 68%"
+    },
+    {
+     "type": "match",
+     "home": "Shakhtar",
+     "away": "Fenerbahçe",
+     "ko": "Shakhtar 56%"
+    },
+    {
+     "type": "match",
+     "home": "Sporting",
+     "away": "Man United",
+     "ko": "Sporting 78%"
+    }
+   ]
+  },
+  {
+   "type": "match",
+   "league": "Champions League",
+   "ko": "20:00 UTC",
+   "home": "Atlético",
+   "away": "Viking",
+   "code": [
+    "ATM",
+    "VIK"
+   ],
+   "colors": {
+    "home": "#cb3524",
+    "away": "#1b3f8b"
+   },
+   "hook": "Viking favourites<br><span>in Madrid?</span>",
+   "hl": "#ff7a6a",
+   "note": "Atlético lost their last two home games, to Barcelona and Bayern. The model makes Viking slight favourites.",
+   "probs": [
+    28,
+    26,
+    45
+   ],
+   "score": "1–1"
+  },
+  {
+   "type": "match",
+   "league": "Champions League",
+   "ko": "20:00 UTC",
+   "home": "Sporting",
+   "away": "Man United",
+   "code": [
+    "SCP",
+    "MUN"
+   ],
+   "colors": {
+    "home": "#008057",
+    "away": "#da291c"
+   },
+   "hook": "1 win in 5.<br><span>Lisbon next.</span>",
+   "hl": "#4fd18b",
+   "note": "United conceded 18 in their last 10, including 4–0 at Anfield on Sunday. Sporting won 4 of their last 5.",
+   "probs": [
+    78,
+    14,
+    8
+   ],
+   "score": "2–0"
+  },
+  {
+   "type": "match",
+   "league": "Champions League",
+   "ko": "20:00 UTC",
+   "home": "Club Brugge",
+   "away": "Liverpool",
+   "code": [
+    "BRU",
+    "LIV"
+   ],
+   "colors": {
+    "home": "#1d4f91",
+    "away": "#c8102e"
+   },
+   "hook": "Liverpool<br><span>underdogs?</span>",
+   "hl": "#7fb2ff",
+   "note": "Brugge scored 24 in their last 10 games. Liverpool won their last two, but lost to Fenerbahçe and Arsenal before that.",
+   "probs": [
+    55,
+    23,
+    22
+   ],
+   "score": "1–1"
+  },
+  {
+   "type": "match",
+   "league": "Champions League",
+   "ko": "20:00 UTC",
+   "home": "PSG",
+   "away": "Roma",
+   "code": [
+    "PSG",
+    "ROM"
+   ],
+   "colors": {
+    "home": "#004170",
+    "away": "#8e1f2f"
+   },
+   "hook": "6–0 in Villarreal.<br><span>Roma next?</span>",
+   "hl": "#ff5a6a",
+   "note": "PSG scored 31 in their last 10 and conceded 8. Roma scored 5 at Parma on Saturday.",
+   "probs": [
+    68,
+    18,
+    14
+   ],
+   "score": "2–0"
+  },
+  {
+   "type": "match",
+   "league": "Champions League",
+   "ko": "20:00 UTC",
+   "home": "Lille",
+   "away": "Bayern",
+   "code": [
+    "LIL",
+    "BAY"
+   ],
+   "colors": {
+    "home": "#1d2b56",
+    "away": "#dc052d"
+   },
+   "hook": "37 goals in 10.<br><span>Lille next.</span>",
+   "hl": "#ff5a6a",
+   "note": "Bayern scored 37 in their last 10. Lille conceded only 8, but lost 1–0 to Lyon on Saturday.",
+   "probs": [
+    16,
+    24,
+    60
+   ],
+   "score": "0–1"
+  },
+  {
+   "type": "cta",
+   "h1": "Your<br><span>9 scores?</span>",
+   "p": "Drop your calls in the comments.<br>Full scorecard tomorrow morning.",
+   "ex": "2–0 · 1–1 · 0–2 · …",
+   "save": "this post for tonight"
+  }
+ ]
+}

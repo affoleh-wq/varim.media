@@ -124,3 +124,9 @@
 - Все шаблоны рисуют щит v2 из `engine/crest.js`: металлическая окантовка, рисунок формы команды, медальон с кодом. Реальные гербы по-прежнему НЕ используем.
 - Рисунок берётся из таблицы KITS по коду команды (hoops / stripes / band / halves / sash / plain + второй цвет). Для новой команды с полосатой формой — добавь её код в KITS или задай в data `kit: {home:{pat,c2}, away:{pat,c2}}` (в каруселях — `kit: [{pat,c2},{pat,c2}]` в слайде).
 - Светлая основная форма (белый Реал) → тёмный медальон автоматически.
+
+## Итоги на 2026-11-25 (дополнение)
+- Atlético Madrid – Viking · Champions League · KO 2026-11-25 20:00 UTC · code ATM/VIK · colors #cb3524/#1b3f8b · venue Metropolitano · модель 28/26/45, pick Viking 45%, точный 1-1 · pinLink https://varim.net/predictions/atletico-madrid-vs-viking-2026-11-25-1391917659/
+
+## 2026-11-26 утро — scorecard ЛЧ среды (обещан в карусели 25.11)
+- Карусель «UCL Wednesday: X/9» (как carousel-weekend-scorecard): Slavia–Villarreal (Slavia 79%, 2-0), Sabah–Barcelona (Barça 77%, 0-2), Atlético–Viking (Viking 45%, 1-1), Brugge–Liverpool (Brugge 55%, 1-1), Inter–Stuttgart (Inter 61%, 2-1), Lille–Bayern (Bayern 60%, 0-1), PSG–Roma (PSG 68%, 2-0), Shakhtar–Fenerbahçe (Shakhtar 56%, 1-0), Sporting–Man United (Sporting 78%, 2-0). Счёт — 2 независимых источника. IG + Threads в 12:00.
