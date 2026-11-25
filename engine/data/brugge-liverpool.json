@@ -1,0 +1,18 @@
+{
+ "slug": "brugge-liverpool",
+ "template": "tpl_quiz.html",
+ "home": "Club Brugge",
+ "away": "Liverpool",
+ "code": {"home": "BRU", "away": "LIV"},
+ "colors": {"home": "#1d4f91", "away": "#c8102e"},
+ "league": "Champions League",
+ "when": "Wed 25 Nov · 20:00 UTC",
+ "url": "https://varim.net/predictions/club-brugge-kv-vs-liverpool-2026-11-25-1391932126/",
+ "probs": [55, 23, 22],
+ "over25": 56,
+ "btts": 56,
+ "clue": "Both teams score",
+ "score": "1-1",
+ "scorePct": "10.7",
+ "others": [["1-0", "9.9"], ["2-1", "9.9"], ["2-0", "9.1"]]
+}

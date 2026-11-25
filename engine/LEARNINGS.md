@@ -111,3 +111,11 @@
 ## Итоги на 2026-11-24 (дополнение)
 - Galatasaray – Aston Villa · Champions League · KO 2026-11-24 17:45 UTC · code GAL/AVL · colors #a90432/#670e36 · venue RAMS Park · модель 63/18/19, pick Galatasaray 63%, точный 2-1 · pinLink https://varim.net/predictions/galatasaray-vs-aston-villa-2026-11-24-1391953401/
 - Real Madrid – PSV · Champions League · KO 2026-11-24 20:00 UTC · code RMA/PSV · colors #f2f2f2/#e2001a · venue Santiago Bernabéu · модель 43/24/33, pick Real Madrid 43%, точный 1-1 · pinLink https://varim.net/predictions/real-madrid-vs-psv-eindhoven-2026-11-24-1391994249/
+
+## Итоги на 2026-11-25
+- Club Brugge – Liverpool · Champions League · KO 2026-11-25 20:00 UTC · code BRU/LIV · colors #1d4f91/#c8102e · venue Jan Breydel Stadium · модель 55/23/22, pick Club Brugge 55%, точный 1-1 · pinLink https://varim.net/predictions/club-brugge-kv-vs-liverpool-2026-11-25-1391932126/
+- Sporting CP – Man United · Champions League · KO 2026-11-25 20:00 UTC · code SCP/MUN · colors #008057/#da291c · venue Estádio José Alvalade · модель 78/14/8, pick Sporting CP 78%, точный 2-0 · pinLink https://varim.net/predictions/sporting-cp-vs-manchester-united-2026-11-25-1392011269/
+- PSG – Roma · Champions League · KO 2026-11-25 20:00 UTC · code PSG/ROM · colors #004170/#8e1f2f · venue Parc des Princes · модель 68/18/14, pick PSG 68%, точный 2-0 · pinLink https://varim.net/predictions/paris-saint-germain-vs-as-roma-2026-11-25-1391984037/
+
+## 2026-11-25 — утренняя задача
+- 24.11 и 25.11 утренняя задача завершилась «успешно» за ~6 мин, но ничего не выпустила и не написала. День выпущен вручную из основной сессии (квиз Brugge–Liverpool 13:00, 3 Stats Sporting–United 17:00).
