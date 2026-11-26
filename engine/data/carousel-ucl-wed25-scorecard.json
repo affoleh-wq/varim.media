@@ -1,0 +1,225 @@
+{
+ "slug": "carousel-ucl-wed25-scorecard",
+ "title": "UCL model check",
+ "date": "Wed 25 Nov 2026",
+ "slides": [
+  {
+   "type": "cover",
+   "kick": "Champions League · Wed 25 Nov",
+   "h1": "Model check",
+   "big": "2<span>/9</span>",
+   "sub": "Our worst night yet. 2 winners called, 7 misses. Every call, shown.",
+   "rows": [
+    {
+     "type": "result",
+     "home": "Slavia",
+     "final": "0–1",
+     "away": "Villarreal",
+     "ok": false,
+     "ko": "Missed"
+    },
+    {
+     "type": "result",
+     "home": "Sabah",
+     "final": "1–4",
+     "away": "Barcelona",
+     "ok": true,
+     "ko": "Called"
+    },
+    {
+     "type": "result",
+     "home": "Atlético",
+     "final": "2–0",
+     "away": "Viking",
+     "ok": false,
+     "ko": "Missed"
+    },
+    {
+     "type": "result",
+     "home": "Club Brugge",
+     "final": "0–3",
+     "away": "Liverpool",
+     "ok": false,
+     "ko": "Missed"
+    },
+    {
+     "type": "result",
+     "home": "Inter",
+     "final": "2–0",
+     "away": "Stuttgart",
+     "ok": true,
+     "ko": "Called"
+    },
+    {
+     "type": "result",
+     "home": "Lille",
+     "final": "2–1",
+     "away": "Bayern",
+     "ok": false,
+     "ko": "Missed"
+    },
+    {
+     "type": "result",
+     "home": "PSG",
+     "final": "2–2",
+     "away": "Roma",
+     "ok": false,
+     "ko": "Missed"
+    },
+    {
+     "type": "result",
+     "home": "Shakhtar",
+     "final": "0–1",
+     "away": "Fenerbahçe",
+     "ok": false,
+     "ko": "Missed"
+    },
+    {
+     "type": "result",
+     "home": "Sporting",
+     "final": "2–2",
+     "away": "Man United",
+     "ok": false,
+     "ko": "Missed"
+    }
+   ]
+  },
+  {
+   "type": "result",
+   "league": "Champions League",
+   "home": "Lille",
+   "away": "Bayern",
+   "code": [
+    "LIL",
+    "BAY"
+   ],
+   "colors": {
+    "home": "#1d2b56",
+    "away": "#dc052d"
+   },
+   "final": "2–1",
+   "ko": "Missed",
+   "pick": "Bayern",
+   "probs": [
+    16,
+    24,
+    60
+   ],
+   "ok": false,
+   "hook": "Bayern's first<br><span>loss of the season.</span>",
+   "hl": "#ff5a6a",
+   "note": "Bayern led through Upamecano. Ueda equalised on 62', and a Pavlović own goal won it for Lille three minutes later."
+  },
+  {
+   "type": "result",
+   "league": "Champions League",
+   "home": "Club Brugge",
+   "away": "Liverpool",
+   "code": [
+    "BRU",
+    "LIV"
+   ],
+   "colors": {
+    "home": "#1d4f91",
+    "away": "#c8102e"
+   },
+   "final": "0–3",
+   "ko": "Missed",
+   "pick": "Club Brugge",
+   "probs": [
+    55,
+    23,
+    22
+   ],
+   "ok": false,
+   "hook": "We backed Brugge.<br><span>Liverpool won 3–0.</span>",
+   "hl": "#ff6b6b",
+   "note": "The model had Brugge at 55%. Liverpool made it three wins in a row."
+  },
+  {
+   "type": "result",
+   "league": "Champions League",
+   "home": "Sabah",
+   "away": "Barcelona",
+   "code": [
+    "SAB",
+    "BAR"
+   ],
+   "colors": {
+    "home": "#3a3f4b",
+    "away": "#004d98"
+   },
+   "final": "1–4",
+   "ko": "Called",
+   "pick": "Barcelona",
+   "probs": [
+    8,
+    15,
+    77
+   ],
+   "ok": true,
+   "hook": "Called it.<br><span>Gordon x2.</span>",
+   "hl": "#ff4f7a",
+   "note": "Anthony Gordon scored twice in Baku. The model had Barcelona at 77%."
+  },
+  {
+   "type": "result",
+   "league": "Champions League",
+   "home": "Inter",
+   "away": "Stuttgart",
+   "code": [
+    "INT",
+    "VFB"
+   ],
+   "colors": {
+    "home": "#0a3d91",
+    "away": "#e32219"
+   },
+   "final": "2–0",
+   "ko": "Called",
+   "pick": "Inter",
+   "probs": [
+    61,
+    21,
+    18
+   ],
+   "ok": true,
+   "hook": "Called it.<br><span>2–0 at San Siro.</span>",
+   "hl": "#7fb2ff",
+   "note": "Sučić from the spot, then Lautaro. The model had Inter at 61%."
+  },
+  {
+   "type": "result",
+   "league": "Champions League",
+   "home": "Sporting",
+   "away": "Man United",
+   "code": [
+    "SCP",
+    "MUN"
+   ],
+   "colors": {
+    "home": "#008057",
+    "away": "#da291c"
+   },
+   "final": "2–2",
+   "ko": "Missed",
+   "pick": "Sporting",
+   "probs": [
+    78,
+    14,
+    8
+   ],
+   "ok": false,
+   "hook": "United at 8%.<br><span>Still got a point.</span>",
+   "hl": "#4fd18b",
+   "note": "The model gave United their lowest chance of the night. Four goals in Lisbon, no winner."
+  },
+  {
+   "type": "cta",
+   "h1": "How did<br><span>you do?</span>",
+   "p": "Comment your score from last night.<br>Europa League tonight: Olympiakos vs Milan.",
+   "ex": "Model 2/9 · You ?/9",
+   "save": "and follow for tonight"
+  }
+ ]
+}

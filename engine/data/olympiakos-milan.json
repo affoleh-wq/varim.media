@@ -1,0 +1,81 @@
+{
+ "slug": "olympiakos-milan",
+ "template": "tpl_top3.html",
+ "home": "Olympiakos",
+ "away": "AC Milan",
+ "code": {
+  "home": "OLY",
+  "away": "MIL"
+ },
+ "colors": {
+  "home": "#d0102c",
+  "away": "#1a1a1a"
+ },
+ "kit": {
+  "home": {
+   "pat": "stripes",
+   "c2": "#ffffff"
+  },
+  "away": {
+   "pat": "stripes",
+   "c2": "#d0102c"
+  }
+ },
+ "league": "Europa League",
+ "when": "Thu 26 Nov · 17:45 UTC",
+ "kickoff": "before tonight's kick-off",
+ "url": "https://varim.net/predictions/olympiakos-piraeus-vs-ac-milan-2026-11-26-1392498041/",
+ "hook": "Milan: 16 conceded<br><span>in their last 10</span>",
+ "hot": "home",
+ "stat3": "Olympiakos: 6 conceded<br>in their last 10",
+ "formHome": [
+  "W",
+  "D",
+  "D",
+  "W",
+  "W"
+ ],
+ "formAway": [
+  "W",
+  "W",
+  "L",
+  "W",
+  "L"
+ ],
+ "tagHome": "unbeaten in 5",
+ "tagAway": "2 losses in 5",
+ "stat2": "Europa League table:<br>Olympiakos 6th, Milan 29th",
+ "cmp": [
+  [
+   "Scored",
+   16,
+   16
+  ],
+  [
+   "Conceded",
+   6,
+   16,
+   1
+  ]
+ ],
+ "cmpNote": "Last 10 games · all competitions",
+ "venueLabel": "Venue form",
+ "venue": [
+  [
+   "Olympiakos at home",
+   "W2 D1 L0"
+  ],
+  [
+   "Milan away",
+   "W1 D0 L0"
+  ]
+ ],
+ "probs": [
+  70,
+  19,
+  11
+ ],
+ "pick": "Olympiakos",
+ "score": "2-0",
+ "scorePct": "14.0"
+}

@@ -131,3 +131,9 @@
 ## 2026-11-26 утро — scorecard ЛЧ среды (обещан в карусели 25.11)
 - Карусель «UCL Wednesday: X/9» (как carousel-weekend-scorecard): Slavia–Villarreal (Slavia 79%, 2-0), Sabah–Barcelona (Barça 77%, 0-2), Atlético–Viking (Viking 45%, 1-1), Brugge–Liverpool (Brugge 55%, 1-1), Inter–Stuttgart (Inter 61%, 2-1), Lille–Bayern (Bayern 60%, 0-1), PSG–Roma (PSG 68%, 2-0), Shakhtar–Fenerbahçe (Shakhtar 56%, 1-0), Sporting–Man United (Sporting 78%, 2-0). Счёт — 2 независимых источника. IG + Threads в 12:00.
 - Sabah – Barcelona · Champions League · KO 2026-11-25 17:45 UTC · code SAB/BAR · colors #3a3f4b/#004d98 · модель 8/15/77, pick Barcelona 77%, точный 0-2 · pinLink https://varim.net/predictions/sabah-fa-vs-barcelona-2026-11-25-1391996802/
+
+## Итоги на 2026-11-26
+- Olympiakos – AC Milan · Europa League · KO 2026-11-26 17:45 UTC · code OLY/MIL · colors #d0102c/#1a1a1a · kit home stripes #ffffff, away stripes #d0102c · venue Karaiskakis · модель 70/19/11, pick Olympiakos 70%, точный 2-0 · pinLink https://varim.net/predictions/olympiakos-piraeus-vs-ac-milan-2026-11-26-1392498041/
+- Crystal Palace – Real Sociedad · Europa League · KO 2026-11-26 20:00 UTC · code CRY/RSO · colors #1b458f/#0067b1 · kit home stripes #c4122e, away stripes #ffffff · venue Selhurst Park · модель 29/23/48, pick Real Sociedad 48%, точный 1-1 · pinLink https://varim.net/predictions/crystal-palace-vs-real-sociedad-2026-11-26-1392451236/
+
+## 2026-11-26 — scorecard ЛЧ 25.11 опубликован: 2/9 (Barça ✓, Inter ✓). Утренняя задача снова ничего не сделала — выпущено вручную.

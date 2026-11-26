@@ -1,0 +1,51 @@
+{
+ "slug": "palace-sociedad",
+ "template": "tpl_quiz.html",
+ "home": "Crystal Palace",
+ "away": "Real Sociedad",
+ "code": {
+  "home": "CRY",
+  "away": "RSO"
+ },
+ "colors": {
+  "home": "#1b458f",
+  "away": "#0067b1"
+ },
+ "kit": {
+  "home": {
+   "pat": "stripes",
+   "c2": "#c4122e"
+  },
+  "away": {
+   "pat": "stripes",
+   "c2": "#ffffff"
+  }
+ },
+ "league": "Europa League",
+ "when": "Thu 26 Nov · 20:00 UTC",
+ "url": "https://varim.net/predictions/crystal-palace-vs-real-sociedad-2026-11-26-1392451236/",
+ "probs": [
+  29,
+  23,
+  48
+ ],
+ "over25": 60,
+ "btts": 61,
+ "clue": "Both teams score",
+ "score": "1-1",
+ "scorePct": "10.6",
+ "others": [
+  [
+   "1-2",
+   "9.4"
+  ],
+  [
+   "0-1",
+   "7.9"
+  ],
+  [
+   "2-1",
+   "7.1"
+  ]
+ ]
+}
