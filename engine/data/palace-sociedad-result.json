@@ -1,0 +1,56 @@
+{
+ "slug": "palace-sociedad-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Palace",
+ "away": "Sociedad",
+ "league": "Europa League",
+ "colors": {
+  "home": "#1b458f",
+  "away": "#0067b1"
+ },
+ "probs": [
+  29,
+  23,
+  48
+ ],
+ "pick": "Real Sociedad",
+ "pickOk": false,
+ "score": "1-1",
+ "final": "2-1",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "McNeil seals late comeback vs 10-man La Real"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "CRY",
+  "away": "RSO"
+ },
+ "venue": "Selhurst Park",
+ "date": "26 Nov 2026",
+ "round": "Matchday 5",
+ "kit": {
+  "home": {
+   "pat": "stripes",
+   "c2": "#c4122e"
+  },
+  "away": {
+   "pat": "stripes",
+   "c2": "#ffffff"
+  }
+ }
+}
