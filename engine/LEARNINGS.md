@@ -137,3 +137,10 @@
 - Crystal Palace – Real Sociedad · Europa League · KO 2026-11-26 20:00 UTC · code CRY/RSO · colors #1b458f/#0067b1 · kit home stripes #c4122e, away stripes #ffffff · venue Selhurst Park · модель 29/23/48, pick Real Sociedad 48%, точный 1-1 · pinLink https://varim.net/predictions/crystal-palace-vs-real-sociedad-2026-11-26-1392451236/
 
 ## 2026-11-26 — scorecard ЛЧ 25.11 опубликован: 2/9 (Barça ✓, Inter ✓). Утренняя задача снова ничего не сделала — выпущено вручную.
+
+## Итоги на 2026-11-27 / 28
+- Nottingham Forest – Chelsea · Premier League · KO 2026-11-27 20:00 UTC · code NFO/CHE · colors #dd0000/#0a4aa0 · venue City Ground · модель 27/24/49, pick Chelsea 49%, точный 1-1 · pinLink https://varim.net/predictions/nottingham-forest-vs-chelsea-2026-11-27-1325420519/
+- Hamburger SV – Bayern Munich · Bundesliga · KO 2026-11-28 14:30 UTC · code HSV/BAY · colors #00387b/#dc052d · venue Volksparkstadion · модель 3/7/91, pick Bayern 91%, точный 0-3 · pinLink https://varim.net/predictions/hamburger-sv-vs-bayern-munich-2026-11-28-1340525769/
+
+## 2026-11-30 (Пн) — scorecard Big 5 выходных (обещан в карусели 27.11)
+- Hamburg–Bayern (Bayern 91%, 0-3), Real Madrid–Alavés (Real 75%, 2-0), Everton–Liverpool (Liverpool 39%, 1-1), Arsenal–Man City (Arsenal 41%, 1-1), Como–Juventus (Como 44%, 1-0).

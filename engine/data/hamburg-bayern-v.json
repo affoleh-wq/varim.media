@@ -1,0 +1,50 @@
+{
+ "slug": "hamburg-bayern-v",
+ "template": "tpl_verdict.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Hamburger SV",
+ "away": "Bayern Munich",
+ "short": {
+  "home": "Hamburg",
+  "away": "Bayern"
+ },
+ "code": {
+  "home": "HSV",
+  "away": "BAY"
+ },
+ "league": "Bundesliga",
+ "when": "Sat · 14:30 UTC",
+ "colors": {
+  "home": "#00387b",
+  "away": "#dc052d"
+ },
+ "probs": [
+  3,
+  7,
+  91
+ ],
+ "pick": "Bayern",
+ "score": "0-3",
+ "scorePct": "11.3",
+ "fact": {
+  "label": "Key stat",
+  "big": "24",
+  "line": "goals conceded by Hamburg<br>in their last 10",
+  "sub": "Including 0–4 at Werder last weekend"
+ },
+ "ask": "Your<br><span>score?</span>",
+ "url": "https://varim.net/predictions/hamburger-sv-vs-bayern-munich-2026-11-28-1340525769/"
+}

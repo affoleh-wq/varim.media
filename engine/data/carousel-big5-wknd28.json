@@ -1,0 +1,178 @@
+{
+ "slug": "carousel-big5-wknd28",
+ "title": "Weekend Big 5",
+ "date": "28–29 Nov 2026",
+ "slides": [
+  {
+   "type": "cover",
+   "kick": "Big 5 · 28–29 Nov",
+   "h1": "The weekend's <span>big 5.</span>",
+   "sub": "One model call for each. Recorded before kick-off.",
+   "rows": [
+    {
+     "type": "match",
+     "home": "Hamburg",
+     "away": "Bayern",
+     "ko": "Bayern 91%"
+    },
+    {
+     "type": "match",
+     "home": "Real Madrid",
+     "away": "Alavés",
+     "ko": "Real 75%"
+    },
+    {
+     "type": "match",
+     "home": "Everton",
+     "away": "Liverpool",
+     "ko": "Liverpool 39%"
+    },
+    {
+     "type": "match",
+     "home": "Arsenal",
+     "away": "Man City",
+     "ko": "Arsenal 41%"
+    },
+    {
+     "type": "match",
+     "home": "Como",
+     "away": "Juventus",
+     "ko": "Como 44%"
+    }
+   ]
+  },
+  {
+   "type": "match",
+   "league": "Bundesliga",
+   "ko": "Sat · 14:30 UTC",
+   "home": "Hamburg",
+   "away": "Bayern",
+   "code": [
+    "HSV",
+    "BAY"
+   ],
+   "colors": {
+    "home": "#00387b",
+    "away": "#dc052d"
+   },
+   "hook": "91%.<br><span>Biggest call of the weekend.</span>",
+   "hl": "#ff5a6a",
+   "note": "Bayern lost at Lille on Wednesday. Hamburg conceded 24 in their last 10, including 4–0 at Werder.",
+   "probs": [
+    3,
+    7,
+    91
+   ],
+   "score": "0–3"
+  },
+  {
+   "type": "match",
+   "league": "La Liga",
+   "ko": "Sat · 20:00 UTC",
+   "home": "Real Madrid",
+   "away": "Alavés",
+   "code": [
+    "RMA",
+    "ALA"
+   ],
+   "colors": {
+    "home": "#ffffff",
+    "away": "#1f4fa3"
+   },
+   "ink": {
+    "0": "#1a1a1a"
+   },
+   "hook": "5 wins in a row.<br><span>Alavés next.</span>",
+   "hl": "#ffd84a",
+   "note": "Real won their last 5 and scored 16. Alavés drew 3 of their last 5.",
+   "probs": [
+    75,
+    15,
+    10
+   ],
+   "score": "2–0"
+  },
+  {
+   "type": "match",
+   "league": "Premier League",
+   "ko": "Sun · 12:00 UTC",
+   "home": "Everton",
+   "away": "Liverpool",
+   "code": [
+    "EVE",
+    "LIV"
+   ],
+   "colors": {
+    "home": "#003399",
+    "away": "#c8102e"
+   },
+   "hook": "Merseyside derby.<br><span>Coin toss.</span>",
+   "hl": "#ff6b6b",
+   "note": "Everton won their last 2 at home. Liverpool come in on 3 straight wins.",
+   "probs": [
+    34,
+    27,
+    39
+   ],
+   "score": "1–1"
+  },
+  {
+   "type": "match",
+   "league": "Premier League",
+   "ko": "Sun · 16:30 UTC",
+   "home": "Arsenal",
+   "away": "Man City",
+   "code": [
+    "ARS",
+    "MCI"
+   ],
+   "colors": {
+    "home": "#ef0107",
+    "away": "#5fa8d8"
+   },
+   "ink": {
+    "1": "#1a1a1a"
+   },
+   "hook": "1st vs 3rd.<br><span>6 points apart.</span>",
+   "hl": "#ff5a6a",
+   "note": "Arsenal top the league on 28 points, City are third on 22. City lost 3–1 at Forest this month.",
+   "probs": [
+    41,
+    26,
+    33
+   ],
+   "score": "1–1"
+  },
+  {
+   "type": "match",
+   "league": "Serie A",
+   "ko": "Sun · 19:45 UTC",
+   "home": "Como",
+   "away": "Juventus",
+   "code": [
+    "COM",
+    "JUV"
+   ],
+   "colors": {
+    "home": "#0a3d91",
+    "away": "#111111"
+   },
+   "hook": "Como favourites<br><span>vs Juventus?</span>",
+   "hl": "#7fb2ff",
+   "note": "Como kept clean sheets in 3 of their last 5. Juventus beat Venezia 4–0 last weekend.",
+   "probs": [
+    44,
+    31,
+    25
+   ],
+   "score": "1–0"
+  },
+  {
+   "type": "cta",
+   "h1": "Your<br><span>5 scores?</span>",
+   "p": "Drop your calls in the comments.<br>Scorecard on Monday.",
+   "ex": "0–3 · 2–0 · 1–1 · 1–1 · 1–0",
+   "save": "this post for the weekend"
+  }
+ ]
+}

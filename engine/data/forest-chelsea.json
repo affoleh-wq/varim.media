@@ -1,0 +1,41 @@
+{
+ "slug": "forest-chelsea",
+ "template": "tpl_quiz.html",
+ "home": "Nott'm Forest",
+ "away": "Chelsea",
+ "code": {
+  "home": "NFO",
+  "away": "CHE"
+ },
+ "colors": {
+  "home": "#dd0000",
+  "away": "#0a4aa0"
+ },
+ "league": "Premier League",
+ "when": "Fri 27 Nov · 20:00 UTC",
+ "url": "https://varim.net/predictions/nottingham-forest-vs-chelsea-2026-11-27-1325420519/",
+ "probs": [
+  27,
+  24,
+  49
+ ],
+ "over25": 54,
+ "btts": 56,
+ "clue": "Both teams score",
+ "score": "1-1",
+ "scorePct": "11.4",
+ "others": [
+  [
+   "0-1",
+   "9.8"
+  ],
+  [
+   "1-2",
+   "9.5"
+  ],
+  [
+   "0-2",
+   "8.2"
+  ]
+ ]
+}
