@@ -1,0 +1,46 @@
+{
+ "slug": "forest-chelsea-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Forest",
+ "away": "Chelsea",
+ "league": "Premier League",
+ "colors": {
+  "home": "#dd0000",
+  "away": "#0a4aa0"
+ },
+ "probs": [
+  27,
+  24,
+  49
+ ],
+ "pick": "Chelsea",
+ "pickOk": false,
+ "score": "1-1",
+ "final": "3-2",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "Gibbs-White double beats Emegha's late brace"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "NFO",
+  "away": "CHE"
+ },
+ "venue": "City Ground",
+ "date": "27 Nov 2026",
+ "round": "Matchday 12"
+}
