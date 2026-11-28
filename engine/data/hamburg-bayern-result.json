@@ -1,0 +1,46 @@
+{
+ "slug": "hamburg-bayern-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Hamburg",
+ "away": "Bayern",
+ "league": "Bundesliga",
+ "colors": {
+  "home": "#00387b",
+  "away": "#dc052d"
+ },
+ "probs": [
+  3,
+  7,
+  91
+ ],
+ "pick": "Bayern",
+ "pickOk": false,
+ "score": "0-3",
+ "final": "0-0",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "Ten-man Bayern held to a goalless draw"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "HSV",
+  "away": "BAY"
+ },
+ "venue": "Volksparkstadion",
+ "date": "28 Nov 2026",
+ "round": "Matchday 11"
+}

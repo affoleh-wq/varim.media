@@ -1,0 +1,56 @@
+{
+ "slug": "manutd-brentford-result",
+ "template": "tpl_fulltime.html",
+ "music": "sound_verdict.wav",
+ "scenes": {
+  "s1": 2.571,
+  "s2": 2.572,
+  "s3": 3.428,
+  "s4": 3.429
+ },
+ "checks": {
+  "s1a": 0.0,
+  "s1": 1.6,
+  "s2": 1.9,
+  "s3": 2.2,
+  "s4": 2.4
+ },
+ "home": "Man Utd",
+ "away": "Brentford",
+ "league": "Premier League",
+ "colors": {
+  "home": "#1d1d1d",
+  "away": "#e30613"
+ },
+ "probs": [
+  17,
+  19,
+  64
+ ],
+ "pick": "Brentford",
+ "pickOk": true,
+ "score": "1-2",
+ "final": "0-4",
+ "hook": "Did the model <span>call it?</span>",
+ "story": {
+  "short": "Brentford hammer United at Old Trafford"
+ },
+ "ask": "Watch<br><span>the goals</span>",
+ "code": {
+  "home": "MUN",
+  "away": "BRE"
+ },
+ "venue": "Old Trafford",
+ "date": "28 Nov 2026",
+ "round": "Matchday 12",
+ "kit": {
+  "home": {
+   "pat": "plain",
+   "c2": "#da291c"
+  },
+  "away": {
+   "pat": "stripes",
+   "c2": "#ffffff"
+  }
+ }
+}
