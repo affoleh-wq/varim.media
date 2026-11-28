@@ -144,3 +144,10 @@
 
 ## 2026-11-30 (Пн) — scorecard Big 5 выходных (обещан в карусели 27.11)
 - Hamburg–Bayern (Bayern 91%, 0-3), Real Madrid–Alavés (Real 75%, 2-0), Everton–Liverpool (Liverpool 39%, 1-1), Arsenal–Man City (Arsenal 41%, 1-1), Como–Juventus (Como 44%, 1-0).
+
+## Итоги на 2026-11-28
+- Manchester United – Brentford · Premier League · KO 2026-11-28 15:00 UTC · code MUN/BRE · colors #1d1d1d/#e30613 · kit home plain #da291c, away stripes #ffffff · venue Old Trafford · модель 17/19/64, pick Brentford 64%, точный 1-2 · pinLink https://varim.net/predictions/manchester-united-vs-brentford-2026-11-28-1325419668/
+- Real Madrid – Alavés · La Liga · KO 2026-11-28 20:00 UTC · code RMA/ALA · colors #f2f2f2/#1f4fa3 · kit home plain #febe10, away stripes #ffffff · venue Bernabéu · модель 75/15/10, pick Real Madrid 75%, точный 2-0 · pinLink https://varim.net/predictions/real-madrid-vs-alaves-2026-11-28-1336470754/
+
+## Напоминание для баннеров итогов (28.11)
+- В баннере Forest–Chelsea 27.11 стояли хештеги команд (#NFFC #CFC) — НЕЛЬЗЯ. Только лига + #football #soccer #fulltime.

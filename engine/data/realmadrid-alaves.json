@@ -1,0 +1,81 @@
+{
+ "slug": "realmadrid-alaves",
+ "template": "tpl_top3.html",
+ "home": "Real Madrid",
+ "away": "Alavés",
+ "code": {
+  "home": "RMA",
+  "away": "ALA"
+ },
+ "colors": {
+  "home": "#f2f2f2",
+  "away": "#1f4fa3"
+ },
+ "kit": {
+  "home": {
+   "pat": "plain",
+   "c2": "#febe10"
+  },
+  "away": {
+   "pat": "stripes",
+   "c2": "#ffffff"
+  }
+ },
+ "league": "La Liga",
+ "when": "Sat 28 Nov · 20:00 UTC",
+ "kickoff": "before tonight's kick-off",
+ "url": "https://varim.net/predictions/real-madrid-vs-alaves-2026-11-28-1336470754/",
+ "hook": "Real: 5 wins<br><span>in a row</span>",
+ "hot": "home",
+ "stat3": "Alavés: 3 draws<br>in their last 5",
+ "formHome": [
+  "W",
+  "W",
+  "W",
+  "W",
+  "W"
+ ],
+ "formAway": [
+  "D",
+  "D",
+  "L",
+  "W",
+  "D"
+ ],
+ "tagHome": "5 wins in 5",
+ "tagAway": "1 win in 5",
+ "stat2": "La Liga table:<br>Real 2nd, Alavés 9th",
+ "cmp": [
+  [
+   "Scored",
+   24,
+   16
+  ],
+  [
+   "Conceded",
+   10,
+   17,
+   1
+  ]
+ ],
+ "cmpNote": "Last 10 games · all competitions",
+ "venueLabel": "Venue form",
+ "venue": [
+  [
+   "Real at home",
+   "W2 D0 L0"
+  ],
+  [
+   "Alavés away",
+   "W1 D1 L1"
+  ]
+ ],
+ "probs": [
+  75,
+  15,
+  10
+ ],
+ "pick": "Real Madrid",
+ "score": "2-0",
+ "scorePct": "10.3"
+}

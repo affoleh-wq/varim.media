@@ -1,0 +1,51 @@
+{
+ "slug": "manutd-brentford",
+ "template": "tpl_quiz.html",
+ "home": "Man United",
+ "away": "Brentford",
+ "code": {
+  "home": "MUN",
+  "away": "BRE"
+ },
+ "colors": {
+  "home": "#1d1d1d",
+  "away": "#e30613"
+ },
+ "kit": {
+  "home": {
+   "pat": "plain",
+   "c2": "#da291c"
+  },
+  "away": {
+   "pat": "stripes",
+   "c2": "#ffffff"
+  }
+ },
+ "league": "Premier League",
+ "when": "Sat 28 Nov · 15:00 UTC",
+ "url": "https://varim.net/predictions/manchester-united-vs-brentford-2026-11-28-1325419668/",
+ "probs": [
+  17,
+  19,
+  64
+ ],
+ "over25": 68,
+ "btts": 61,
+ "clue": "Over 2.5 goals",
+ "score": "1-2",
+ "scorePct": "9.6",
+ "others": [
+  [
+   "0-2",
+   "8.4"
+  ],
+  [
+   "1-1",
+   "8.2"
+  ],
+  [
+   "1-3",
+   "7.5"
+  ]
+ ]
+}
